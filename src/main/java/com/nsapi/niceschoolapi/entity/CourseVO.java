@@ -13,14 +13,14 @@ public class CourseVO {
     private String studytype;
     private String ctname;
     private String mname;
-    private Integer isdel;
+    private Integer isDel;
 
-    public Integer getIsdel() {
-        return isdel;
+    public Integer getIsDel() {
+        return isDel;
     }
 
-    public void setIsdel(Integer isdel) {
-        this.isdel = isdel;
+    public void setIsDel(Integer isDel) {
+        this.isDel = isDel;
     }
 
     public String getMname() {

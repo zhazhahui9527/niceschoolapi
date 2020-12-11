@@ -10,6 +10,7 @@ public class StuCourseVO {
     private Integer classid;
     private String classname; //班级名称
     private String studytype; //班级名称
+    private Integer isDel;
 
     public String getStudytype() {
         return studytype;
@@ -83,15 +84,13 @@ public class StuCourseVO {
         this.classid = classid;
     }
 
-    public Integer getIsdel() {
-        return isdel;
+    public Integer getIsDel() {
+        return isDel;
     }
 
-    public void setIsdel(Integer isdel) {
-        this.isdel = isdel;
+    public void setIsDel(Integer isDel) {
+        this.isDel = isDel;
     }
 
-    private Integer isdel
 
-            ;
 }

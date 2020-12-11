@@ -4,7 +4,7 @@
 
 <mapper namespace="com.nsapi.niceschoolapi.mapper.courseMapperl">
     <select id="selCourse" resultType="com.nsapi.niceschoolapi.entity.CourseVO">
-        SELECT c.*, c.is_del isdel, o.ctname ctname,m.mname mname FROM course c,course_type o,major m WHERE o.ctid=c.ctid and m.mid=c.mid
+        SELECT c.*, c.is_del isDel, o.ctname ctname,m.mname mname FROM course c,course_type o,major m WHERE o.ctid=c.ctid and m.mid=c.mid
             <if test="cname!=null and cname!=''">
               and  cname like concat('%' ,concat(#{cname},'%'))
             </if>
