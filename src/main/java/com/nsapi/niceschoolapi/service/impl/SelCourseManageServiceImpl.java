@@ -29,7 +29,7 @@ public class SelCourseManageServiceImpl implements SelCourseManageService {
     }
 
     @Override
-    public List<ClassinfoDB> selClass(Integer gid) {
+    public List<ClassInfoDB> selClass(Integer gid) {
         return selCourseManageMapper.selClass(gid);
     }
 

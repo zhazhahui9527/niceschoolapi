@@ -33,11 +33,11 @@ public class TchCourseServiceImpl implements TchCourseService {
 
     //查询级联班级
     @Override
-    public List<TeacherDB> findTchCourseClassName(ClassinfoDB classinfoDB) { return tchCourseMapper.findTchCourseClassName(classinfoDB); }
+    public List<TeacherDB> findTchCourseClassName(ClassInfoDB classinfoDB) { return tchCourseMapper.findTchCourseClassName(classinfoDB); }
 
     //查询周
     @Override
-    public List<WeeksDB> findAllWeeks() {
+    public List<WeekDB> findAllWeeks() {
         return tchCourseMapper.findAllWeeks();
     }
 

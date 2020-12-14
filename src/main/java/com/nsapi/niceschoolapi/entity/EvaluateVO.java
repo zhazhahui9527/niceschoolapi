@@ -3,27 +3,27 @@ package com.nsapi.niceschoolapi.entity;
 import java.util.Date;
 
 /**
- * 教评表
+ * 关联表：EvaluateRecordDB,TeacherDB,TchExamDB,MajorDB
  */
 public class EvaluateVO {
     private Integer eid;
-    private String stuid;
-    private String tchid;
-    private Integer erexam;
+    private String stuid; //学号
+    private String tchid; //教师工号
+    private Integer erscore; //评教分数
     private Integer erstate;
-    private Integer tid;
-    private String tname;
-    private String tgender;
-    private Date tbirthday;
-    private Integer pid;
-    private String tnation;
-    private String tcardid;
-    private String tphone;
-    private String taddress;
-    private Integer tchstate;
-    private Integer exam;
+    private Integer tid; //教师编号
+    private String tname; //姓名
+    private String tgender; //性别
+    private Date tbirthday; //出生年月
+    private Integer pid; //政治面貌编号
+    private String tnation; //民族
+    private String tcardid; //身份证号
+    private String tphone; //手机号
+    private String taddress; //家庭住址
+    private Integer tchstate; //教师状态
+    private Integer exam; //总成绩
     private Integer count;
-    private Integer mid;
+    private Integer mid; //专业编号
     private Integer teid; //教师成绩编号
     private Integer pcount; //评教人数
     private Date tetime; //成绩时间
@@ -54,12 +54,12 @@ public class EvaluateVO {
         this.tchid = tchid;
     }
 
-    public Integer getErexam() {
-        return erexam;
+    public Integer getErscore() {
+        return erscore;
     }
 
-    public void setErexam(Integer erexam) {
-        this.erexam = erexam;
+    public void setErscore(Integer erscore) {
+        this.erscore = erscore;
     }
 
     public Integer getErstate() {

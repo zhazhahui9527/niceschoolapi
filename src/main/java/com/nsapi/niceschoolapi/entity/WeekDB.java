@@ -8,7 +8,7 @@ import java.util.Date;
  * 星期表
  */
 
-public class WeeksDB implements Serializable {
+public class WeekDB implements Serializable {
 
   private Integer wid; //星期编号
   private String wname; //星期名

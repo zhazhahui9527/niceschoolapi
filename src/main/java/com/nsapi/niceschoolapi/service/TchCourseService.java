@@ -12,9 +12,9 @@ public interface TchCourseService {
     //通过专业查询全部课程
     List<TeacherDB> findAllCourseByMajorName(TchCourseVO tchCourseVO);
     //查询级联班级
-    List<TeacherDB> findTchCourseClassName(ClassinfoDB classinfoDB);
+    List<TeacherDB> findTchCourseClassName(ClassInfoDB classinfoDB);
     //查询周
-    List<WeeksDB> findAllWeeks();
+    List<WeekDB> findAllWeeks();
     //查询节段
     List<ScheduleDB> findAllSchedule();
     //添加教师授课表记录并返回新数据id

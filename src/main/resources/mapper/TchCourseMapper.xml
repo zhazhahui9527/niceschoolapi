@@ -26,7 +26,7 @@
         select * from classinfo where gid = #{gid}
     </select>
     <!--查询周-->
-    <select id="findAllWeeks" resultType="WeeksDB">
+    <select id="findAllWeeks" resultType="WeekDB">
         select * from weeks
     </select>
     <!--查询节段-->

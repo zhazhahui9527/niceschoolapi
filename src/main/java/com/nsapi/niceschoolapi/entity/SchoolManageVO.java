@@ -4,7 +4,7 @@ import java.util.Date;
 
 /**
  * 校建管理
- * 所用表：ClassinfoDB、GradeDB、MajorDB、DepartmentDB、
+ * 关联表：ClassinfoDB、GradeDB、MajorDB、DepartmentDB、
  */
 
 public class SchoolManageVO {

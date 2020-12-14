@@ -1,12 +1,12 @@
 package com.nsapi.niceschoolapi.service;
 
-import com.nsapi.niceschoolapi.entity.NewsinfoDB;
+import com.nsapi.niceschoolapi.entity.NewsInfoDB;
 
 import java.util.List;
 
 public interface NewsService {
-    List<NewsinfoDB> findAllNews(NewsinfoDB newsinfoDB);
+    List<NewsInfoDB> findAllNews(NewsInfoDB newsinfoDB);
     int deleteNews(Integer nId);
-    int addNews(NewsinfoDB newsinfoDB);
-    int editNews(NewsinfoDB newsinfoDB);
+    int addNews(NewsInfoDB newsinfoDB);
+    int editNews(NewsInfoDB newsinfoDB);
 }

@@ -4,7 +4,7 @@ package com.nsapi.niceschoolapi.entity;
 import java.io.Serializable;
 
 /**
- * 课目类型表
+ * 课程类型表
  */
 
 public class CourseTypeDB implements Serializable {

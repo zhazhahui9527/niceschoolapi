@@ -2,7 +2,7 @@ package com.nsapi.niceschoolapi.controller;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.nsapi.niceschoolapi.entity.NewsinfoDB;
+import com.nsapi.niceschoolapi.entity.NewsInfoDB;
 import com.nsapi.niceschoolapi.entity.ScheduleDB;
 import com.nsapi.niceschoolapi.service.NewsService;
 import com.nsapi.niceschoolapi.service.ScheduleService;
@@ -40,9 +40,9 @@ public class IndexController {
      */
     @RequestMapping("newslist")
     @ResponseBody
-    public Object NewsList(NewsinfoDB newsinfoDB, Integer page){
+    public Object NewsList(NewsInfoDB newsinfoDB, Integer page){
         PageHelper.startPage(page,5);
-        List<NewsinfoDB> listAll = newsService.findAllNews(newsinfoDB);
+        List<NewsInfoDB> listAll = newsService.findAllNews(newsinfoDB);
         PageInfo pageInfo = new PageInfo(listAll);
         Map<String, Object> newsList = new HashMap<String, Object>();
         //这是layui要求返回的json数据格式

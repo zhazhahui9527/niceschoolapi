@@ -1,11 +1,14 @@
 package com.nsapi.niceschoolapi.entity;
 
+/**
+ * 关联表：classInfoDB,GradeDB,MajorDB,DepartmentDB,StuExamDB
+ */
 public class SelAllExamVO {
-    private String classname;
-    private String gname;
-    private String mname;
-    private String dname;
-    private Integer stime;
+    private String classname; //班级名称
+    private String gname; //年级名称
+    private String mname; //专业名称
+    private String dname; //系部名称
+    private Integer stime; //成绩时间
 
     public String getClassname() {
         return classname;

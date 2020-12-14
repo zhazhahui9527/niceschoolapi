@@ -4,20 +4,20 @@ package com.nsapi.niceschoolapi.entity;
 import java.io.Serializable;
 
 /**
- * 课目表
+ * 课程表
  */
 
 public class CourseDB implements Serializable {
 
-  private Integer cid; //课目编号
-  private String cname; //课目名称
+  private Integer cid; //课程编号
+  private String cname; //课程名称
   private double ccredit; //学分
   private double cperiod; //学时
-  private Integer cstate; //课目状态
+  private Integer cstate; //课程状态
   private Integer cselcount; //已选人数
   private Integer cmaxcount; //限定人数
   private String studytype; //修读类型
-  private Integer ctid; //课目类型编号
+  private Integer ctid; //课程类型编号
   private Integer mid; //专业编号
   private Integer isDel; //逻辑删除
 

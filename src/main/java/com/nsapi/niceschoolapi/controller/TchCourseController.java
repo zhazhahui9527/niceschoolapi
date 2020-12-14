@@ -85,7 +85,7 @@ public class TchCourseController extends BaseController {
      */
     @RequestMapping("findtchcourseclassname")
     @ResponseBody
-    public Object findTchCourseClassName(ClassinfoDB classinfoDB,Integer page, Integer limit){
+    public Object findTchCourseClassName(ClassInfoDB classinfoDB, Integer page, Integer limit){
         PageHelper.startPage(page, limit);
         List<TeacherDB> listAll = tchCourseService.findTchCourseClassName(classinfoDB);
         PageInfo pageInfo = new PageInfo(listAll);
@@ -104,7 +104,7 @@ public class TchCourseController extends BaseController {
     @ResponseBody
     public Object findAllWeeks(Integer page, Integer limit){
         PageHelper.startPage(page, limit);
-        List<WeeksDB> listAll = tchCourseService.findAllWeeks();
+        List<WeekDB> listAll = tchCourseService.findAllWeeks();
         PageInfo pageInfo = new PageInfo(listAll);
         Map<String, Object> wData = new HashMap<String, Object>();
         wData.put("code", 0);

@@ -36,7 +36,7 @@ public class StudentVO implements Serializable {
     private Date entertime;
     private Date leavetime;
     private Integer stustate;
-    private Integer is_del;
+    private Integer isDel;
 
     public Integer getDid() {
         return did;
@@ -254,11 +254,11 @@ public class StudentVO implements Serializable {
         this.stustate = stustate;
     }
 
-    public Integer getIs_del() {
-        return is_del;
+    public Integer getIsDel() {
+        return isDel;
     }
 
-    public void setIs_del(Integer is_del) {
-        this.is_del = is_del;
+    public void setIsDel(Integer isDel) {
+        this.isDel = isDel;
     }
 }

@@ -105,12 +105,12 @@ public class SchoolManageServiceImpl implements SchoolManageService {
     }
     //添加班级
     @Override
-    public int addOneClass(ClassinfoDB classinfoDB) {
+    public int addOneClass(ClassInfoDB classinfoDB) {
         return schoolManageMapper.addOneClass(classinfoDB);
     }
     //编辑班级
     @Override
-    public int editOneClass(ClassinfoDB classinfoDB) {
+    public int editOneClass(ClassInfoDB classinfoDB) {
         return schoolManageMapper.editOneClass(classinfoDB);
     }
     //删除班级
@@ -161,7 +161,7 @@ public class SchoolManageServiceImpl implements SchoolManageService {
     }
 
     @Override
-    public int checkOneClass(ClassinfoDB classinfoDB) {
+    public int checkOneClass(ClassInfoDB classinfoDB) {
         return schoolManageMapper.checkOneClass(classinfoDB);
     }
 }

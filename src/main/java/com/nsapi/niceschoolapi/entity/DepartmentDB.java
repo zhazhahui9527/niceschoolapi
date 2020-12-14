@@ -4,7 +4,7 @@ package com.nsapi.niceschoolapi.entity;
 import java.io.Serializable;
 
 /**
- * 系部表
+ * 院系表
  */
 
 public class DepartmentDB implements Serializable {

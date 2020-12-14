@@ -6,7 +6,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.nsapi.niceschoolapi.entity.Role;
 import com.nsapi.niceschoolapi.entity.User;
 import com.nsapi.niceschoolapi.service.RoleService;
-import com.nsapi.niceschoolapi.service.UploadService;
+//import com.nsapi.niceschoolapi.service.UploadService;
 import com.nsapi.niceschoolapi.service.UserService;
 import com.nsapi.niceschoolapi.common.annotation.SysLog;
 import com.nsapi.niceschoolapi.common.base.PageData;
@@ -39,9 +39,9 @@ public class UserController {
 
     @Autowired
     RoleService roleService;
-
-    @Autowired
-    UploadService uploadService;
+//
+//    @Autowired
+//    UploadService uploadService;
 
     @RequestMapping("list")
     @SysLog("跳转系统用户列表页面")
@@ -327,24 +327,24 @@ public class UserController {
 
     }
 
-    @SysLog("上传头像")
-    @PostMapping("uploadFace")
-    @ResponseBody
-    public ResponseEntity uploadFile(@RequestParam("icon") MultipartFile file, HttpServletRequest httpServletRequest) {
-        if(file == null){
-            return ResponseEntity.failure("上传文件为空 ");
-        }
-        String url = null;
-        Map map = new HashMap();
-        try {
-            url = uploadService.upload(file);
-            map.put("url", url);
-            map.put("name", file.getOriginalFilename());
-        } catch (Exception e) {
-            e.printStackTrace();
-            return ResponseEntity.failure(e.getMessage());
-        }
-        return ResponseEntity.success("操作成功").setAny("data",map);
-    }
+//    @SysLog("上传头像")
+//    @PostMapping("uploadFace")
+//    @ResponseBody
+//    public ResponseEntity uploadFile(@RequestParam("icon") MultipartFile file, HttpServletRequest httpServletRequest) {
+//        if(file == null){
+//            return ResponseEntity.failure("上传文件为空 ");
+//        }
+//        String url = null;
+//        Map map = new HashMap();
+//        try {
+//            url = uploadService.upload(file);
+//            map.put("url", url);
+//            map.put("name", file.getOriginalFilename());
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//            return ResponseEntity.failure(e.getMessage());
+//        }
+//        return ResponseEntity.success("操作成功").setAny("data",map);
+//    }
 
 }

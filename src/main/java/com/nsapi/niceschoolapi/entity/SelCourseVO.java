@@ -1,6 +1,7 @@
 package com.nsapi.niceschoolapi.entity;
 /**
- * 课程表，课程类型表，教师授课表，教师表，星期表，作息时间表,学生表
+ *
+ * 关联表：CourseTypeDB,TchCourseDB,TeacherDB,WeekDB,ScheduleDB,StudentDB
  */
 public class SelCourseVO {
     private Integer cid;//课程编号
@@ -11,9 +12,9 @@ public class SelCourseVO {
     private String tname;//教授教师
     private Integer cselcount;//已选人数
     private Integer cmaxcount;//限定人数
-    private String wname;//周
-    private String timeinterval;//天
-    private String schname;//时段
+    private String wname;//星期名
+    private String timeinterval;//时段
+    private String schname;//节序名
     private String stuid; //学号
 
     public String getStuid() {

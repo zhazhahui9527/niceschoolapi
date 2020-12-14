@@ -1,14 +1,14 @@
 package com.nsapi.niceschoolapi.mapper;
 
-import com.nsapi.niceschoolapi.entity.NewsinfoDB;
+import com.nsapi.niceschoolapi.entity.NewsInfoDB;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
 
 @Mapper
 public interface NewsMapper {
-    List<NewsinfoDB> findAllNews(NewsinfoDB newsinfoDB);
+    List<NewsInfoDB> findAllNews(NewsInfoDB newsinfoDB);
     int deleteNews(Integer nId);
-    int addNews(NewsinfoDB newsinfoDB);
-    int editNews(NewsinfoDB newsinfoDB);
+    int addNews(NewsInfoDB newsinfoDB);
+    int editNews(NewsInfoDB newsinfoDB);
 }

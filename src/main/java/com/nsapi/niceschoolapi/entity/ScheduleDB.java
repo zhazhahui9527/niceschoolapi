@@ -11,7 +11,7 @@ public class ScheduleDB implements Serializable {
 
   private Integer schid; //作息时间编号
   private String timeinterval; //时段
-  private String schname; //时序
+  private String schname; //节序名
   private String summer; //夏季时间
   private String winter; //冬季时间
 

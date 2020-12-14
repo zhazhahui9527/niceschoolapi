@@ -70,7 +70,7 @@ public class StudentController extends BaseController {
     @RequestMapping("selectgid")
     @ResponseBody
     public LayuiResult<Map> selClassinfoDB(Integer gid){
-        List<ClassinfoDB> classinfo = studentService.selClassinfoDB(gid);
+        List<ClassInfoDB> classinfo = studentService.selClassinfoDB(gid);
         LayuiResult result = new LayuiResult();
         result.setData(classinfo);
         return result;
@@ -83,7 +83,7 @@ public class StudentController extends BaseController {
         //  查询学生信息
         List<StudentDB> stu = studentService.selStudentId(id);
         //  查询班级
-        List<ClassinfoDB> cls = studentService.selClass();
+        List<ClassInfoDB> cls = studentService.selClass();
         //  查询政治面貌表
         List<PoliticsTypeDB> stupol = studentService.selPolitics();
         model.addAttribute("stu",stu);
@@ -98,7 +98,7 @@ public class StudentController extends BaseController {
         //  查询学生信息
         List<StudentDB> stu = studentService.selStudentId(id);
         //  查询班级
-        List<ClassinfoDB> cls = studentService.selClass();
+        List<ClassInfoDB> cls = studentService.selClass();
         //  查询政治面貌表
         List<PoliticsTypeDB> stupol = studentService.selPolitics();
         model.addAttribute("stu",stu);

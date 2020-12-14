@@ -9,39 +9,39 @@ import java.util.Date;
  */
 
 public class SelEvaluateVO implements Serializable {
-    private int tid;
-    private String tchid;
-    private String tname;
-    private String tgender;
-    private Date tbirthday;
-    private int pid;
-    private String tnation;
-    private String tcardid;
-    private String tphone;
-    private String taddress;
-    private int tchstate;
+    private int tid; //教师编号
+    private String tchid; //教师工号
+    private String tname; //姓名
+    private String tgender; //性别
+    private Date tbirthday; //出生年月
+    private int pid; //政治面貌编号
+    private String tnation; //民族
+    private String tcardid; //身份证号
+    private String tphone; //手机号
+    private String taddress; //家庭住址
+    private int tchstate; //教师状态
     private int exam;
     private int count;
     private int mid;
-    private int sid;
-    private String stuid;
+    private int sid; //学生编号
+    private String stuid; //学号
     private String stupwd;
-    private String sname;
-    private String sgender;
-    private Date sbirthday;
-    private String snation;
-    private String scardid;
-    private String sphone;
-    private String saddress;
-    private int stustate;
-    private int classid;
-    private int scid;
-    private int cid;
+    private String sname; //姓名
+    private String sgender; //性别
+    private Date sbirthday; //出生年月
+    private String snation; //民族
+    private String scardid; //身份证号
+    private String sphone; //手机号
+    private String saddress; //家庭住址
+    private int stustate; //学生状态
+    private int classid; //班级编号
+    private int scid; //学生选课记录编号
+    private int cid; //课程编号
     private int giid;
-    private  String pname;
+    private  String pname; //政治面貌名称
     private Date gitime;
     private String gaddress;
-    private String cname;
+    private String cname; //课程名称
     private int ccredit;
     private int cperiod;
     private int cstate;

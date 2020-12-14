@@ -51,9 +51,9 @@ public interface SchoolManageService {
     //级联专业查询对应年级
     List<SchoolManageVO> jlSelGrade(SchoolManageVO schoolManageVO);
     //添加班级
-    int addOneClass(ClassinfoDB classinfoDB);
+    int addOneClass(ClassInfoDB classinfoDB);
     //编辑班级
-    int editOneClass(ClassinfoDB classinfoDB);
+    int editOneClass(ClassInfoDB classinfoDB);
     //删除班级
     int delOneClass(Integer classid);
 
@@ -76,5 +76,5 @@ public interface SchoolManageService {
     int checkOneDpm(DepartmentDB departmentDB);
     int checkOneMajor(MajorDB majorDB);
     int checkOneGrade(GradeDB gradeDB);
-    int checkOneClass(ClassinfoDB classinfoDB);
+    int checkOneClass(ClassInfoDB classinfoDB);
 }

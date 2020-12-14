@@ -251,7 +251,7 @@ public class SchoolManageController extends BaseController {
      */
     @RequestMapping("addoneclass")
     @ResponseBody
-    public Object addOneClass(ClassinfoDB classinfoDB) {
+    public Object addOneClass(ClassInfoDB classinfoDB) {
         int check = schoolManageService.checkOneClass(classinfoDB);
         if (check > 0) {
             return false;
@@ -306,7 +306,7 @@ public class SchoolManageController extends BaseController {
      */
     @RequestMapping("editoneclass")
     @ResponseBody
-    public Object editOneClass(ClassinfoDB classinfoDB) {
+    public Object editOneClass(ClassInfoDB classinfoDB) {
         int check = schoolManageService.checkOneClass(classinfoDB);
         if (check > 0) {
             return false;

@@ -2,10 +2,8 @@ package com.nsapi.niceschoolapi.controller;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.nsapi.niceschoolapi.common.config.MySysUser;
 import com.nsapi.niceschoolapi.entity.*;
 import com.nsapi.niceschoolapi.service.SelCourseManageService;
-import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -72,9 +70,9 @@ public class SelCourseManController {
     @ResponseBody
     public Object selCl(Integer gid){
        // System.out.println(gid);
-        List<ClassinfoDB> classinfoDBS = selCourseManageService.selClass(gid);
+        List<ClassInfoDB> classInfoDBS = selCourseManageService.selClass(gid);
        // System.out.println(classinfoDBS);
-        return classinfoDBS;
+        return classInfoDBS;
     }
     @RequestMapping("selSt")
     @ResponseBody

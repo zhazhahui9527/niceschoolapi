@@ -11,7 +11,7 @@ public class EvaluateRecordDB implements Serializable {
   private Integer erid; //记录编号
   private String stuid; //学生学号
   private String tchid; //教师工号
-  private Integer erexam; //评教成绩
+  private Integer erscore; //评教分数
   private Integer isDel; //逻辑删除
 
   public Integer getErid() {
@@ -38,12 +38,12 @@ public class EvaluateRecordDB implements Serializable {
     this.tchid = tchid;
   }
 
-  public Integer getErexam() {
-    return erexam;
+  public Integer getErscore() {
+    return erscore;
   }
 
-  public void setErexam(Integer erexam) {
-    this.erexam = erexam;
+  public void setErscore(Integer erscore) {
+    this.erscore = erscore;
   }
 
   public Integer getIsDel() {

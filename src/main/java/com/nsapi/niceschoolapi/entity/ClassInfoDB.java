@@ -7,7 +7,7 @@ import java.util.Date;
  * 班级表
  */
 
-public class ClassinfoDB implements Serializable {
+public class ClassInfoDB implements Serializable {
 
   private Integer classid; //班级编号
   private String classname; //班级名称

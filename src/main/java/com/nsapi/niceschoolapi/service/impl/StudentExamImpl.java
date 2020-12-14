@@ -29,7 +29,7 @@ private StuExamMapper stuExamMapper;
     }
 
     @Override
-    public List<ClassinfoDB> selClasss(Integer gid) {
+    public List<ClassInfoDB> selClasss(Integer gid) {
         return stuExamMapper.selClasss(gid);
     }
 

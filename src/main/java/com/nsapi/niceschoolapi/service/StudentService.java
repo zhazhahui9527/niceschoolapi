@@ -13,7 +13,7 @@ public interface StudentService {
     //  根据id查询一条学生信息
     public List<StudentDB> selStudentId(Integer id);
     //  查询班级
-    public List<ClassinfoDB> selClass();
+    public List<ClassInfoDB> selClass();
     //  查询政治面貌表
     public List<PoliticsTypeDB> selPolitics();
     //  修改学生信息
@@ -27,5 +27,5 @@ public interface StudentService {
     //  根据专业查询年级
     List<GradeDB> selGradeDB(Integer mid);
     //  根据年级查询班级
-    List<ClassinfoDB> selClassinfoDB(Integer gid);
+    List<ClassInfoDB> selClassinfoDB(Integer gid);
 }

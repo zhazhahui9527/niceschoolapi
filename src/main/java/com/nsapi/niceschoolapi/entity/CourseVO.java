@@ -1,19 +1,22 @@
 package com.nsapi.niceschoolapi.entity;
 
+/**
+ * 关联表：CourseDB,CourseTypeDB,DepartmentDB
+ */
 public class CourseVO {
-    private Integer cid;
-    private String cname;
-    private Integer ccredit;
-    private Integer cperiod;
-    private Integer cstate;
-    private Integer cselcount;
-    private Integer cmaxcount;
-    private Integer ctid;
-    private Integer mid;
-    private String studytype;
-    private String ctname;
-    private String mname;
-    private Integer isDel;
+    private Integer cid; //课程编号
+    private String cname; //课程名称
+    private Integer ccredit; //学分
+    private Integer cperiod; //学时
+    private Integer cstate; //课程状态
+    private Integer cselcount; //已选人数
+    private Integer cmaxcount; //限定人数
+    private Integer ctid; //课程类型编号
+    private Integer mid; //专业编号
+    private String studytype; //修读类型
+    private String ctname; //类型名称
+    private String mname; //专业名称
+    private Integer isDel; //逻辑删除
 
     public Integer getIsDel() {
         return isDel;

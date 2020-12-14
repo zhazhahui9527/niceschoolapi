@@ -8,7 +8,7 @@ import java.util.Date;
  * 新闻表
  */
 
-public class NewsinfoDB implements Serializable {
+public class NewsInfoDB implements Serializable {
 
   private Integer nid; //新闻编号
   private String ntitle; //新闻标题
