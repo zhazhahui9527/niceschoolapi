@@ -19,23 +19,23 @@ public class AppraiseServiceImpl implements AppraiseService {
     private AppraiseMapper appraiseMapper;
     //查询全部对应教评的老师
     @Override
-    public List<SelEvaluateVO> findAllTch(SelEvaluateVO selEvaluateVO) {
-        return appraiseMapper.findAllTch(selEvaluateVO);
+    public List<SelEvaluateVO> findEvaTch(SelEvaluateVO selEvaluateVO) {
+        return appraiseMapper.findEvaTch(selEvaluateVO);
     }
     //查询全部教评题目
     @Override
-    public List<EvaluateListDB> findAllTM(EvaluateListDB evaluateListDB) {
-        return appraiseMapper.findAllTM(evaluateListDB);
+    public List<EvaluateListDB> findEvaList(EvaluateListDB evaluateListDB) {
+        return appraiseMapper.findEvaList(evaluateListDB);
     }
     //查询教评状态
     @Override
-    public int selOneState(EvaluateRecordDB evaluateRecordDB) {
-        return appraiseMapper.selOneState(evaluateRecordDB);
+    public int selEvaState(EvaluateRecordDB evaluateRecordDB) {
+        return appraiseMapper.selEvaState(evaluateRecordDB);
     }
     //添加教评
     @Override
-    public int addOneAppraise(EvaluateVO evaluateVO) {
-        return appraiseMapper.addOneAppraise(evaluateVO);
+    public int addAppraise(EvaluateVO evaluateVO) {
+        return appraiseMapper.addAppraise(evaluateVO);
     }
     //判断是否有教师成绩记录
     @Override

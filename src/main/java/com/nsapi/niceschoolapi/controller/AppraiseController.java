@@ -84,11 +84,11 @@ public class AppraiseController extends BaseController {
     /**
      * 获取教评教师列表
      */
-    @RequestMapping("findalltch")
+    @RequestMapping("findEvaTch")
     @ResponseBody
-    public Object findalltch(SelEvaluateVO selEvaluateVO){
+    public Object findEvaTch(SelEvaluateVO selEvaluateVO){
         selEvaluateVO.setStuid(MySysUser.loginName());
-        List<SelEvaluateVO> listAll = appraiseService.findAllTch(selEvaluateVO);
+        List<SelEvaluateVO> listAll = appraiseService.findEvaTch(selEvaluateVO);
         Map<String, Object> tchData = new HashMap<String, Object>();
         //这是layui要求返回的json数据格式
         tchData.put("code", 0);
@@ -100,11 +100,11 @@ public class AppraiseController extends BaseController {
     /**
      * 获取教评题目列表
      */
-    @RequestMapping("findalltm")
+    @RequestMapping("findEvaList")
     @ResponseBody
-    public Object findalltm(EvaluateListDB evaluateListDB, Integer page, Integer limit){
+    public Object findEvaList(EvaluateListDB evaluateListDB, Integer page, Integer limit){
         PageHelper.startPage(page, limit);
-        List<EvaluateListDB> listAll = appraiseService.findAllTM(evaluateListDB);
+        List<EvaluateListDB> listAll = appraiseService.findEvaList(evaluateListDB);
         PageInfo pageInfo = new PageInfo(listAll);
         Map<String, Object> tmData = new HashMap<String, Object>();
         //这是layui要求返回的json数据格式
@@ -120,11 +120,11 @@ public class AppraiseController extends BaseController {
     /**
      * 查询教评状态
      * */
-    @RequestMapping("selonestate")
+    @RequestMapping("selEvaState")
     @ResponseBody
-    public Object selOneState(EvaluateRecordDB evaluateRecordDB){
+    public Object selEvaState(EvaluateRecordDB evaluateRecordDB){
         evaluateRecordDB.setStuid(MySysUser.loginName());
-        int r = appraiseService.selOneState(evaluateRecordDB);
+        int r = appraiseService.selEvaState(evaluateRecordDB);
         if(r>0){
             return true;
         }else{
@@ -135,31 +135,31 @@ public class AppraiseController extends BaseController {
     /**
      * 提交教评
      */
-    @RequestMapping("addoneappraise")
+    @RequestMapping("addAppraise")
     @ResponseBody
-    public Object addOneAppraise(EvaluateVO evaluateVO){
+    public Object addAppraise(EvaluateVO evaluateVO){
         evaluateVO.setStuid(MySysUser.loginName());
         //判断成绩是否存在
         int res1 = appraiseService.selTchExamState(evaluateVO);
         if(res1>0){
             //添加记录
-            int res_addOneAppraise = appraiseService.addOneAppraise(evaluateVO);
+            int res_addAppraise = appraiseService.addAppraise(evaluateVO);
             //更新成绩
             int res_updOneTchExam = appraiseService.updOneTchExam(evaluateVO);
-            if(res_addOneAppraise==1&&res_updOneTchExam==1){
+            if(res_addAppraise==1&&res_updOneTchExam==1){
                 return true;
             }else{
                 return false;
             }
         }else if(res1==0){
             //添加记录
-            int res_addOneAppraise = appraiseService.addOneAppraise(evaluateVO);
+            int res_addAppraise = appraiseService.addAppraise(evaluateVO);
             evaluateVO.setPcount(1);
             evaluateVO.setExam(evaluateVO.getErscore());
             //新增成绩
             int res_addOneTchExam = appraiseService.addOneTchExam(evaluateVO);
 
-            if(res_addOneAppraise==1&&res_addOneTchExam==1){
+            if(res_addAppraise==1&&res_addOneTchExam==1){
                 return true;
             }else{
                 return false;

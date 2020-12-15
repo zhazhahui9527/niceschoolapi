@@ -47,7 +47,7 @@
         //获取分页数据列表
         table.render({
             elem: '#tchlist'
-            , url: '/appraise/findalltch'
+            , url: '/appraise/findEvaTch'
             , cols: [
                 [
                     {field: 'tname', title: '教师姓名'}
@@ -67,7 +67,7 @@
                 //查询教评状态
                 $.ajax({
                     type: 'post',
-                    url: '/appraise/selonestate',
+                    url: '/appraise/selEvaState',
                     data: {
                         tchid: data.tchid
                     },
@@ -83,7 +83,7 @@
                             //开始获取题目数据
                             $.ajax({
                                 type: 'post',
-                                url: '/appraise/findalltm',
+                                url: '/appraise/findEvaList',
                                 data: {
                                     page: 1,
                                     limit: 100
@@ -131,7 +131,7 @@
                                             layer.confirm('最终打分为'+ sum +'分，确定要提交吗？', function (index) {
                                                 $.ajax({
                                                     type: 'post',
-                                                    url: '/appraise/addoneappraise',
+                                                    url: '/appraise/addAppraise',
                                                     data: {
                                                         tid:data.tchid,
                                                         tchid:data.tchid,

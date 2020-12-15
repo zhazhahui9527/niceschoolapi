@@ -11,13 +11,13 @@ import java.util.List;
 @Mapper
 public interface AppraiseMapper {
     //查询全部对应教评的老师
-    List<SelEvaluateVO> findAllTch(SelEvaluateVO selEvaluateVO);
+    List<SelEvaluateVO> findEvaTch(SelEvaluateVO selEvaluateVO);
     //查询全部教评题目
-    List<EvaluateListDB> findAllTM(EvaluateListDB evaluateListDB);
+    List<EvaluateListDB> findEvaList(EvaluateListDB evaluateListDB);
     //查询教评状态
-    int selOneState(EvaluateRecordDB evaluateRecordDB);
+    int selEvaState(EvaluateRecordDB evaluateRecordDB);
     //添加教评记录
-    int addOneAppraise(EvaluateVO evaluateVO);
+    int addAppraise(EvaluateVO evaluateVO);
     //判断是否有教师成绩记录
     int selTchExamState(EvaluateVO evaluateVO);
     //添加教师分数及教评人数

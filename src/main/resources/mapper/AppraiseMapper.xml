@@ -4,20 +4,20 @@
 
 <mapper namespace="com.nsapi.niceschoolapi.mapper.AppraiseMapper">
     <!--查询全部对应教评的老师-->
-    <select id="findAllTch" resultType="SelEvaluateVO">
+    <select id="findEvaTch" resultType="SelEvaluateVO">
 select DISTINCT tc.*,c.cname from teacher tc,tch_course tco,tch_class tcl,course c,student s where
 tc.tid = tco.tid and tco.cid = c.cid and tc.tid = tcl.tid and tcl.classid = s.classid and s.sid = #{stuid}
     </select>
     <!--查询全部教评题目-->
-    <select id="findAllTM" resultType="EvaluateListDB">
+    <select id="findEvaList" resultType="EvaluateListDB">
        select * from evaluate_list
     </select>
     <!--查询教评状态-->
-    <select id="selOneState" resultType="Integer">
+    <select id="selEvaState" resultType="Integer">
        select count(*) from evaluate_record where stuid=#{stuid} and tchid=#{tchid}
     </select>
     <!--添加教评记录-->
-    <insert id="addOneAppraise" parameterType="EvaluateVO">
+    <insert id="addAppraise" parameterType="EvaluateVO">
         insert into evaluate_record(stuid,tchid,erscore,is_del) values(#{stuid},#{tchid},#{erscore},0)
     </insert>
     <!--判断是否有教师成绩记录-->
