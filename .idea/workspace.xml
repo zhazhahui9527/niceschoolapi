@@ -15,31 +15,8 @@
   <component name="ChangeListManager">
     <list default="true" id="32e2b928-60b9-42c7-9397-233dbb3b89c8" name="Default Changelist" comment="2020/12/14 17:18">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/common/realm/AuthRealm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/common/realm/AuthRealm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/AddStudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/AddStudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/IndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/LonginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/NewsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/NewsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/SelectCourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/SelectCourseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/StudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/courseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/CourseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/mapper/NewsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/mapper/NewsMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/mapper/SelectCourseMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/mapper/SelectCourseMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/mapper/StudentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/mapper/StudentMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/service/NewsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/service/NewsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/service/SelectCourseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/service/SelectCourseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/service/StudentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/service/impl/NewsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/service/impl/NewsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/service/impl/SelectCourseImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/service/impl/SelectCourseImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/service/impl/StudentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/service/impl/StudentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/NewsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/NewsMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/SelectCourseMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/SelectCourseMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/StudentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/StudentMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/schoolmanage/dpmmanage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/schoolmanage/dpmmanage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/student/addStudent.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/student/addStudent.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/student/selStuExam.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/student/selStuMessage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/student/selStudent.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/student/selStudent.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/student/updStudent.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/student/updateStudent.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/SelCourseManController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/SelCourseManageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/SelCourseMan.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/SelCourseManage.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -458,6 +435,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="741" y="277" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1607677040073" />
+    <state x="784" y="421" key="Github.CreateGistDialog" timestamp="1608012204072">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="784" y="421" key="Github.CreateGistDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1608012204072" />
     <state x="820" y="420" key="Github.ShareDialog" timestamp="1607678059499">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -466,38 +447,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="602" y="220" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607678094212" />
-    <state width="1742" height="310" key="GridCell.Tab.0.bottom" timestamp="1608000576341">
+    <state width="1742" height="321" key="GridCell.Tab.0.bottom" timestamp="1608015289393">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1742" height="310" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608000576341" />
-    <state width="1742" height="310" key="GridCell.Tab.0.center" timestamp="1608000576341">
+    <state width="1742" height="321" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608015289393" />
+    <state width="1742" height="321" key="GridCell.Tab.0.center" timestamp="1608015289393">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1742" height="310" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608000576341" />
-    <state width="1742" height="310" key="GridCell.Tab.0.left" timestamp="1608000576341">
+    <state width="1742" height="321" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608015289393" />
+    <state width="1742" height="321" key="GridCell.Tab.0.left" timestamp="1608015289393">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1742" height="310" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608000576341" />
-    <state width="1742" height="310" key="GridCell.Tab.0.right" timestamp="1608000576341">
+    <state width="1742" height="321" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608015289393" />
+    <state width="1742" height="321" key="GridCell.Tab.0.right" timestamp="1608015289393">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1742" height="310" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608000576341" />
-    <state width="1742" height="310" key="GridCell.Tab.1.bottom" timestamp="1608000576341">
+    <state width="1742" height="321" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608015289393" />
+    <state width="1742" height="321" key="GridCell.Tab.1.bottom" timestamp="1608015289393">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1742" height="310" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608000576341" />
-    <state width="1742" height="310" key="GridCell.Tab.1.center" timestamp="1608000576341">
+    <state width="1742" height="321" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608015289393" />
+    <state width="1742" height="321" key="GridCell.Tab.1.center" timestamp="1608015289393">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1742" height="310" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608000576341" />
-    <state width="1742" height="310" key="GridCell.Tab.1.left" timestamp="1608000576341">
+    <state width="1742" height="321" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608015289393" />
+    <state width="1742" height="321" key="GridCell.Tab.1.left" timestamp="1608015289393">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1742" height="310" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608000576341" />
-    <state width="1742" height="310" key="GridCell.Tab.1.right" timestamp="1608000576341">
+    <state width="1742" height="321" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608015289393" />
+    <state width="1742" height="321" key="GridCell.Tab.1.right" timestamp="1608015289393">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1742" height="310" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608000576341" />
+    <state width="1742" height="321" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608015289393" />
     <state x="462" y="167" key="SettingsEditor" timestamp="1607677043977">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -506,10 +487,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="553" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1607937559713" />
-    <state x="510" y="168" width="1099" height="688" key="find.popup" timestamp="1608001190634">
+    <state x="607" y="208" width="1099" height="688" key="find.popup" timestamp="1608016138160">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="510" y="168" width="1099" height="688" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1608001190634" />
+    <state x="607" y="208" width="1099" height="688" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1608016138160" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />

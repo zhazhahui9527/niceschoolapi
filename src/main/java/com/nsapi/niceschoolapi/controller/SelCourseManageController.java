@@ -14,14 +14,14 @@ import java.util.List;
 import java.util.Map;
 
 @Controller
-public class SelCourseManController {
+public class SelCourseManageController {
     @Autowired
     private SelCourseManageService selCourseManageService;
 
-    @RequestMapping("selCourses")
+    @RequestMapping("selCourseManage")
     public String selCourses(){
-        System.out.println("----------------------");
-        return "SelCourseMan";
+//        System.out.println("----------------------");
+        return "SelCourseManage";
     }
     @RequestMapping("selSc")
     @ResponseBody
