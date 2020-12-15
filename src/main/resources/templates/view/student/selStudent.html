@@ -121,7 +121,7 @@
                     $("#required4").html("");
                     layui.$.ajax({
                         type : 'post',
-                        url : "selectdid",
+                        url : "findByDid",
                         data : {
                             'did' : data.value
                         },
@@ -139,7 +139,7 @@
                             if(required2!=0){
                                 layui.$.ajax({
                                     type : 'post',
-                                    url : "selectmid",
+                                    url : "findByMid",
                                     data : {
                                         'mid' : required2
                                     },
@@ -157,7 +157,7 @@
                                         if(required3!=null){
                                             layui.$.ajax({
                                                 type : 'post',
-                                                url : "selectgid",
+                                                url : "findByGid",
                                                 data : {
                                                     'gid' : required3
                                                 },
@@ -197,7 +197,7 @@
                 if(data.value!=0){
                     layui.$.ajax({
                         type : 'post',
-                        url : "selectmid",
+                        url : "findByMid",
                         data : {
                             'mid' : data.value
                         },
@@ -214,7 +214,7 @@
                             if(required3!=null){
                                 layui.$.ajax({
                                     type : 'post',
-                                    url : "selectgid",
+                                    url : "findByGid",
                                     data : {
                                         'gid' : required3
                                     },
@@ -247,7 +247,7 @@
                 if(data.value!=0){
                     layui.$.ajax({
                         type : 'post',
-                        url : "selectgid",
+                        url : "findByGid",
                         data : {
                             'gid' : data.value
                         },
@@ -335,7 +335,7 @@
                                 shadeClose:true,          //点击遮罩层外区域关闭遮罩层
                                 area: ['580px', '500px'],    //弹出框大小
                                 anim: 1,              //弹出动画
-                                content:'selStudentId?id='+checkStatus.data[0].sid
+                                content:'selStudentById?id='+checkStatus.data[0].sid
                             });
                         }
                         break;
@@ -375,7 +375,7 @@
                         shadeClose:true,          //点击遮罩层外区域关闭遮罩层
                         area: ['580px', '500px'],   //弹出框大小
                         anim: 1,              //弹出动画
-                        content:'selStudentId?id='+data.sid
+                        content:'selStudentById?id='+data.sid
                     });
                 }
                 //查看详情

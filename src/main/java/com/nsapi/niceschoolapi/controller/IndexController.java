@@ -40,9 +40,9 @@ public class IndexController {
      */
     @RequestMapping("newslist")
     @ResponseBody
-    public Object NewsList(NewsInfoDB newsinfoDB, Integer page){
+    public Object NewsList(NewsInfoDB newsInfoDB, Integer page){
         PageHelper.startPage(page,5);
-        List<NewsInfoDB> listAll = newsService.findAllNews(newsinfoDB);
+        List<NewsInfoDB> listAll = newsService.findAllNews(newsInfoDB);
         PageInfo pageInfo = new PageInfo(listAll);
         Map<String, Object> newsList = new HashMap<String, Object>();
         //这是layui要求返回的json数据格式

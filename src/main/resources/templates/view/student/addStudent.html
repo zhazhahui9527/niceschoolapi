@@ -259,7 +259,7 @@
                 $("#required4").find("option").remove();
                 layui.$.ajax({
                     type: 'post',
-                    url: "selectdid",
+                    url: "findByDid",
                     data: {
                         'did': data.value
                     },
@@ -277,7 +277,7 @@
                         if (required2 != 0) {
                             layui.$.ajax({
                                 type: 'post',
-                                url: "selectmid",
+                                url: "findByMid",
                                 data: {
                                     'mid': required2
                                 },
@@ -295,7 +295,7 @@
                                     if (required3 != null) {
                                         layui.$.ajax({
                                             type: 'post',
-                                            url: "selectgid",
+                                            url: "findByGid",
                                             data: {
                                                 'gid': required3
                                             },
@@ -340,7 +340,7 @@
             if (data.value != 0) {
                 layui.$.ajax({
                     type: 'post',
-                    url: "selectmid",
+                    url: "findByMid",
                     data: {
                         'mid': data.value
                     },
@@ -357,7 +357,7 @@
                         if (required3 != null) {
                             layui.$.ajax({
                                 type: 'post',
-                                url: "selectgid",
+                                url: "findByGid",
                                 data: {
                                     'gid': required3
                                 },
@@ -394,7 +394,7 @@
             if (data.value != 0) {
                 layui.$.ajax({
                     type: 'post',
-                    url: "selectgid",
+                    url: "findByGid",
                     data: {
                         'gid': data.value
                     },

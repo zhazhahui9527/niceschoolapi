@@ -9,81 +9,37 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
+    <expand />
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="32e2b928-60b9-42c7-9397-233dbb3b89c8" name="Default Changelist" comment="2020/12/11 17:27">
+    <list default="true" id="32e2b928-60b9-42c7-9397-233dbb3b89c8" name="Default Changelist" comment="2020/12/14 17:18">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/AppraiseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/AppraiseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/common/realm/AuthRealm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/common/realm/AuthRealm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/AddStudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/AddStudentController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/IndexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/LonginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/NewsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/NewsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/SchoolManageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/SchoolManageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/SelCourseManController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/SelCourseManController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/StuExamController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/StuExamController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/SelectCourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/SelectCourseController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/StudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/TchCourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/TchCourseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/TchSelStuExamController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/TchSelStuExamController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/entity/ClassinfoDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/entity/ClassInfoDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/entity/CourseDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/entity/CourseDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/entity/CourseTypeDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/entity/CourseTypeDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/entity/CourseVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/entity/CourseVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/entity/DepartmentDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/entity/DepartmentDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/entity/EvaluateRecordDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/entity/EvaluateRecordDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/entity/EvaluateVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/entity/EvaluateVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/entity/Group.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/entity/Group.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/entity/NewsinfoDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/entity/NewsInfoDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/entity/Rescource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/entity/Rescource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/entity/ScheduleDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/entity/ScheduleDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/entity/SchoolManageVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/entity/SchoolManageVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/entity/SelAllExamVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/entity/SelAllExamVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/entity/SelCourseVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/entity/SelCourseVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/entity/SelEvaluateVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/entity/SelEvaluateVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/entity/StudentVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/entity/StudentVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/entity/TchClassDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/entity/TchClassDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/entity/TchCourseDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/entity/TchCourseDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/entity/WeeksDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/entity/WeekDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/courseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/CourseController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/mapper/NewsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/mapper/NewsMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/mapper/RescourceMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/mapper/RescourceMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/mapper/SchoolManageMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/mapper/SchoolManageMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/mapper/SelCourseManageMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/mapper/SelCourseManageMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/mapper/StuExamMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/mapper/StuExamMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/mapper/SelectCourseMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/mapper/SelectCourseMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/mapper/StudentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/mapper/StudentMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/mapper/TchCourseMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/mapper/TchCourseMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/service/NewsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/service/NewsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/service/SchoolManageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/service/SchoolManageService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/service/SelCourseManageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/service/SelCourseManageService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/service/StudentExamService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/service/StudentExamService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/service/SelectCourseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/service/SelectCourseService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/service/StudentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/service/TchCourseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/service/TchCourseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/service/UploadService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/service/UploadService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/service/impl/NewsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/service/impl/NewsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/service/impl/SchoolManageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/service/impl/SchoolManageServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/service/impl/SelCourseManageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/service/impl/SelCourseManageServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/service/impl/StudentExamImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/service/impl/StudentExamImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/service/impl/SelectCourseImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/service/impl/SelectCourseImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/service/impl/StudentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/service/impl/StudentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/service/impl/TchCourseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/service/impl/TchCourseServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/service/impl/UploadServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/service/impl/UploadServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/AppraiseMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/AppraiseMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/SelCourseManageMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/SelCourseManageMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/StuExamMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/StuExamMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/TchCourseMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/TchCourseMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/appraise/seltch.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/appraise/seltch.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/NewsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/NewsMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/SelectCourseMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/SelectCourseMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/StudentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/StudentMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/schoolmanage/dpmmanage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/schoolmanage/dpmmanage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/student/addStudent.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/student/addStudent.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/student/selStuExam.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/student/selStuMessage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/student/selStudent.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/student/selStudent.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/student/updStudent.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/student/updateStudent.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,15 +108,13 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -224,6 +178,7 @@
       <workItem from="1594287314810" duration="1983000" />
       <workItem from="1595563842158" duration="9630000" />
       <workItem from="1607676995430" duration="2568000" />
+      <workItem from="1607995970020" duration="5218000" />
     </task>
     <task id="LOCAL-00001" summary="提交测试">
       <created>1572971677972</created>
@@ -400,7 +355,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607678836701</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="2020/12/14 17:18">
+      <created>1607937553522</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1607937553522</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -430,11 +392,41 @@
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
             <State />
           </value>
         </entry>
+      </map>
+    </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="1" value="TOOL_WINDOW" />
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
@@ -450,7 +442,8 @@
     <MESSAGE value="完成部分教师授课管理" />
     <MESSAGE value="最终" />
     <MESSAGE value="2020/12/11 17:27" />
-    <option name="LAST_COMMIT_MESSAGE" value="2020/12/11 17:27" />
+    <MESSAGE value="2020/12/14 17:18" />
+    <option name="LAST_COMMIT_MESSAGE" value="2020/12/14 17:18" />
   </component>
   <component name="WindowStateProjectService">
     <state x="638" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1607931880949">
@@ -473,50 +466,50 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="602" y="220" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607678094212" />
-    <state width="1742" height="318" key="GridCell.Tab.0.bottom" timestamp="1607937036544">
+    <state width="1742" height="310" key="GridCell.Tab.0.bottom" timestamp="1608000576341">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1742" height="318" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607937036544" />
-    <state width="1742" height="318" key="GridCell.Tab.0.center" timestamp="1607937036543">
+    <state width="1742" height="310" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608000576341" />
+    <state width="1742" height="310" key="GridCell.Tab.0.center" timestamp="1608000576341">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1742" height="318" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607937036543" />
-    <state width="1742" height="318" key="GridCell.Tab.0.left" timestamp="1607937036543">
+    <state width="1742" height="310" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608000576341" />
+    <state width="1742" height="310" key="GridCell.Tab.0.left" timestamp="1608000576341">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1742" height="318" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607937036543" />
-    <state width="1742" height="318" key="GridCell.Tab.0.right" timestamp="1607937036543">
+    <state width="1742" height="310" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608000576341" />
+    <state width="1742" height="310" key="GridCell.Tab.0.right" timestamp="1608000576341">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1742" height="318" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607937036543" />
-    <state width="1742" height="318" key="GridCell.Tab.1.bottom" timestamp="1607937036544">
+    <state width="1742" height="310" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608000576341" />
+    <state width="1742" height="310" key="GridCell.Tab.1.bottom" timestamp="1608000576341">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1742" height="318" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607937036544" />
-    <state width="1742" height="318" key="GridCell.Tab.1.center" timestamp="1607937036544">
+    <state width="1742" height="310" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608000576341" />
+    <state width="1742" height="310" key="GridCell.Tab.1.center" timestamp="1608000576341">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1742" height="318" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607937036544" />
-    <state width="1742" height="318" key="GridCell.Tab.1.left" timestamp="1607937036544">
+    <state width="1742" height="310" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608000576341" />
+    <state width="1742" height="310" key="GridCell.Tab.1.left" timestamp="1608000576341">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1742" height="318" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607937036544" />
-    <state width="1742" height="318" key="GridCell.Tab.1.right" timestamp="1607937036544">
+    <state width="1742" height="310" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608000576341" />
+    <state width="1742" height="310" key="GridCell.Tab.1.right" timestamp="1608000576341">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1742" height="318" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607937036544" />
+    <state width="1742" height="310" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608000576341" />
     <state x="462" y="167" key="SettingsEditor" timestamp="1607677043977">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="462" y="167" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1607677043977" />
-    <state x="553" y="256" key="Vcs.Push.Dialog.v2" timestamp="1607678844730">
+    <state x="553" y="256" key="Vcs.Push.Dialog.v2" timestamp="1607937559713">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="553" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1607678844730" />
-    <state x="662" y="308" width="938" height="594" key="find.popup" timestamp="1607937262979">
+    <state x="553" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1607937559713" />
+    <state x="510" y="168" width="1099" height="688" key="find.popup" timestamp="1608001190634">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="662" y="308" width="938" height="594" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1607937262979" />
+    <state x="510" y="168" width="1099" height="688" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1608001190634" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />

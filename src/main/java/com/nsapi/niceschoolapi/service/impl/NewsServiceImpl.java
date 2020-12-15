@@ -15,8 +15,8 @@ public class NewsServiceImpl implements NewsService {
     @Resource
     private NewsMapper newsMapper;
     @Override
-    public List<NewsInfoDB> findAllNews(NewsInfoDB newsinfoDB) {
-        return newsMapper.findAllNews(newsinfoDB);
+    public List<NewsInfoDB> findAllNews(NewsInfoDB newsInfoDB) {
+        return newsMapper.findAllNews(newsInfoDB);
     }
 
     @Override
@@ -25,12 +25,12 @@ public class NewsServiceImpl implements NewsService {
     }
 
     @Override
-    public int addNews(NewsInfoDB newsinfoDB) {
-        return newsMapper.addNews(newsinfoDB);
+    public int addNews(NewsInfoDB newsInfoDB) {
+        return newsMapper.addNews(newsInfoDB);
     }
 
     @Override
-    public int editNews(NewsInfoDB newsinfoDB) {
-        return newsMapper.editNews(newsinfoDB);
+    public int editNews(NewsInfoDB newsInfoDB) {
+        return newsMapper.editNews(newsInfoDB);
     }
 }

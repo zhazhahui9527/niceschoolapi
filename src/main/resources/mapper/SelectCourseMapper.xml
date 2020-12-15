@@ -36,7 +36,7 @@
         SELECT count(*) FROM stu_course a where a.sid=#{sid} and a.cid=#{cid}
     </select>
     <!-- 查询课程所属学生的编号 -->
-    <select id="selStudentid" resultType="StudentDB" parameterType="StudentDB">
+    <select id="selStuid" resultType="StudentDB" parameterType="StudentDB">
         SELECT sid from student where stuid=#{stuid}
     </select>
     <!-- 学生选择课程 -->

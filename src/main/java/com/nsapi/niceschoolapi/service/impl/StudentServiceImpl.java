@@ -42,8 +42,8 @@ public class StudentServiceImpl implements StudentService {
 
     //  根据id查询一条学生信息
     @Override
-    public List<StudentDB> selStudentId(Integer id) {
-        return studentMapper.selStudentId(id);
+    public List<StudentDB> selStudentById(Integer id) {
+        return studentMapper.selStudentById(id);
     }
 
     //  查询班级
@@ -86,8 +86,8 @@ public class StudentServiceImpl implements StudentService {
 
     //  根据年级查询班级
     @Override
-    public List<ClassInfoDB> selClassinfoDB(Integer gid) {
-        return studentMapper.selClassinfoDB(gid);
+    public List<ClassInfoDB> selClassInfoDB(Integer gid) {
+        return studentMapper.selClassInfoDB(gid);
     }
 
 }

@@ -28,8 +28,8 @@ private SelectCourseMapper selectCourseMapper;
     }
     //查询学生id
     @Override
-    public StudentDB selStudentid(String stuid) {
-        return selectCourseMapper.selStudentid(stuid);
+    public StudentDB selStuid(String stuid) {
+        return selectCourseMapper.selStuid(stuid);
     }
 
     //查询是否有该课程

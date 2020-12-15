@@ -48,7 +48,7 @@ public class StudentController extends BaseController {
     }
 
     //  根据系部查询专业
-    @RequestMapping("selectdid")
+    @RequestMapping("findByDid")
     @ResponseBody
     public LayuiResult<Map> selMajorDB(Integer did){
         List<MajorDB> major  =studentService.selMajorDB(did);
@@ -57,7 +57,7 @@ public class StudentController extends BaseController {
         return result;
     }
     //  根据专业查询年级
-    @RequestMapping("selectmid")
+    @RequestMapping("findByMid")
     @ResponseBody
     public LayuiResult<Map> selGradeDB(Integer mid){
         List<GradeDB> grade = studentService.selGradeDB(mid);
@@ -67,10 +67,10 @@ public class StudentController extends BaseController {
     }
 
     //  根据年级查询班级
-    @RequestMapping("selectgid")
+    @RequestMapping("findByGid")
     @ResponseBody
-    public LayuiResult<Map> selClassinfoDB(Integer gid){
-        List<ClassInfoDB> classinfo = studentService.selClassinfoDB(gid);
+    public LayuiResult<Map> selClassInfoDB(Integer gid){
+        List<ClassInfoDB> classinfo = studentService.selClassInfoDB(gid);
         LayuiResult result = new LayuiResult();
         result.setData(classinfo);
         return result;
@@ -78,10 +78,10 @@ public class StudentController extends BaseController {
 
 
     //  根据id查询一条学生信息以此进行修改
-    @RequestMapping("/selStudentId")
-    public String selStudentId(Integer id, Model model){
+    @RequestMapping("/selStudentById")
+    public String selStudentById(Integer id, Model model){
         //  查询学生信息
-        List<StudentDB> stu = studentService.selStudentId(id);
+        List<StudentDB> stu = studentService.selStudentById(id);
         //  查询班级
         List<ClassInfoDB> cls = studentService.selClass();
         //  查询政治面貌表
@@ -89,14 +89,14 @@ public class StudentController extends BaseController {
         model.addAttribute("stu",stu);
         model.addAttribute("cls",cls);
         model.addAttribute("stupol",stupol);
-        return "view/student/updStudent";
+        return "view/student/updateStudent";
     }
 
     //  根据id查询显示学生详细信息
     @RequestMapping("/selectMessage")
     public String selectMessage(Integer id, Model model){
         //  查询学生信息
-        List<StudentDB> stu = studentService.selStudentId(id);
+        List<StudentDB> stu = studentService.selStudentById(id);
         //  查询班级
         List<ClassInfoDB> cls = studentService.selClass();
         //  查询政治面貌表
@@ -104,7 +104,7 @@ public class StudentController extends BaseController {
         model.addAttribute("stu",stu);
         model.addAttribute("cls",cls);
         model.addAttribute("stupol",stupol);
-        return "view/student/selStuExam";
+        return "view/student/selStuMessage";
     }
 
     //  修改用户信息

@@ -43,8 +43,8 @@ public class NewsController extends BaseController {
      */
     @RequestMapping("addingnews")
     @ResponseBody
-    public Object addingNews(NewsInfoDB newsinfoDB){
-        int r = newsService.addNews(newsinfoDB);
+    public Object addingNews(NewsInfoDB newsInfoDB){
+        int r = newsService.addNews(newsInfoDB);
         if(r==1){
             return true;
         }else{
@@ -57,9 +57,9 @@ public class NewsController extends BaseController {
      */
     @RequestMapping("findallnews")
     @ResponseBody
-    public Object findallnews(NewsInfoDB newsinfoDB, Integer page, Integer limit){
+    public Object findallnews(NewsInfoDB newsInfoDB, Integer page, Integer limit){
         PageHelper.startPage(page, limit);
-        List<NewsInfoDB> listAll = newsService.findAllNews(newsinfoDB);
+        List<NewsInfoDB> listAll = newsService.findAllNews(newsInfoDB);
         PageInfo pageInfo = new PageInfo(listAll);
         Map<String, Object> newsData = new HashMap<String, Object>();
         //这是layui要求返回的json数据格式
@@ -91,8 +91,8 @@ public class NewsController extends BaseController {
      */
     @RequestMapping("editingnews")
     @ResponseBody
-    public Object editNews(NewsInfoDB newsinfoDB){
-        int r = newsService.editNews(newsinfoDB);
+    public Object editNews(NewsInfoDB newsInfoDB){
+        int r = newsService.editNews(newsInfoDB);
         if(r==1){
             return true;
         }else{

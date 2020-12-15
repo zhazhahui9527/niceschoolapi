@@ -36,9 +36,9 @@ import java.io.IOException;
 import java.util.*;
 
 @Controller
-public class LonginController {
+public class LoginController {
 
-    private final static Logger LOGGER = LoggerFactory.getLogger(LonginController.class);
+    private final static Logger LOGGER = LoggerFactory.getLogger(LoginController.class);
 
     public final static String LOGIN_TYPE = "loginType";
 

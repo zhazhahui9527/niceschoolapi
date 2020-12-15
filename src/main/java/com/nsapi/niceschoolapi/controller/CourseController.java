@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Map;
 
 @Controller
-public class courseController {
+public class CourseController {
     @Autowired
     private com.nsapi.niceschoolapi.service.courselService courselService;
 

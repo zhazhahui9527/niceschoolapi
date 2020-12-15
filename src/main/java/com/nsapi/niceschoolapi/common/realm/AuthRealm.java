@@ -1,6 +1,6 @@
 package com.nsapi.niceschoolapi.common.realm;
 
-import com.nsapi.niceschoolapi.controller.LonginController;
+import com.nsapi.niceschoolapi.controller.LoginController;
 import com.nsapi.niceschoolapi.entity.Menu;
 import com.nsapi.niceschoolapi.entity.Role;
 import com.nsapi.niceschoolapi.entity.User;
@@ -76,9 +76,9 @@ public class AuthRealm extends AuthorizingRealm {
         }
         ServletRequest request = ((WebSubject)SecurityUtils.getSubject()).getServletRequest();
         HttpSession httpSession = ((HttpServletRequest)request).getSession();
-        Object attribute = httpSession.getAttribute(LonginController.LOGIN_TYPE);
-        LonginController.LoginTypeEnum loginType = attribute == null ? null : (LonginController.LoginTypeEnum)attribute;
-        if(LonginController.LoginTypeEnum.ADMIN.equals(loginType)) {
+        Object attribute = httpSession.getAttribute(LoginController.LOGIN_TYPE);
+        LoginController.LoginTypeEnum loginType = attribute == null ? null : (LoginController.LoginTypeEnum)attribute;
+        if(LoginController.LoginTypeEnum.ADMIN.equals(loginType)) {
             if(Boolean.FALSE.equals(user.getAdminUser())) {
                 throw new UserTypeAccountException(); //帐号不是后台账户
             }

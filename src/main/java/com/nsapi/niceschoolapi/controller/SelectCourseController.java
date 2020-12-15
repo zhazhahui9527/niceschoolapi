@@ -23,7 +23,7 @@ public class SelectCourseController {
     @RequestMapping("sel")
     public String sel(Model model){
         String stuid= MySysUser.loginName();
-        StudentDB sid= selectCourseService.selStudentid(stuid);
+        StudentDB sid= selectCourseService.selStuid(stuid);
         model.addAttribute("sid",sid);
         return "view/student/SelectCourse";
     }

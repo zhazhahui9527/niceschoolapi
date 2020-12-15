@@ -63,7 +63,7 @@
     </select>
 
     <!-- 根据学生id查询学生信息 -->
-    <select id="selStudentId" resultType="StudentDB">
+    <select id="selStudentById" resultType="StudentDB">
         select * from student where sid = #{sid}
     </select>
     <!-- 查询班级 -->
@@ -94,7 +94,7 @@
         select * from grade where mid = #{mid}
     </select>
     <!-- 根据年级查询班级 -->
-    <select id="selClassinfoDB" resultType="ClassinfoDB">
+    <select id="selClassInfoDB" resultType="ClassInfoDB">
         select * from classinfo where gid = #{gid}
     </select>
 </mapper>
