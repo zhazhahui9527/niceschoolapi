@@ -26,17 +26,17 @@ public class AppraiseController extends BaseController {
     /**
      * 进入查询教评教师页面
      */
-    @RequestMapping("seltch")
-    public String seltch() {
-        return "view/appraise/seltch";
+    @RequestMapping("evaTeacher")
+    public String evaTeacher() {
+        return "view/appraise/evaTeacher";
     }
 
     /**
      * 进入教评问题管理页面
      */
-    @RequestMapping("evlistcontrol")
-    public String evListControl() {
-        return "view/appraise/evlistcontrol";
+    @RequestMapping("evaManage")
+    public String evaManage() {
+        return "view/appraise/evaManage";
     }
 
     /**

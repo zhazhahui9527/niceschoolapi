@@ -21,7 +21,7 @@ public class SelCourseManageController {
     @RequestMapping("selCourseManage")
     public String selCourses(){
 //        System.out.println("----------------------");
-        return "SelCourseManage";
+        return "selCourseManage";
     }
     @RequestMapping("selSc")
     @ResponseBody
@@ -91,9 +91,9 @@ public class SelCourseManageController {
         return courseDBS;
     }
     //退课
-    @RequestMapping("dropCous")
+    @RequestMapping("dropCou")
     @ResponseBody
-    public Object dropCous(Integer sid,Integer cid){
+    public Object dropCou(Integer sid,Integer cid){
 
         int dropcou = selCourseManageService.dropcou(sid, cid);
         int updatecou = selCourseManageService.updatecou(cid);
@@ -104,9 +104,9 @@ public class SelCourseManageController {
         }
     }
     //换课
-    @RequestMapping("changesCou")
+    @RequestMapping("changeCou")
     @ResponseBody
-    public Object changesCou( Integer ccd,  Integer sid,Integer cid) {
+    public Object changeCou( Integer ccd,  Integer sid,Integer cid) {
         /*System.out.println(ccd+"8888888");
         System.out.println(sid+"-----"+cid);*/
         int i = selCourseManageService.selStc(ccd, sid);
@@ -114,7 +114,7 @@ public class SelCourseManageController {
         if (i > 0) {
             return "该学生已经选过这门课";
         } else {
-            int dropcou = selCourseManageService.changesCou(ccd, sid, cid);
+            int dropcou = selCourseManageService.changeCou(ccd, sid, cid);
             if (dropcou > 0) {
                 return "换课成功";
             } else {

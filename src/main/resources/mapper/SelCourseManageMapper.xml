@@ -33,7 +33,7 @@
     <update id="updatecou" parameterType="Integer">
         update course set cselcount=cselcount-1 where cid=#{cid}
     </update>
-    <update id="changesCou" parameterType="Integer">
+    <update id="changeCou" parameterType="Integer">
         UPDATE stu_course set cid=#{ccd} where sid=#{sid} and cid=#{cid}
     </update>
     <select id="selCo" resultType="com.nsapi.niceschoolapi.entity.CourseDB">

@@ -141,7 +141,7 @@
             if(layEvent === 'del'){ //删除
                 layer.confirm('确定要为'+data.sname+'退选【'+data.cname+'】这个课程吗', function(index){
                     //向服务端发送删除指令
-                    $.post("dropCous",{cid:data.cid,sid:data.sid},function(res){
+                    $.post("dropCou",{cid:data.cid,sid:data.sid},function(res){
                         layer.msg(res);
                         //刷新数据 表格
                         tableIns.reload();
@@ -160,7 +160,7 @@
                 area:['500px','300px'],
                 success:function(index){
                     form.val("dataFrm",data);
-                    url="changesCou";
+                    url="changeCou";
                 }
             });
         }

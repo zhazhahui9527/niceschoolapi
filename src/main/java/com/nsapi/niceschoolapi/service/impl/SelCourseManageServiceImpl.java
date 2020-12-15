@@ -54,8 +54,8 @@ public class SelCourseManageServiceImpl implements SelCourseManageService {
     }
 
     @Override
-    public int changesCou(@Param("ccd") Integer ccd, @Param("sid") Integer sid, @Param("cid") Integer cid) {
-        return selCourseManageMapper.changesCou(ccd,sid,cid);
+    public int changeCou(@Param("ccd") Integer ccd, @Param("sid") Integer sid, @Param("cid") Integer cid) {
+        return selCourseManageMapper.changeCou(ccd,sid,cid);
     }
 
 
