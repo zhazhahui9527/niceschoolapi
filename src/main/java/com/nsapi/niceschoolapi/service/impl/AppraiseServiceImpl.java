@@ -54,11 +54,11 @@ public class AppraiseServiceImpl implements AppraiseService {
     public int updOneTchExam(EvaluateVO evaluateVO) { return appraiseMapper.updOneTchExam(evaluateVO); }
     //删除问题
     @Override
-    public int deleteOneEv(Integer elid) { return appraiseMapper.deleteOneEv(elid); }
+    public int deleteEva(Integer elid) { return appraiseMapper.deleteEva(elid); }
     //编辑问题
     @Override
-    public int editOneEv(EvaluateListDB evaluateListDB) { return appraiseMapper.editOneEv(evaluateListDB); }
+    public int editEva(EvaluateListDB evaluateListDB) { return appraiseMapper.editEva(evaluateListDB); }
     //添加问题
     @Override
-    public int addOneEv(EvaluateListDB evaluateListDB) { return appraiseMapper.addOneEv(evaluateListDB); }
+    public int addEva(EvaluateListDB evaluateListDB) { return appraiseMapper.addEva(evaluateListDB); }
 }

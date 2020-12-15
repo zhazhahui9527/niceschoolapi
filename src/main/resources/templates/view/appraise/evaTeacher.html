@@ -47,11 +47,11 @@
         //获取分页数据列表
         table.render({
             elem: '#tchlist'
-            , url: '/appraise/findalltch?stuid=20172005'
+            , url: '/appraise/findalltch'
             , cols: [
                 [
                     {field: 'tname', title: '教师姓名'}
-                    , {field: 'tchid', title: '教评验证码'}
+                    , {field: 'tchid', title: '教师工号'}
                     , {field: 'cname', title: '教授课程'}
                     , {fixed: 'right', title: '操作', toolbar: '#barBtn', width: 150}
                 ]

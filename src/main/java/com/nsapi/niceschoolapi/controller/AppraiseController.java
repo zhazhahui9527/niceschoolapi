@@ -42,10 +42,10 @@ public class AppraiseController extends BaseController {
     /**
      * 添加问题
      */
-    @RequestMapping("addoneev")
+    @RequestMapping("addEva")
     @ResponseBody
-    public Object addOneEv(EvaluateListDB evaluateListDB){
-        int r = appraiseService.addOneEv(evaluateListDB);
+    public Object addEva(EvaluateListDB evaluateListDB){
+        int r = appraiseService.addEva(evaluateListDB);
         if(r==1){
             return true;
         }else{
@@ -56,10 +56,10 @@ public class AppraiseController extends BaseController {
     /**
      * 删除问题
      * */
-    @RequestMapping("deleteoneev")
+    @RequestMapping("deleteEva")
     @ResponseBody
-    public Object deleteOneEv(Integer elid){
-        int r = appraiseService.deleteOneEv(elid);
+    public Object deleteEva(Integer elid){
+        int r = appraiseService.deleteEva(elid);
         if(r==1){
             return true;
         }else{
@@ -70,10 +70,10 @@ public class AppraiseController extends BaseController {
     /**
      * 编辑问题
      */
-    @RequestMapping("editoneev")
+    @RequestMapping("editEva")
     @ResponseBody
-    public Object editOneEv(EvaluateListDB evaluateListDB){
-        int r = appraiseService.editOneEv(evaluateListDB);
+    public Object editEva(EvaluateListDB evaluateListDB){
+        int r = appraiseService.editEva(evaluateListDB);
         if(r==1){
             return true;
         }else{

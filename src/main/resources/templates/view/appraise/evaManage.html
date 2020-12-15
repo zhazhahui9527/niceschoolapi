@@ -107,7 +107,7 @@
                             layer.confirm('确定要添加吗？', function (index) {
                                 $.ajax({
                                     type: 'post',
-                                    url: '/appraise/addoneev',
+                                    url: '/appraise/addEva',
                                     data: {
                                         elcontent: addElcontent
                                     },
@@ -158,7 +158,7 @@
                             layer.confirm('确定要修改吗？', function (index) {
                                 $.ajax({
                                     type: 'post',
-                                    url: '/appraise/editoneev',
+                                    url: '/appraise/editEva',
                                     data: {
                                         elid: data.elid,
                                         elcontent: editElcontent
@@ -189,7 +189,7 @@
                 layer.confirm('确定要删除吗？', function (index) {
                     $.ajax({
                         type: 'post',
-                        url: '/appraise/deleteoneev',
+                        url: '/appraise/deleteEva',
                         data: {
                             elid: data.elid
                         },

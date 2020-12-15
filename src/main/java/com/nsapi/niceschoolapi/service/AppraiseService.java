@@ -23,9 +23,9 @@ public interface AppraiseService {
     //更新教师分数及教评人数
     int updOneTchExam(EvaluateVO evaluateVO);
     //删除问题
-    int deleteOneEv(Integer elid);
+    int deleteEva(Integer elid);
     //编辑问题
-    int editOneEv(EvaluateListDB evaluateListDB);
+    int editEva(EvaluateListDB evaluateListDB);
     //添加问题
-    int addOneEv(EvaluateListDB evaluateListDB);
+    int addEva(EvaluateListDB evaluateListDB);
 }

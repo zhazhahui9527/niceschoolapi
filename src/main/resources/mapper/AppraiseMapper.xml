@@ -49,15 +49,15 @@ tc.tid = tco.tid and tco.cid = c.cid and tc.tid = tcl.tid and tcl.classid = s.cl
         update tch_exam set exam=exam+#{erscore},pcount=pcount+1 where tid=#{tid}
     </update>
     <!--编辑问题-->
-    <update id="editOneEv" parameterType="EvaluateListDB">
+    <update id="editEva" parameterType="EvaluateListDB">
         update evaluate_list set elcontent=#{elcontent} where elid=#{elid}
     </update>
     <!--删除问题-->
-    <delete id="deleteOneEv" parameterType="Integer">
+    <delete id="deleteEva" parameterType="Integer">
         delete from evaluate_list where elid=#{elid}
     </delete>
     <!--添加问题-->
-    <insert id="addOneEv" parameterType="EvaluateListDB">
+    <insert id="addEva" parameterType="EvaluateListDB">
         insert into evaluate_list(elcontent) values(#{elcontent})
     </insert>
 </mapper>
