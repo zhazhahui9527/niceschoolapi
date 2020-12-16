@@ -13,13 +13,18 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="32e2b928-60b9-42c7-9397-233dbb3b89c8" name="Default Changelist" comment="2020/12/15 17:07">
+    <list default="true" id="32e2b928-60b9-42c7-9397-233dbb3b89c8" name="Default Changelist" comment="2020/12/16 11:50">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/DropCourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/DropCourseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/SelectCourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/SelectCourseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/DropCourselMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/DropCourseMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/dropCourse.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/exitCourse.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/student/SelectCourse.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/chooseCourse.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/SchoolManageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/SchoolManageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/chooseCourse.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/chooseCourse.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/exitCourse.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/exitCourse.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/schoolmanage/classmanage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/schoolManage/classManage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/schoolmanage/dpmmanage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/schoolManage/departmentManage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/schoolmanage/grademanage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/schoolManage/gradeManage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/schoolmanage/majormanage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/schoolManage/majorManage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/student/selStuAllExam.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/student/selStuAllExam.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/teacher/tchcoursemanage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/teacher/tchcoursemanage.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -369,7 +374,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608023289531</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="2020/12/16 11:50">
+      <created>1608090609149</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1608090609149</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -454,7 +466,8 @@
     <MESSAGE value="2020/12/15 16:27" />
     <MESSAGE value="2020/12/15 16:50" />
     <MESSAGE value="2020/12/15 17:07" />
-    <option name="LAST_COMMIT_MESSAGE" value="2020/12/15 17:07" />
+    <MESSAGE value="2020/12/16 11:50" />
+    <option name="LAST_COMMIT_MESSAGE" value="2020/12/16 11:50" />
   </component>
   <component name="WindowStateProjectService">
     <state x="638" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1607931880949">
@@ -481,38 +494,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="602" y="220" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607678094212" />
-    <state width="1653" height="327" key="GridCell.Tab.0.bottom" timestamp="1608090154038">
+    <state width="1653" height="296" key="GridCell.Tab.0.bottom" timestamp="1608101860988">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1653" height="327" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608090154038" />
-    <state width="1653" height="327" key="GridCell.Tab.0.center" timestamp="1608090154038">
+    <state width="1653" height="296" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608101860988" />
+    <state width="1653" height="296" key="GridCell.Tab.0.center" timestamp="1608101860988">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1653" height="327" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608090154038" />
-    <state width="1653" height="327" key="GridCell.Tab.0.left" timestamp="1608090154037">
+    <state width="1653" height="296" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608101860988" />
+    <state width="1653" height="296" key="GridCell.Tab.0.left" timestamp="1608101860988">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1653" height="327" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608090154037" />
-    <state width="1653" height="327" key="GridCell.Tab.0.right" timestamp="1608090154038">
+    <state width="1653" height="296" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608101860988" />
+    <state width="1653" height="296" key="GridCell.Tab.0.right" timestamp="1608101860988">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1653" height="327" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608090154038" />
-    <state width="1653" height="327" key="GridCell.Tab.1.bottom" timestamp="1608090154038">
+    <state width="1653" height="296" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608101860988" />
+    <state width="1653" height="296" key="GridCell.Tab.1.bottom" timestamp="1608101860989">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1653" height="327" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608090154038" />
-    <state width="1653" height="327" key="GridCell.Tab.1.center" timestamp="1608090154038">
+    <state width="1653" height="296" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608101860989" />
+    <state width="1653" height="296" key="GridCell.Tab.1.center" timestamp="1608101860988">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1653" height="327" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608090154038" />
-    <state width="1653" height="327" key="GridCell.Tab.1.left" timestamp="1608090154038">
+    <state width="1653" height="296" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608101860988" />
+    <state width="1653" height="296" key="GridCell.Tab.1.left" timestamp="1608101860988">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1653" height="327" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608090154038" />
-    <state width="1653" height="327" key="GridCell.Tab.1.right" timestamp="1608090154038">
+    <state width="1653" height="296" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608101860988" />
+    <state width="1653" height="296" key="GridCell.Tab.1.right" timestamp="1608101860988">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1653" height="327" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608090154038" />
+    <state width="1653" height="296" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608101860988" />
     <state x="751" y="221" key="RollbackChangesDialog" timestamp="1608017970850">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -521,14 +534,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="462" y="167" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1607677043977" />
-    <state x="553" y="256" key="Vcs.Push.Dialog.v2" timestamp="1608023293004">
+    <state x="553" y="256" key="Vcs.Push.Dialog.v2" timestamp="1608090615207">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="553" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1608023293004" />
-    <state x="607" y="208" width="1099" height="688" key="find.popup" timestamp="1608090285569">
+    <state x="553" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1608090615207" />
+    <state x="787" y="338" width="1099" height="688" key="find.popup" timestamp="1608101733079">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="607" y="208" width="1099" height="688" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1608090285569" />
+    <state x="787" y="338" width="1099" height="688" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1608101733079" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />

@@ -184,7 +184,7 @@
                 //获取系部表
                 $.ajax({
                     type: 'post',
-                    url: '/schoolmanage/findalldpm?page=1&limit=1000',
+                    url: '/schoolManage/findDepartment?page=1&limit=1000',
                     data: {},
                     success: function (editdata) {var result = editdata.data;
                         var lists = '';
@@ -199,7 +199,7 @@
                         //获取对应专业
                         $.ajax({
                             type: 'post',
-                            url: '/schoolmanage/jlselmajor?page=1&limit=1000',
+                            url: '/schoolManage/jlSelMajor?page=1&limit=1000',
                             data: {
                                 did: $("#editSelDpm option:selected").val()
                             },
@@ -216,7 +216,7 @@
                                 //获取对应年级
                                 $.ajax({
                                     type: 'post',
-                                    url: '/schoolmanage/jlselgrade?page=1&limit=1000',
+                                    url: '/schoolManage/jlSelGrade?page=1&limit=1000',
                                     data: {
                                         mid: $("#editSelMajor option:selected").val()
                                     },
@@ -381,7 +381,7 @@
             //获取对应专业
             $.ajax({
                 type: 'post',
-                url: '/schoolmanage/jlselmajor?page=1&limit=1000',
+                url: '/schoolManage/jlSelMajor?page=1&limit=1000',
                 data: {
                     did: seldata.value
                 },
@@ -394,7 +394,7 @@
                     //获取对应年级
                     $.ajax({
                         type: 'post',
-                        url: '/schoolmanage/jlselgrade?page=1&limit=1000',
+                        url: '/schoolManage/jlSelGrade?page=1&limit=1000',
                         data: {
                             mid: $("#editSelMajor option:selected").val()
                         },
@@ -454,7 +454,7 @@
             //获取对应年级
             $.ajax({
                 type: 'post',
-                url: '/schoolmanage/jlselgrade?page=1&limit=1000',
+                url: '/schoolManage/jlSelGrade?page=1&limit=1000',
                 data: {
                     mid: seldata.value
                 },

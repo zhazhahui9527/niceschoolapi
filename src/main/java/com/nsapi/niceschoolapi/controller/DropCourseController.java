@@ -20,19 +20,19 @@ public class DropCourseController {
     private DropCourseService dropCourseService;
 
     @RequestMapping("exitCourse")
-    public String exitCourse(){
+    public String exitCourse() {
         return "exitCourse";
     }
 
     @RequestMapping("selDropCourse")
     @ResponseBody
-    public Object sel(Integer page, Integer limit, String cname){
+    public Object sel(Integer page, Integer limit, String cname) {
 
-        Integer sid= Integer.valueOf(MySysUser.loginName());
+        Integer sid = Integer.valueOf(MySysUser.loginName());
 
         System.out.println(cname);
         PageHelper.startPage(page, limit);
-        List<CourseVO> cs = dropCourseService.seledCourse(cname,sid);
+        List<CourseVO> cs = dropCourseService.seledCourse(cname, sid);
         PageInfo pageInfo = new PageInfo(cs);
         Map<String, Object> tableData = new HashMap<String, Object>();
         //这是layui要求返回的json数据格式
@@ -45,16 +45,17 @@ public class DropCourseController {
         // System.out.print(cs);
         return tableData;
     }
+
     @RequestMapping("dropCourse")
     @ResponseBody
-    public Object dropCourse(Integer cid){
-        Integer sid= Integer.valueOf(MySysUser.loginName());
+    public Object dropCourse(Integer cid) {
+        Integer sid = Integer.valueOf(MySysUser.loginName());
         int dropcou = dropCourseService.dropcou(sid, cid);
         int updatecou = dropCourseService.updatecou(cid);
-        if(dropcou>0 && updatecou>0){
+        if (dropcou > 0 && updatecou > 0) {
             return "退课成功";
-        }else{
+        } else {
             return "退课失败,请稍后再试或联系管理员";
-             }
+        }
     }
 }

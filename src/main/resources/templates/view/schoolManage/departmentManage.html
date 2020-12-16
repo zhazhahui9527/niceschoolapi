@@ -14,6 +14,7 @@
     .layui-card {
         box-shadow: #c0c0c0 0 1px 3px;
     }
+
     .layui-row .layui-form-item {
         padding: 0 5px;
     }
@@ -94,14 +95,14 @@
         tableId = table.render({
             elem: '#evlist'
             ,
-            url: '/schoolmanage/findalldpm'
+            url: '/schoolManage/findDepartment'
             ,
             cols: [
                 [
                     {field: 'did', title: '系部编号', width: 200}
                     , {field: 'dname', title: '系部名称'}
                     , {field: 'dcount', title: '系部人数'}
-                    , {fixed: 'right', title: '操作', toolbar: '#barBtn',width:100}
+                    , {fixed: 'right', title: '操作', toolbar: '#barBtn', width: 100}
                 ]
             ]
             ,
@@ -132,7 +133,7 @@
                             layer.confirm('确定要添加吗？', function (index) {
                                 $.ajax({
                                     type: 'post',
-                                    url: '/schoolmanage/addonedpm',
+                                    url: '/schoolManage/addDepartment',
                                     data: {
                                         dname: addDname
                                     },
@@ -183,7 +184,7 @@
                             layer.confirm('确定要修改吗？', function (index) {
                                 $.ajax({
                                     type: 'post',
-                                    url: '/schoolmanage/editonedpm',
+                                    url: '/schoolManage/editDepartment',
                                     data: {
                                         did: data.did,
                                         dname: editDname
@@ -222,7 +223,7 @@
         //填充系部
         $.ajax({
             type: 'post',
-            url: '/schoolmanage/tjseldpm?page=1&limit=1000',
+            url: '/schoolManage/tjSelDepartment?page=1&limit=1000',
             data: {},
             success: function (alldata) {
 
@@ -237,13 +238,13 @@
         });
         //按系名查询
         form.on('select(selByDpm)', function (seldata) {
-            if(seldata.value=='all'){
+            if (seldata.value == 'all') {
                 tableId.reload({
-                    url : '/schoolmanage/findalldpm'
+                    url: '/schoolManage/findDepartment'
                 });
-            }else{
+            } else {
                 tableId.reload({
-                    url : '/schoolmanage/findalldpm?dname=' + seldata.value
+                    url: '/schoolManage/findDepartment?dname=' + seldata.value
                 });
             }
             form.render();

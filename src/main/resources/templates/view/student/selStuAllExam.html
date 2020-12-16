@@ -138,7 +138,7 @@
         //填充班级
         $.ajax({
             type: 'post',
-            url: '/schoolmanage/tjselclass?page=1&limit=1000',
+            url: '/schoolManage/tjSelClass?page=1&limit=1000',
             data: {},
             success: function (alldata) {
 
@@ -154,7 +154,7 @@
         //填充系部
         $.ajax({
             type: 'post',
-            url: '/schoolmanage/tjseldpm?page=1&limit=1000',
+            url: '/schoolManage/tjSelDepartment?page=1&limit=1000',
             data: {},
             success: function (alldata) {
 
@@ -192,7 +192,7 @@
             //填充专业
             $.ajax({
                 type: 'post',
-                url: '/schoolmanage/tjselmajor?page=1&limit=1000',
+                url: '/schoolManage/tjSelMajor?page=1&limit=1000',
                 data: {
                     dname:$("#selByDpm option:selected").val()
                 },
@@ -222,7 +222,7 @@
             //填充年级
             $.ajax({
                 type: 'post',
-                url: '/schoolmanage/tjselgrade?page=1&limit=1000',
+                url: '/schoolManage/tjSelGrade?page=1&limit=1000',
                 data: {
                     mname:$("#selByMajor option:selected").val()
                 },
