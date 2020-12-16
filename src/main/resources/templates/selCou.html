@@ -1,10 +1,8 @@
 <!DOCTYPE html>
-<!--them前后端分离-->
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>课程管理</title>
-
     <!--引入layui-->
     <script type="text/javascript" th:src="@{/static/layui/layui.js}"></script>
     <link rel="stylesheet" type="text/css" th:href="@{/static/layui/css/layui.css}"/>
@@ -164,41 +162,62 @@
             ,url:'sel' //数据接口
             ,title: '课程数据表'//数据导出来的标题
             ,toolbar:"#userToolBar"   //表格的工具条
-
-            ,cellMinWidth:200 //设置列的最小默认宽度
+            ,cellMinWidth:100 //设置列的最小默认宽度
             ,page: 1  //是否启用分页, limits: [10, 20, 30]
             ,limits: [3, 10, 20]
             ,limit: 3//默认采用3
+            // ,cols: [
+            //     [   //列表数据
+            //     {field:'cid', title:'ID',align:'center',width:"70",sort: true}
+            //     ,{field:'cname', title:'课程名字',align:'center',width:"150"}
+            //     ,{field:'ccredit', title:'学分',align:'center',width:"70"}
+            //     ,{field:'cperiod', title:'学时',align:'center',width:"70"}
+            //     ,{field:'cstate', title:'状态',align:'center',width:"80",sort: true,templet:function(data){
+            //                if(data.cstate==0){
+            //                    return "正常"
+            //                }else{
+            //                    return "不可选"
+            //                }
+            //         }}
+            //     ,{field:'ctname', title:'课程类型',align:'center',width:"100",sort: true}
+            //     ,{field:'studytype', title:'修学类型',align:'center',width:"100",sort: true}
+            //     ,{field:'mname', title:'所属专业',align:'center',width:"200"}
+            //     ,{field:'cselcount', title:'已选人数',align:'center',width:"100",sort: true}
+            //     ,{field:'cmaxcount', title:'最大人数',align:'center',width:"100"}
+            //     ,{fixed: '', title:'操作',align:'center',width:'200',templet:function(data){
+            //             if(data.isdel==0){
+            //                 return '<a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a><a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>'
+            //             }else{
+            //                 return '<a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a><a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="dels" style="background-color: rgb(255,198,51);">恢复</a>'
+            //             }
+            // }}
+            // ]]
             ,cols: [
                 [   //列表数据
-                {field:'cid', title:'ID',align:'center',width:"70",sort: true}
-                ,{field:'cname', title:'课程名字',align:'center',width:"150"}
-                ,{field:'ccredit', title:'学分',align:'center',width:"70"}
-                ,{field:'cperiod', title:'学时',align:'center',width:"70"}
-
-                ,{field:'cstate', title:'状态',align:'center',width:"80",sort: true,templet:function(data){
-                           if(data.cstate==0){
-                               return "正常"
-                           }else{
-                               return "不可选"
-                           }
+                    {field:'cid', title:'ID',align:'center',sort: true}
+                    ,{field:'cname', title:'课程名称',align: 'center'}
+                    ,{field:'ccredit', title:'学分',align:'center',sort: true}
+                    ,{field:'cperiod', title:'学时',align:'center',sort: true}
+                    ,{field:'cstate', title:'状态',align: 'center',templet:function(data){
+                        if(data.cstate==0){
+                            return "正常"
+                        }else{
+                            return "不可选"
+                        }
                     }}
-                ,{field:'ctname', title:'课程类型',align:'center',width:"100",sort: true}
-                ,{field:'studytype', title:'修学类型',align:'center',width:"100",sort: true}
-                ,{field:'mname', title:'所属专业',align:'center',width:"200"}
-                ,{field:'cselcount', title:'已选人数',align:'center',width:"100",sort: true}
-                ,{field:'cmaxcount', title:'最大人数',align:'center',width:"100"}
-
-                ,{fixed: '', title:'操作',align:'center',width:'200',templet:function(data){
+                    ,{field:'ctname', title:'课程类型',align:'center',sort: true}
+                    ,{field:'studytype', title:'修学类型',align:'center',sort: true}
+                    ,{field:'mname', title:'所属专业',align:'center',sort: true}
+                    ,{field:'cselcount', title:'已选人数',align:'center',sort: true}
+                    ,{field:'cmaxcount', title:'限选人数',align:'center',sort: true}
+                    ,{fixed: '', title:'操作',align:'center',templet:function(data){
                         if(data.isdel==0){
-
                             return '<a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a><a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>'
                         }else{
                             return '<a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a><a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="dels" style="background-color: rgb(255,198,51);">恢复</a>'
                         }
-            }}
-            ]
-            ]
+                    }}
+                ]]
         })
         //搜索
         $("#doSearch").click(function(){

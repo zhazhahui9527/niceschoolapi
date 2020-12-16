@@ -13,15 +13,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="32e2b928-60b9-42c7-9397-233dbb3b89c8" name="Default Changelist" comment="2020/12/15 16:50">
+    <list default="true" id="32e2b928-60b9-42c7-9397-233dbb3b89c8" name="Default Changelist" comment="2020/12/15 17:07">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/AppraiseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/AppraiseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/mapper/AppraiseMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/mapper/AppraiseMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/service/AppraiseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/service/AppraiseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/service/impl/AppraiseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/service/impl/AppraiseServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/AppraiseMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/AppraiseMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/appraise/evaManage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/appraise/evaManage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/appraise/evaTeacher.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/appraise/evaTeacher.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/DropCourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/DropCourseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/dropCourse.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/dropCourse.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/selCou.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/selCou.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/selCourseManage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/selCourseManage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/student/SelectCourse.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/student/SelectCourse.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,17 +88,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="NiceschoolapiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="niceschoolapi" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.nsapi.niceschoolapi.NiceschoolapiApplication" />
@@ -161,6 +148,7 @@
       <workItem from="1595563842158" duration="9630000" />
       <workItem from="1607676995430" duration="2568000" />
       <workItem from="1607995970020" duration="5218000" />
+      <workItem from="1608082622960" duration="976000" />
     </task>
     <task id="LOCAL-00001" summary="提交测试">
       <created>1572971677972</created>
@@ -358,7 +346,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608022276541</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="2020/12/15 17:07">
+      <created>1608023289531</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1608023289531</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -442,7 +437,8 @@
     <MESSAGE value="2020/12/15 16:26" />
     <MESSAGE value="2020/12/15 16:27" />
     <MESSAGE value="2020/12/15 16:50" />
-    <option name="LAST_COMMIT_MESSAGE" value="2020/12/15 16:50" />
+    <MESSAGE value="2020/12/15 17:07" />
+    <option name="LAST_COMMIT_MESSAGE" value="2020/12/15 17:07" />
   </component>
   <component name="WindowStateProjectService">
     <state x="638" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1607931880949">
@@ -469,38 +465,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="602" y="220" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607678094212" />
-    <state width="1742" height="290" key="GridCell.Tab.0.bottom" timestamp="1608021836374">
+    <state width="1742" height="195" key="GridCell.Tab.0.bottom" timestamp="1608028818312">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1742" height="290" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608021836374" />
-    <state width="1742" height="290" key="GridCell.Tab.0.center" timestamp="1608021836374">
+    <state width="1742" height="195" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608028818312" />
+    <state width="1742" height="195" key="GridCell.Tab.0.center" timestamp="1608028818312">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1742" height="290" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608021836374" />
-    <state width="1742" height="290" key="GridCell.Tab.0.left" timestamp="1608021836374">
+    <state width="1742" height="195" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608028818312" />
+    <state width="1742" height="195" key="GridCell.Tab.0.left" timestamp="1608028818312">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1742" height="290" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608021836374" />
-    <state width="1742" height="290" key="GridCell.Tab.0.right" timestamp="1608021836374">
+    <state width="1742" height="195" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608028818312" />
+    <state width="1742" height="195" key="GridCell.Tab.0.right" timestamp="1608028818312">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1742" height="290" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608021836374" />
-    <state width="1742" height="290" key="GridCell.Tab.1.bottom" timestamp="1608021836374">
+    <state width="1742" height="195" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608028818312" />
+    <state width="1742" height="195" key="GridCell.Tab.1.bottom" timestamp="1608028818312">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1742" height="290" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608021836374" />
-    <state width="1742" height="290" key="GridCell.Tab.1.center" timestamp="1608021836374">
+    <state width="1742" height="195" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608028818312" />
+    <state width="1742" height="195" key="GridCell.Tab.1.center" timestamp="1608028818312">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1742" height="290" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608021836374" />
-    <state width="1742" height="290" key="GridCell.Tab.1.left" timestamp="1608021836374">
+    <state width="1742" height="195" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608028818312" />
+    <state width="1742" height="195" key="GridCell.Tab.1.left" timestamp="1608028818312">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1742" height="290" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608021836374" />
-    <state width="1742" height="290" key="GridCell.Tab.1.right" timestamp="1608021836374">
+    <state width="1742" height="195" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608028818312" />
+    <state width="1742" height="195" key="GridCell.Tab.1.right" timestamp="1608028818312">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1742" height="290" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608021836374" />
+    <state width="1742" height="195" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608028818312" />
     <state x="751" y="221" key="RollbackChangesDialog" timestamp="1608017970850">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -509,14 +505,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="462" y="167" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1607677043977" />
-    <state x="553" y="256" key="Vcs.Push.Dialog.v2" timestamp="1608022281997">
+    <state x="553" y="256" key="Vcs.Push.Dialog.v2" timestamp="1608023293004">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="553" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1608022281997" />
-    <state x="607" y="208" width="1099" height="688" key="find.popup" timestamp="1608023001217">
+    <state x="553" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1608023293004" />
+    <state x="607" y="208" width="1099" height="688" key="find.popup" timestamp="1608025290080">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="607" y="208" width="1099" height="688" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1608023001217" />
+    <state x="607" y="208" width="1099" height="688" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1608025290080" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />

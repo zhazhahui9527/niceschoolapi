@@ -18,11 +18,12 @@ import java.util.Map;
 public class DropCourseController {
     @Autowired
     private DropCourseService dropCourseService;
+
     @RequestMapping("seledCourse")
     public String seledCourse(){
-
         return "dropCourse";
     }
+
     @RequestMapping("seld")
     @ResponseBody
     public Object sel(Integer page, Integer limit, String cname){
