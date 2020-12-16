@@ -44,7 +44,7 @@ public class SchoolManageController extends BaseController {
     }
 
     /**
-     * 进入系部管理页面
+     * 进入系院管理页面
      */
     @RequestMapping("departmentManage")
     public String departmentManage() {

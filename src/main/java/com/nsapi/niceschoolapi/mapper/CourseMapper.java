@@ -8,7 +8,7 @@ import org.apache.ibatis.annotations.Mapper;
 import java.util.List;
 
 @Mapper
-public interface courseMapperl {
+public interface CourseMapper {
     List<CourseVO> selCourse(CourseVO CourseVO);
     List<MajorDB> selJson();
     List<CourseTypeDB> selCoutu();

@@ -6,7 +6,7 @@ import org.apache.ibatis.annotations.Mapper;
 import java.util.List;
 
 @Mapper
-public interface AddTEacherMapper {
+public interface AddTeacherMapper {
 
     //  添加教师
     Integer addTeacher(TeacherDB teacherDB);

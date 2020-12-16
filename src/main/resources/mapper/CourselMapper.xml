@@ -2,7 +2,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.nsapi.niceschoolapi.mapper.courseMapperl">
+<mapper namespace="com.nsapi.niceschoolapi.mapper.CourseMapper">
     <select id="selCourse" resultType="com.nsapi.niceschoolapi.entity.CourseVO">
         SELECT c.*, c.is_del isDel, o.ctname ctname,m.mname mname FROM course c,course_type o,major m WHERE o.ctid=c.ctid and m.mid=c.mid
             <if test="cname!=null and cname!=''">

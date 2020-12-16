@@ -103,7 +103,7 @@
     <form class="layui-form layui-form-pane" style="padding: 10px;">
 
         <div class="layui-form-item">
-            <label class="layui-form-label">所属系别</label>
+            <label class="layui-form-label">所属系部</label>
             <div class="layui-input-block">
                 <select id="addSelDpm" name="addSelDpm" lay-filter="addSelDpm" lay-verify="addSelDpm"
                         lay-search></select>
@@ -151,12 +151,12 @@
             ,
             cols: [
                 [
-                    {field: 'gid', title: '年级编号', width: 200}
-                    , {field: 'gname', title: '年级名称'}
-                    , {field: 'mname', title: '所属专业'}
-                    , {field: 'dname', title: '所属系部'}
-                    , {field: 'gcount', title: '年级人数'}
-                    , {fixed: 'right', title: '操作', toolbar: '#barBtn', width: 100}
+                    {field: 'gid', title: '年级编号', width: 200, align: 'center'}
+                    , {field: 'gname', title: '年级名称', align: 'center'}
+                    , {field: 'mname', title: '所属专业', align: 'center'}
+                    , {field: 'dname', title: '所属系部', align: 'center'}
+                    , {field: 'gcount', title: '年级人数', align: 'center'}
+                    , {fixed: 'right', title: '操作', toolbar: '#barBtn', width: 100, align: 'center'}
                 ]
             ]
             ,

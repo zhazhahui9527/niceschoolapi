@@ -1,7 +1,7 @@
 package com.nsapi.niceschoolapi.service.impl;
 
 import com.nsapi.niceschoolapi.entity.TeacherDB;
-import com.nsapi.niceschoolapi.mapper.AddTEacherMapper;
+import com.nsapi.niceschoolapi.mapper.AddTeacherMapper;
 import com.nsapi.niceschoolapi.service.AddTeacherService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -13,7 +13,7 @@ import java.util.List;
 @Transactional
 public class AddTeacherServiceImpl implements AddTeacherService {
     @Resource
-    private AddTEacherMapper addTEacherMapper;
+    private AddTeacherMapper addTEacherMapper;
 
 
     //  添加教师
