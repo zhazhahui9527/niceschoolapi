@@ -16,10 +16,10 @@
     <list default="true" id="32e2b928-60b9-42c7-9397-233dbb3b89c8" name="Default Changelist" comment="2020/12/15 17:07">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/DropCourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/DropCourseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/dropCourse.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/dropCourse.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/selCou.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/selCou.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/selCourseManage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/selCourseManage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/student/SelectCourse.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/student/SelectCourse.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/SelectCourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/SelectCourseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/DropCourselMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/DropCourseMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/dropCourse.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/exitCourse.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/student/SelectCourse.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/chooseCourse.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +74,9 @@
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\jiaowu\niceschoolapi\src\main\resources\templates" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.nsapi.niceschoolapi.entity" />
       <recent name="com.nsapi.niceschoolapi.service.impl" />
@@ -88,6 +91,19 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="NiceschoolapiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="niceschoolapi" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.nsapi.niceschoolapi.NiceschoolapiApplication" />
@@ -465,38 +481,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="602" y="220" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607678094212" />
-    <state width="1742" height="195" key="GridCell.Tab.0.bottom" timestamp="1608028818312">
+    <state width="1653" height="327" key="GridCell.Tab.0.bottom" timestamp="1608090154038">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1742" height="195" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608028818312" />
-    <state width="1742" height="195" key="GridCell.Tab.0.center" timestamp="1608028818312">
+    <state width="1653" height="327" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608090154038" />
+    <state width="1653" height="327" key="GridCell.Tab.0.center" timestamp="1608090154038">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1742" height="195" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608028818312" />
-    <state width="1742" height="195" key="GridCell.Tab.0.left" timestamp="1608028818312">
+    <state width="1653" height="327" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608090154038" />
+    <state width="1653" height="327" key="GridCell.Tab.0.left" timestamp="1608090154037">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1742" height="195" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608028818312" />
-    <state width="1742" height="195" key="GridCell.Tab.0.right" timestamp="1608028818312">
+    <state width="1653" height="327" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608090154037" />
+    <state width="1653" height="327" key="GridCell.Tab.0.right" timestamp="1608090154038">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1742" height="195" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608028818312" />
-    <state width="1742" height="195" key="GridCell.Tab.1.bottom" timestamp="1608028818312">
+    <state width="1653" height="327" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608090154038" />
+    <state width="1653" height="327" key="GridCell.Tab.1.bottom" timestamp="1608090154038">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1742" height="195" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608028818312" />
-    <state width="1742" height="195" key="GridCell.Tab.1.center" timestamp="1608028818312">
+    <state width="1653" height="327" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608090154038" />
+    <state width="1653" height="327" key="GridCell.Tab.1.center" timestamp="1608090154038">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1742" height="195" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608028818312" />
-    <state width="1742" height="195" key="GridCell.Tab.1.left" timestamp="1608028818312">
+    <state width="1653" height="327" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608090154038" />
+    <state width="1653" height="327" key="GridCell.Tab.1.left" timestamp="1608090154038">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1742" height="195" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608028818312" />
-    <state width="1742" height="195" key="GridCell.Tab.1.right" timestamp="1608028818312">
+    <state width="1653" height="327" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608090154038" />
+    <state width="1653" height="327" key="GridCell.Tab.1.right" timestamp="1608090154038">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1742" height="195" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608028818312" />
+    <state width="1653" height="327" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608090154038" />
     <state x="751" y="221" key="RollbackChangesDialog" timestamp="1608017970850">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -509,10 +525,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="553" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1608023293004" />
-    <state x="607" y="208" width="1099" height="688" key="find.popup" timestamp="1608025290080">
+    <state x="607" y="208" width="1099" height="688" key="find.popup" timestamp="1608090285569">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="607" y="208" width="1099" height="688" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1608025290080" />
+    <state x="607" y="208" width="1099" height="688" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1608090285569" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />

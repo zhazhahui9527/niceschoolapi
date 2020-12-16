@@ -48,7 +48,7 @@
         //渲染数据表格
         tableIns=table.render({
             elem: '#userTable'   //渲染的目标对象
-            ,url:'seld' //数据接口
+            ,url:'selDropCourse' //数据接口
             ,title: '退课表'//数据导出来的标题
             ,toolbar:"#userToolBar"   //表格的工具条
             ,cellMinWidth:100 //设置列的最小默认宽度
@@ -92,7 +92,7 @@
             var params=$("#searchFrm").serialize();//序列化表单
 
             tableIns.reload({
-                url:"seld?"+params
+                url:"selDropCourse?"+params
             })
         });
 
@@ -104,7 +104,7 @@
             if(layEvent === 'del'){ //删除
                 layer.confirm('确定退选【'+data.cname+'】这个课程吗', function(index){
                     //向服务端发送删除指令
-                    $.post("dropcou",{cid:data.cid},function(res){
+                    $.post("dropCourse",{cid:data.cid},function(res){
                         layer.msg(res);
                         //刷新数据 表格
                         tableIns.reload();

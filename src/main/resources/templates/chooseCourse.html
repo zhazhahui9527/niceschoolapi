@@ -58,7 +58,7 @@
         });
         //获取对应年级
         $.ajax({
-            url: '/course/seltype',
+            url: '/selCourseType',
             success: function (alldata) {
                 var result = alldata.data;
                 var lists = '';
@@ -71,7 +71,7 @@
         });
         form.on('select(selCourseType)',function (seldata) {
             tableid.reload({
-            url:'/course/selectCourse?ctname='+seldata.value
+            url:'/selectCourse?ctname='+seldata.value
             })
         })
         var sid=$("#sid").val();
@@ -81,7 +81,7 @@
             if(layEvent === 'add'){ //删除
                 layer.confirm('确定选择【'+data.cname+'】这个课程吗', function(index){
                     //向服务端发送添加指令
-                    $.post("/course/selcourse",{cid:data.cid,cselcount:data.cselcount,cmaxcount:data.cmaxcount,sid:sid},function(res){
+                    $.post("/judgeCourse",{cid:data.cid,cselcount:data.cselcount,cmaxcount:data.cmaxcount,sid:sid},function(res){
                         layer.msg(res);
                         //刷新数据 表格
                         tableid.reload();

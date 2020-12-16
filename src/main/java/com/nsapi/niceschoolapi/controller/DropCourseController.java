@@ -19,12 +19,12 @@ public class DropCourseController {
     @Autowired
     private DropCourseService dropCourseService;
 
-    @RequestMapping("seledCourse")
-    public String seledCourse(){
-        return "dropCourse";
+    @RequestMapping("exitCourse")
+    public String exitCourse(){
+        return "exitCourse";
     }
 
-    @RequestMapping("seld")
+    @RequestMapping("selDropCourse")
     @ResponseBody
     public Object sel(Integer page, Integer limit, String cname){
 
@@ -45,9 +45,9 @@ public class DropCourseController {
         // System.out.print(cs);
         return tableData;
     }
-    @RequestMapping("dropcou")
+    @RequestMapping("dropCourse")
     @ResponseBody
-    public Object dropcou(Integer cid){
+    public Object dropCourse(Integer cid){
         Integer sid= Integer.valueOf(MySysUser.loginName());
         int dropcou = dropCourseService.dropcou(sid, cid);
         int updatecou = dropCourseService.updatecou(cid);
