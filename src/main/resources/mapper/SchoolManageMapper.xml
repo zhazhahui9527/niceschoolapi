@@ -145,24 +145,30 @@
         where c.is_del=0 and g.is_del=0 and m.is_del=0 and d.is_del=0
         group by c.classname order by c.classid
     </select>
-    <!--条件查询department-->
-    <select id="tjSelDpm" resultType="SchoolManageVO">
-        select did,dname from department where is_del=0 group by dname order by did
-    </select>
-    <!--条件查询major-->
-    <select id="tjSelMajor" resultType="SchoolManageVO">
-        select m.mid,m.mname from major m
-        inner join department d on m.did = d.did
-        where m.is_del=0 and d.is_del=0
-        group by m.mname order by m.mid
-    </select>
     <!--条件查询grade-->
     <select id="tjSelGrade" resultType="SchoolManageVO">
         select g.gid,g.gname from grade g
         inner join major m on g.mid=m.mid
         inner join department d on m.did=d.did
-        where g.is_del=0 and m.is_del=0 and d.is_del=0
+        where g.is_del=0 and d.is_del=0
+        <if test="mname != null">
+            and m.mid in(select m.mid from major m where m.mname=#{mname} and m.is_del=0)
+        </if>
         group by g.gname order by g.gid
+    </select>
+    <!--条件查询major-->
+    <select id="tjSelMajor" resultType="SchoolManageVO">
+        select m.mid,m.mname from major m
+        inner join department d on m.did = d.did
+        where m.is_del=0
+        <if test="dname != null">
+            and d.did in(select d.did from department d where d.dname=#{dname} and d.is_del=0)
+        </if>
+        group by m.mname order by m.mid
+    </select>
+    <!--条件查询department-->
+    <select id="tjSelDpm" resultType="SchoolManageVO">
+        select did,dname from department where is_del=0 group by dname order by did
     </select>
     <!--**************************************************************重复验证***********************************************************************-->
     <select id="checkOneDpm" resultType="Integer">
