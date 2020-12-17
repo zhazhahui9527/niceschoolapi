@@ -17,7 +17,8 @@ public class DropoutController {
     @Autowired
     private DropoutService dropoutService;
 
-    //  跳转页面
+
+    //进入退学信息页面
     @RequestMapping("dropoutSchool")
     public String dropoutSchool() {
         return "view/student/dropoutSchool";
@@ -35,4 +36,20 @@ public class DropoutController {
         result.setCount(count);
         return result;
     }
+
+    /**
+     * 删除退学信息
+     * */
+    @RequestMapping("deleteDropout")
+    @ResponseBody
+    public Object deleteDropout(Integer drid){
+        int r = dropoutService.deleteDropout(drid);
+        if(r==1){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+
 }

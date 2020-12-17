@@ -13,4 +13,6 @@ public interface DropoutMapper {
     List<Map> selDropout(Map<String,Object> map);
     //  查询所有信息数量
     int selDropoutCount(StudentDB studentDB);
+    // 删除退学信息
+    int deleteDropout(Integer drid);
 }

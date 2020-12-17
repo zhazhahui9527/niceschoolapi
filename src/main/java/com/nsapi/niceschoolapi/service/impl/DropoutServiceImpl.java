@@ -36,4 +36,11 @@ public class DropoutServiceImpl implements DropoutService {
     public int selDropoutCount(StudentDB studentDB) {
         return dropoutMapper.selDropoutCount(studentDB);
     }
+
+    //  删除退学信息
+
+    @Override
+    public int deleteDropout(Integer drid) {
+        return dropoutMapper.deleteDropout(drid);
+    }
 }

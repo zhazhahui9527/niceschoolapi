@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" th:href="@{/static/layui/css/layui.css}"/>
 </head>
 <body>
+
 <div>
     <div class="demoTable"  style="margin-top: 10px;margin-left: 15px">
         学生编号：
@@ -25,6 +26,9 @@
 
 </div>
 
+<script type="text/html" id="barBtn">
+ <a class="layui-btn layui-btn-sm layui-btn-danger" lay-event="del">删除</a>
+</script>
 <script>
     layui.use(['laydate', 'laypage', 'layer', 'table', 'carousel', 'upload', 'element', 'slider', 'jquery', 'form'], function() {
         var laydate = layui.laydate ,//日期
@@ -54,15 +58,15 @@
             ,cols: [
                 [ //表头
                     //{field: "sid", title: '学生编号'},
-                    {field: "stuid", title: '学号'},
-                    {field: "sname", title: '姓名'},
-                    {field: "sgender", title: '性别'},
-                    {field: "scardid", title: '身份证号'},
-                    {field: "entertime", title: '入学日期',templet:"<div>{{layui.util.toDateString(d.entertime, 'yyyy-MM-dd')}}</div>"},
-                    {field: "leavetime", title: '离校日期',templet:"<div>{{layui.util.toDateString(d.leavetime, 'yyyy-MM-dd')}}</div>"},
-                    {field: "stustate", title: '状态'},
-                    {field: "drreason", title: '退学理由', width: 350}
-
+                    {field: "stuid", title: '学号', align: 'center'},
+                    {field: "sname", title: '姓名', align: 'center'},
+                    {field: "sgender", title: '性别', align: 'center'},
+                    {field: "scardid", title: '身份证号', align: 'center'},
+                    {field: "entertime", title: '入学日期',templet:"<div>{{layui.util.toDateString(d.entertime, 'yyyy-MM-dd')}}</div>", align: 'center'},
+                    {field: "leavetime", title: '离校日期',templet:"<div>{{layui.util.toDateString(d.leavetime, 'yyyy-MM-dd')}}</div>", align: 'center'},
+                    {field: "stustate", title: '状态', align: 'center'},
+                    {field: "drreason", title: '退学理由', width: 350, align: 'center'},
+                    {fixed: 'right', title: '操作', toolbar: '#barBtn', width: 150, align: 'center'}
                 ]
             ]
             , id: 'selDropout',
@@ -81,7 +85,6 @@
             }
         });
 
-
         //分页
         laypage.render({
             elem: 'pageDemo' //分页容器的id
@@ -94,6 +97,36 @@
                 }
             }
         });
+
+        //删除
+        table.on('tool(test)',function (obj){
+            var data = obj.data;
+            if(obj.event === 'del'){
+                layer.confirm('确定要删除吗？', function (index) {
+                    $.ajax({
+                        type: 'post',
+                        url: '/deleteDropout',
+                        data: {
+                            drid: data.drid
+                        },
+                        success: function (deldata) {
+                            if (deldata == true) {
+                                obj.del();
+                                layer.open({
+                                    content: '删除成功！',
+                                    yes: function (index) {
+                                        layer.close(index);
+                                    }
+                                });
+                            } else {
+                                layer.msg('删除失败，请稍后重试！');
+                            }
+                        }
+                    });
+                    layer.close(index);
+                });
+            }
+        })
 
         /*条件查询按钮*/
         //  根据学生姓名查询
@@ -121,6 +154,7 @@
         });
 
     });
+
 </script>
 </body>
 </html>
