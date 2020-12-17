@@ -18,7 +18,7 @@ public class DropoutController {
     private DropoutService dropoutService;
 
     //  跳转页面
-    @RequestMapping("/dropoutPage")
+    @RequestMapping("dropoutPage")
     public String dropoutPage(){
         return "view/student/selDropout";
     }

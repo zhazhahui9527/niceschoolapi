@@ -19,11 +19,11 @@ import java.util.Map;
 public class SelStuAllExamController {
     @Autowired
     private SelAllExamService selAllExamService;
-    @RequestMapping("/selStuAllExam")
+    @RequestMapping("selStuAllExam")
     public String selStuAllExam(){
         return "view/student/selStuAllExam";
     }
-    @RequestMapping("/selAllExam")
+    @RequestMapping("selAllExam")
     @ResponseBody
     public LayuiResult<Map> selAllExam(SelAllExamVO selAllExamVO, Integer page, Integer limit){
         PageHelper.startPage(page, limit);

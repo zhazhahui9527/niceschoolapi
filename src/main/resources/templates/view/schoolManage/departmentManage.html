@@ -117,7 +117,7 @@
         table.on('toolbar(dpmTable)', function (obj) {
             if (obj.event == 'addDpmBtn') {
                 $("#addDpmText").val("");
-                //弹出添加问题窗口
+                //弹出窗口
                 layer.open({
                     type: 1,
                     resize: false,
@@ -212,7 +212,7 @@
                     }
                 });
             }else if (obj.event === 'del') {
-                //删除问题
+                //删除
                 layer.confirm('确定要删除吗？', function (index) {
                     $.ajax({
                         type: 'post',

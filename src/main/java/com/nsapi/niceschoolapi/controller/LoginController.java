@@ -103,7 +103,7 @@ public class LoginController {
 
     }
 
-    @RequestMapping("/getCaptcha")
+    @RequestMapping("getCaptcha")
     public void getCaptcha(HttpServletRequest request, HttpServletResponse response) throws IOException {
         //设置页面不缓存
         response.setHeader("Pragma", "no-cache");

@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" th:href="@{/static/layui/css/layui.css}"/>
 </head>
 <body>
-        教师编号：
+        教师工号：
             <div class="layui-inline">
                 <input class="layui-input" name="tchid" id="demoReload" autocomplete="off">
             </div>
@@ -50,17 +50,17 @@
             ,cols: [
                 [ //表头
                     //{field: 'tid', title: '编号'}
-                    {field: 'tchid', title: '教师工号'}
-                    ,{field: 'tname', title: '姓名'}
-                    ,{field: 'tgender', title: '性别'}
+                    {field: 'tchid', title: '教师工号', align:'center'}
+                    ,{field: 'tname', title: '姓名', align:'center'}
+                    ,{field: 'tgender', title: '性别', align:'center'}
                     //,{field: 'tbirthday', title: '出生日期',templet:"<div>{{layui.util.toDateString(d.tbirthday, 'yyyy年MM月dd日')}}</div>"}
                    // ,{field: 'pname', title: '政治面貌'}
                    // ,{field: 'tnation', title: '民族'}
                    // ,{field: 'tcardid', title: '身份证号'}
                     //,{field: 'tphone', title: '手机号码'}
                     //,{field: 'taddress', title: '地址'}
-                    ,{field: 'entertime', title: '入职时间'}
-                    ,{field: 'tchstate', title: '状态'}
+                    ,{field: 'entertime', title: '入职时间', align:'center'}
+                    ,{field: 'tchstate', title: '状态', align:'center'}
                     ,{fixed: 'right',title:'操作', width: 165, align:'center', toolbar: '#barDemo'}
 
                 ]
@@ -107,7 +107,7 @@
                     shadeClose:true,          //点击遮罩层外区域关闭遮罩层
                     area: ['800px', '500px'],   //弹出框大小
                     anim: 1,              //弹出动画
-                    content:'selectTeaMessage?id='+data.tid,
+                    content:'selectTchMessage?id='+data.tid,
                 });
             }
 

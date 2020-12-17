@@ -21,16 +21,16 @@ import java.util.Map;
 @Controller
 public class TeacherController {
     @Autowired
-    private TeacherService lxxTeacherService;
+    private TeacherService teacherService;
     @Autowired
-    private StudentService lxxStudentService;
+    private StudentService studentService;
     @Autowired
     private DeleteService deleteService;
 
     // 跳转教师查询页面
-    @RequestMapping("/selectTeacher")
+    @RequestMapping("findTeacher")
     public String selectTeacher(){
-        return "view/teacher/selTeacher";
+        return "view/teacher/findTeacher";
     }
 
 
@@ -40,38 +40,38 @@ public class TeacherController {
     public LayuiResult<Map> selTeacher(TeacherDB teacherDB, pageCount pageCount){
         LayuiResult<Map> result = new LayuiResult<>();
         //  查询所有教师信息/模糊查询教师信息
-        List<Map> list = lxxTeacherService.selTeacher(teacherDB,pageCount);
+        List<Map> list = teacherService.selTeacher(teacherDB,pageCount);
         //  查询符合条件的教师数量
-        int count = lxxTeacherService.selTeacherCount(teacherDB);
+        int count = teacherService.selTeacherCount(teacherDB);
         result.setData(list);
         result.setCount(count);
         return result;
     }
 
     //  根据教师编号查询教师信息
-    @RequestMapping("/selTeacherId")
+    @RequestMapping("selTeacherId")
     public String selTeacherId(Integer id, Model model){
-        List<TeacherDB> tea = lxxTeacherService.selTeacherId(id);
+        List<TeacherDB> tea = teacherService.selTeacherId(id);
         //  查询政治面貌
-        List<PoliticsTypeDB> selpol = lxxStudentService.selPolitics();
+        List<PoliticsTypeDB> selpol = studentService.selPolitics();
         model.addAttribute("tea",tea);
         model.addAttribute("selpol",selpol);
         return "view/teacher/updTeacher";
     }
 
     //  根据教师编号查询教师详细信息
-    @RequestMapping("/selectTeaMessage")
-    public String selectTeaMessage(Integer id, Model model){
-        List<TeacherDB> tea = lxxTeacherService.selTeacherId(id);
+    @RequestMapping("selectTchMessage")
+    public String selectTchMessage(Integer id, Model model){
+        List<TeacherDB> tea = teacherService.selTeacherId(id);
         //  查询政治面貌
-        List<PoliticsTypeDB> selpol = lxxStudentService.selPolitics();
+        List<PoliticsTypeDB> selpol = studentService.selPolitics();
         model.addAttribute("tea",tea);
         model.addAttribute("selpol",selpol);
         return "view/teacher/selTchMessage";
     }
 
     //  修改教师信息
-    @RequestMapping("/updateTeacher")
+    @RequestMapping("updateTeacher")
     @ResponseBody
     public LayuiResult<TeacherDB> updTeacher(TeacherDB teacherDB, String birthday) throws Exception{
         LayuiResult result= new LayuiResult();
@@ -97,7 +97,7 @@ public class TeacherController {
             result.setMsg("修改成功！");
             return result;
         }else{
-            int a =lxxTeacherService.updTeacher(teacherDB);
+            int a =teacherService.updTeacher(teacherDB);
             //删除提示
             result.setMsg("修改成功！");
             return result;

@@ -23,8 +23,8 @@ public class AddTeacherController {
     @Autowired
     private AddTeacherService addTeacherService;
 
-    @RequestMapping("/addTeacherPage")
-    public String addTeacherPage(Model model){
+    @RequestMapping("addTeacher")
+    public String addTeacher(Model model){
         //  查询政治面貌表
         List<PoliticsTypeDB> stupol = studentService.selPolitics();
         model.addAttribute("stupol",stupol);
@@ -34,7 +34,7 @@ public class AddTeacherController {
 
 
     //  添加教师
-    @RequestMapping("addTeacher")
+    @RequestMapping("addTch")
     @ResponseBody
     public LayuiResult<TeacherDB> addTeacher(TeacherDB teacherDB, String birthday, String tertime) throws Exception{
         LayuiResult<TeacherDB> result= new LayuiResult<>();

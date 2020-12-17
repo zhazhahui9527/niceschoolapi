@@ -20,12 +20,12 @@ public class selTchExamController {
     @Autowired
     private SelTchExamService selTchExamService;
 
-    @RequestMapping("/tchExam")
+    @RequestMapping("tchExam")
     public String tchExam(){
         return "view/teacher/selTchExam";
     }
 
-    @RequestMapping("/selTchExam")
+    @RequestMapping("selTchExam")
     @ResponseBody
     public LayuiResult<Map> selTchExam(SelTchExamVO selTchExamVO, Integer page, Integer limit){
         PageHelper.startPage(page, limit);

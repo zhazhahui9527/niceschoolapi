@@ -16,7 +16,7 @@ import java.util.Map;
 
 @Transactional
 @Controller
-@RequestMapping("tchcoursemanage")
+//@RequestMapping("tchcoursemanage")
 public class TchCourseController extends BaseController {
     @Autowired
     private TchCourseService tchCourseService;
@@ -24,20 +24,19 @@ public class TchCourseController extends BaseController {
     /**
      * 进入教师授课管理页面
      */
-    @RequestMapping("tchcoursemanage")
-    public String classmanage() {
-        return "view/teacher/tchcoursemanage";
+    @RequestMapping("tchCourseManage")
+    public String tchcourseManage() {
+        return "view/teacher/tchCourseManage";
     }
-
 
 /*******************************************************************查询*********************************************************************/
 
     /**
      * 查询全部教师
      */
-    @RequestMapping("findalltch")
+    @RequestMapping("findAllTch")
     @ResponseBody
-    public Object findAllTch(TeacherDB teacherDB, Integer page, Integer limit){
+    public Object findAllTch(TeacherDB teacherDB, Integer page, Integer limit) {
         PageHelper.startPage(page, limit);
         List<TeacherDB> listAll = tchCourseService.findAllTch(teacherDB);
         PageInfo pageInfo = new PageInfo(listAll);
@@ -48,12 +47,13 @@ public class TchCourseController extends BaseController {
         tchData.put("data", pageInfo.getList());
         return tchData;
     }
+
     /**
      * 查询全部教师姓名
      */
-    @RequestMapping("findalltchbyname")
+    @RequestMapping("findAllTchByName")
     @ResponseBody
-    public Object findAllTchByName(Integer page, Integer limit){
+    public Object findAllTchByName(Integer page, Integer limit) {
         PageHelper.startPage(page, limit);
         List<TeacherDB> listAll = tchCourseService.findAllTchByName();
         PageInfo pageInfo = new PageInfo(listAll);
@@ -64,12 +64,13 @@ public class TchCourseController extends BaseController {
         tchData.put("data", pageInfo.getList());
         return tchData;
     }
+
     /**
      * 通过专业查询全部课程
      */
-    @RequestMapping("findallcoursebymajorname")
+    @RequestMapping("findAllCourseByMajorName")
     @ResponseBody
-    public Object findAllCourseByMajorName(TchCourseVO tchCourseVO,Integer page, Integer limit){
+    public Object findAllCourseByMajorName(TchCourseVO tchCourseVO, Integer page, Integer limit) {
         PageHelper.startPage(page, limit);
         List<TeacherDB> listAll = tchCourseService.findAllCourseByMajorName(tchCourseVO);
         PageInfo pageInfo = new PageInfo(listAll);
@@ -80,12 +81,13 @@ public class TchCourseController extends BaseController {
         csData.put("data", pageInfo.getList());
         return csData;
     }
+
     /**
      * 查询教师授课中级联班级
      */
-    @RequestMapping("findtchcourseclassname")
+    @RequestMapping("findTchCourseClassName")
     @ResponseBody
-    public Object findTchCourseClassName(ClassInfoDB classinfoDB, Integer page, Integer limit){
+    public Object findTchCourseClassName(ClassInfoDB classinfoDB, Integer page, Integer limit) {
         PageHelper.startPage(page, limit);
         List<TeacherDB> listAll = tchCourseService.findTchCourseClassName(classinfoDB);
         PageInfo pageInfo = new PageInfo(listAll);
@@ -100,9 +102,9 @@ public class TchCourseController extends BaseController {
     /**
      * 查询周
      */
-    @RequestMapping("findallweeks")
+    @RequestMapping("findAllWeeks")
     @ResponseBody
-    public Object findAllWeeks(Integer page, Integer limit){
+    public Object findAllWeeks(Integer page, Integer limit) {
         PageHelper.startPage(page, limit);
         List<WeekDB> listAll = tchCourseService.findAllWeeks();
         PageInfo pageInfo = new PageInfo(listAll);
@@ -113,12 +115,13 @@ public class TchCourseController extends BaseController {
         wData.put("data", pageInfo.getList());
         return wData;
     }
+
     /**
-     * 查询节段
+     * 查询节序
      */
-    @RequestMapping("findallschedule")
+    @RequestMapping("findAllSchedule")
     @ResponseBody
-    public Object findAllSchedule(Integer page, Integer limit){
+    public Object findAllSchedule(Integer page, Integer limit) {
         PageHelper.startPage(page, limit);
         List<ScheduleDB> listAll = tchCourseService.findAllSchedule();
         PageInfo pageInfo = new PageInfo(listAll);
@@ -135,26 +138,26 @@ public class TchCourseController extends BaseController {
      * 添加教师授课表记录并返回新数据id
      */
 
-    @RequestMapping("addonetchcourse")
+    @RequestMapping("addTchCourse")
     @ResponseBody
-    public Object addOneTchCourse(TchCourseVO tchCourseVO){
+    public Object addTchCourse(TchCourseVO tchCourseVO) {
         int flag = tchCourseService.findTchCourseFlag(tchCourseVO);
-        if(flag>0){
+        if (flag > 0) {
             return false;
-        }else{
+        } else {
             int d = tchCourseService.findTchCourseDanger(tchCourseVO);
-            if (d>0){
+            if (d > 0) {
                 return false;
-            }else {
+            } else {
                 int r = tchCourseService.addOneTchCourse(tchCourseVO);
-                if(r>0){
+                if (r > 0) {
                     int r2 = tchCourseService.addOneTchClass(tchCourseVO);
-                    if(r2>0){
+                    if (r2 > 0) {
                         return true;
-                    }else{
+                    } else {
                         return false;
                     }
-                }else{
+                } else {
                     return false;
                 }
             }
@@ -166,9 +169,9 @@ public class TchCourseController extends BaseController {
     /**
      * 查询指定老师教授所有课程
      */
-    @RequestMapping("findcoursebytch")
+    @RequestMapping("findCourseByTch")
     @ResponseBody
-    public Object findCourseByTch(TchCourseVO tchCourseVO,Integer page, Integer limit){
+    public Object findCourseByTch(TchCourseVO tchCourseVO, Integer page, Integer limit) {
         PageHelper.startPage(page, limit);
         List<TchCourseVO> listAll = tchCourseService.findCourseByTch(tchCourseVO);
         PageInfo pageInfo = new PageInfo(listAll);
@@ -184,13 +187,13 @@ public class TchCourseController extends BaseController {
      * 教师授课及班级删除
      */
 
-    @RequestMapping("deltchcourse")
+    @RequestMapping("deleteTchCourse")
     @ResponseBody
-    public Object delTchCourse(TchCourseVO tchCourseVO){
+    public Object deleteTchCourse(TchCourseVO tchCourseVO) {
         int flag = tchCourseService.delTchCourse(tchCourseVO);
-        if(flag>0){
+        if (flag > 0) {
             return true;
-        }else {
+        } else {
             return false;
         }
 

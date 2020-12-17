@@ -15,7 +15,7 @@ public class DeleteController {
     @Autowired
     private DeleteService deleteService;
 
-    @RequestMapping("/insertDropout")
+    @RequestMapping("insertDropout")
     public String insertDropout(String stuid,String sname, Model model){
         model.addAttribute("stuid",stuid);
         model.addAttribute("sname",sname);

@@ -14,6 +14,7 @@
     .layui-card {
         box-shadow: #c0c0c0 0 1px 3px;
     }
+
     .layui-row .layui-form-item {
         padding: 0 5px;
     }
@@ -29,7 +30,8 @@
                         <div class="layui-form-item">
                             <label class="layui-form-label">教师工号</label>
                             <div class="layui-input-block">
-                                <select id="selByTchId" name="selByTchId" lay-filter="selByTchId" lay-verify="selByTchId"
+                                <select id="selByTchId" name="selByTchId" lay-filter="selByTchId"
+                                        lay-verify="selByTchId"
                                         lay-search></select>
                             </div>
                         </div>
@@ -117,7 +119,7 @@
         //获取分页数据列表
         tableId = table.render({
             elem: '#tchlist',
-            url: '/tchcoursemanage/findalltch',
+            url: '/findAllTch',
             cols: [
                 [
                     {field: 'tchid', title: '教师工号'}
@@ -152,9 +154,9 @@
                 layer.confirm('确定要删除该门课吗？', function (index) {
                     $.ajax({
                         type: 'post',
-                        url: '/tchcoursemanage/deltchcourse',
+                        url: '/deleteTchCourse',
                         data: {
-                            tcsid:data.tcsid
+                            tcsid: data.tcsid
                         },
                         success: function (editdata) {
                             if (editdata == true) {
@@ -186,7 +188,8 @@
                     type: 'post',
                     url: '/schoolManage/findDepartment?page=1&limit=1000',
                     data: {},
-                    success: function (editdata) {var result = editdata.data;
+                    success: function (editdata) {
+                        var result = editdata.data;
                         var lists = '';
                         for (var i in result) {
                             if (result[i].did == data.did) {
@@ -203,7 +206,8 @@
                             data: {
                                 did: $("#editSelDpm option:selected").val()
                             },
-                            success: function (alldata) {var result = alldata.data;
+                            success: function (alldata) {
+                                var result = alldata.data;
                                 var lists = '';
                                 for (var i in result) {
                                     if (result[i].mid == data.mid) {
@@ -220,7 +224,8 @@
                                     data: {
                                         mid: $("#editSelMajor option:selected").val()
                                     },
-                                    success: function (alldata) {var result = alldata.data;
+                                    success: function (alldata) {
+                                        var result = alldata.data;
                                         var lists = '';
                                         for (var i in result) {
                                             if (result[i].gid == data.gid) {
@@ -234,7 +239,7 @@
                                         //获取班级
                                         $.ajax({
                                             type: 'post',
-                                            url: '/tchcoursemanage/findtchcourseclassname?page=1&limit=1000',
+                                            url: '/findTchCourseClassName?page=1&limit=1000',
                                             data: {
                                                 gid: $("#editSelGrade option:selected").val()
                                             },
@@ -250,7 +255,7 @@
                                                 //获取课目
                                                 $.ajax({
                                                     type: 'post',
-                                                    url: '/tchcoursemanage/findallcoursebymajorname?page=1&limit=1000',
+                                                    url: '/findAllCourseByMajorName?page=1&limit=1000',
                                                     data: {
                                                         mname: $("#editSelMajor option:selected").text()
                                                     },
@@ -280,7 +285,7 @@
                 //获取星期
                 $.ajax({
                     type: 'post',
-                    url: '/tchcoursemanage/findallweeks?page=1&limit=1000',
+                    url: '/findAllWeeks?page=1&limit=1000',
                     data: {},
                     success: function (alldata) {
 
@@ -296,14 +301,14 @@
                 //获取节段
                 $.ajax({
                     type: 'post',
-                    url: '/tchcoursemanage/findallschedule?page=1&limit=1000',
+                    url: '/findAllSchedule?page=1&limit=1000',
                     data: {},
                     success: function (alldata) {
 
                         var result = alldata.data;
                         var lists = "";
                         for (var i in result) {
-                            if(!(result[i].schname=='起床'||result[i].schname=='早操'||result[i].schname=='早饭'||result[i].schname=='预备'||result[i].schname=='课间操'||result[i].schname=='午饭'||result[i].schname=='课外活动')){
+                            if (!(result[i].schname == '起床' || result[i].schname == '早操' || result[i].schname == '早饭' || result[i].schname == '预备' || result[i].schname == '课间操' || result[i].schname == '午饭' || result[i].schname == '课外活动')) {
                                 lists += "<option value='" + result[i].schid + "'>" + result[i].schname + "</option>";
                             }
                         }
@@ -316,23 +321,23 @@
                     type: 1,
                     resize: false,
                     area: ['600px', '500px'],
-                    title: '选择授课教师：'+data.tname+' 教师工号：' + data.tchid,
+                    title: '选择授课教师：' + data.tname + ' 教师工号：' + data.tchid,
                     content: $('#editDiv'),
                     btn: ['提交', '取消'],
                     yes: function (index) {
                         var tchCourseData = {
-                            tid:data.tchid,
-                            classid:$("#editSelClass option:selected").val(),
-                            cid:$("#editSelCourse option:selected").val(),
-                            wid:1,
-                            schid:1,
-                            gid:$("#editSelGrade option:selected").val()
+                            tid: data.tchid,
+                            classid: $("#editSelClass option:selected").val(),
+                            cid: $("#editSelCourse option:selected").val(),
+                            wid: 1,
+                            schid: 1,
+                            gid: $("#editSelGrade option:selected").val()
                         };
-                        var tips='确定让【'+data.tname+'】老师教 ['+$("#editSelGrade option:selected").text()+'] ['+$("#editSelDpm option:selected").text()+'] ['+$("#editSelMajor option:selected").text()+'] ['+$("#editSelClass option:selected").text()+'班] 的 ['+$("#editSelCourse option:selected").text()+'课] 吗？';
+                        var tips = '确定让【' + data.tname + '】老师教 [' + $("#editSelGrade option:selected").text() + '] [' + $("#editSelDpm option:selected").text() + '] [' + $("#editSelMajor option:selected").text() + '] [' + $("#editSelClass option:selected").text() + '班] 的 [' + $("#editSelCourse option:selected").text() + '课] 吗？';
                         layer.confirm(tips.toString(), function (index) {
                             $.ajax({
                                 type: 'post',
-                                url: '/tchcoursemanage/addonetchcourse',
+                                url: '/addTchCourse',
                                 data: tchCourseData,
                                 success: function (editdata) {
                                     if (editdata == true) {
@@ -352,19 +357,18 @@
                         });
 
 
-
                     }
                 });
-            }else if (obj.event === 'sel') {
+            } else if (obj.event === 'sel') {
                 selTable.reload({
-                    url : '/tchcoursemanage/findcoursebytch?tid=' + data.tchid
+                    url: '/findCourseByTch?tid=' + data.tchid
                 });
                 //查看授课
                 layer.open({
                     type: 1,
                     resize: false,
                     area: ['1000px', '500px'],
-                    title: '查看【'+data.tname+'】所授课目，教师工号：' + data.tchid,
+                    title: '查看【' + data.tname + '】所授课目，教师工号：' + data.tchid,
                     content: $('#selDiv'),
                     btn: ['确认'],
                     yes: function (index) {
@@ -385,7 +389,8 @@
                 data: {
                     did: seldata.value
                 },
-                success: function (alldata) {var result = alldata.data;
+                success: function (alldata) {
+                    var result = alldata.data;
                     var lists = '';
                     for (var i in result) {
                         lists += "<option value='" + result[i].mid + "'>" + result[i].mname + "</option>";
@@ -398,7 +403,8 @@
                         data: {
                             mid: $("#editSelMajor option:selected").val()
                         },
-                        success: function (alldata) {var result = alldata.data;
+                        success: function (alldata) {
+                            var result = alldata.data;
                             var lists = '';
                             for (var i in result) {
                                 lists += "<option value='" + result[i].gid + "'>" + result[i].gname + "</option>";
@@ -408,7 +414,7 @@
                             //获取班级
                             $.ajax({
                                 type: 'post',
-                                url: '/tchcoursemanage/findtchcourseclassname?page=1&limit=1000',
+                                url: '/findTchCourseClassName?page=1&limit=1000',
                                 data: {
                                     gid: $("#editSelGrade option:selected").val()
                                 },
@@ -424,7 +430,7 @@
                                     //获取课目
                                     $.ajax({
                                         type: 'post',
-                                        url: '/tchcoursemanage/findallcoursebymajorname?page=1&limit=1000',
+                                        url: '/findAllCourseByMajorName?page=1&limit=1000',
                                         data: {
                                             mname: $("#editSelMajor option:selected").text()
                                         },
@@ -469,7 +475,7 @@
                     //获取班级
                     $.ajax({
                         type: 'post',
-                        url: '/tchcoursemanage/findtchcourseclassname?page=1&limit=1000',
+                        url: '/findTchCourseClassName?page=1&limit=1000',
                         data: {
                             gid: $("#editSelGrade option:selected").val()
                         },
@@ -485,7 +491,7 @@
                             //获取课目
                             $.ajax({
                                 type: 'post',
-                                url: '/tchcoursemanage/findallcoursebymajorname?page=1&limit=1000',
+                                url: '/findAllCourseByMajorName?page=1&limit=1000',
                                 data: {
                                     mname: $("#editSelMajor option:selected").text()
                                 },
@@ -510,7 +516,7 @@
             //获取班级
             $.ajax({
                 type: 'post',
-                url: '/tchcoursemanage/findtchcourseclassname?page=1&limit=1000',
+                url: '/findTchCourseClassName?page=1&limit=1000',
                 data: {
                     gid: $("#editSelGrade option:selected").val()
                 },
@@ -534,7 +540,7 @@
         //填充教师工号
         $.ajax({
             type: 'post',
-            url: '/tchcoursemanage/findalltch?page=1&limit=100000',
+            url: '/findAllTch?page=1&limit=100000',
             data: {},
             success: function (alldata) {
 
@@ -550,7 +556,7 @@
         //填充教师姓名
         $.ajax({
             type: 'post',
-            url: '/tchcoursemanage/findalltchbyname?page=1&limit=1000',
+            url: '/findAllTchByName?page=1&limit=1000',
             data: {},
             success: function (alldata) {
 
@@ -566,39 +572,30 @@
 
         //按教师工号查询
         form.on('select(selByTchId)', function (seldata) {
-            if(seldata.value=='all'){
+            if (seldata.value == 'all') {
                 tableId.reload({
-                    url : '/tchcoursemanage/findalltch'
+                    url: '/findAllTch'
                 });
-            }else{
+            } else {
                 tableId.reload({
-                    url : '/tchcoursemanage/findalltch?tchid=' + seldata.value
+                    url: '/findAllTch?tchid=' + seldata.value
                 });
             }
             form.render();
         });
         //按教师姓名查询
         form.on('select(selByTchName)', function (seldata) {
-            if(seldata.value=='all'){
+            if (seldata.value == 'all') {
                 tableId.reload({
-                    url : '/tchcoursemanage/findalltch'
+                    url: '/findAllTch'
                 });
-            }else{
+            } else {
                 tableId.reload({
-                    url : '/tchcoursemanage/findalltch?tname=' + seldata.value
+                    url: '/findAllTch?tname=' + seldata.value
                 });
             }
             form.render();
         });
-
-
-
-
-
-
-
-
-
 
 
     });

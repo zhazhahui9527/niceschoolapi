@@ -19,7 +19,7 @@ public class StudentController extends BaseController {
     private StudentService studentService;
 
     // 跳转学生查询页面
-    @RequestMapping("/selectStudent")
+    @RequestMapping("selectStudent")
     public String selectStudent(){
         return "view/student/selStudent";
     }
@@ -78,7 +78,7 @@ public class StudentController extends BaseController {
 
 
     //  根据id查询一条学生信息以此进行修改
-    @RequestMapping("/selStudentById")
+    @RequestMapping("selStudentById")
     public String selStudentById(Integer id, Model model){
         //  查询学生信息
         List<StudentDB> stu = studentService.selStudentById(id);
@@ -93,7 +93,7 @@ public class StudentController extends BaseController {
     }
 
     //  根据id查询显示学生详细信息
-    @RequestMapping("/selectMessage")
+    @RequestMapping("selectMessage")
     public String selectMessage(Integer id, Model model){
         //  查询学生信息
         List<StudentDB> stu = studentService.selStudentById(id);
@@ -108,7 +108,7 @@ public class StudentController extends BaseController {
     }
 
     //  修改用户信息
-    @RequestMapping("/updateStudent")
+    @RequestMapping("updateStudent")
     @ResponseBody
     public LayuiResult<StudentDB> updateStudent(StudentDB studentDB, String birthday) throws Exception{
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");

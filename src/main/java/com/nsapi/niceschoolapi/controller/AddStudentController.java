@@ -24,7 +24,7 @@ public class AddStudentController {
     @Autowired
     private AddStudentService addStudentService;
 
-    @RequestMapping("/inputStudent")
+    @RequestMapping("inputStudent")
     public String selPolitics(Model model){
         //  查询政治面貌表
         List<PoliticsTypeDB> stupol = studentService.selPolitics();

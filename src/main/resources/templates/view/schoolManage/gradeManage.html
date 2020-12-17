@@ -244,11 +244,11 @@
                     }
                 });
 
-                //弹出添加问题窗口
+                //弹出添加窗口
                 layer.open({
                     type: 1,
                     resize: false,
-                    area: ['600px', '330px'],
+                    area: ['600px', '400px'],
                     title: '添加年级',
                     content: $('#addDiv'),
                     btn: ['确认添加', '取消'],
@@ -385,7 +385,7 @@
                     }
                 });
             }else if (obj.event === 'del') {
-                //删除问题
+                //删除
                 layer.confirm('确定要删除吗？', function (index) {
                     $.ajax({
                         type: 'post',
