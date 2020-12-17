@@ -19,9 +19,9 @@ public class StudentController extends BaseController {
     private StudentService studentService;
 
     // 跳转学生查询页面
-    @RequestMapping("selectStudent")
+    @RequestMapping("findStudent")
     public String selectStudent(){
-        return "view/student/selStudent";
+        return "view/student/findStudent";
     }
 
 

@@ -25,27 +25,27 @@ public class AddStudentController {
     private AddStudentService addStudentService;
 
     @RequestMapping("inputStudent")
-    public String selPolitics(Model model){
+    public String selPolitics(Model model) {
         //  查询政治面貌表
         List<PoliticsTypeDB> stupol = studentService.selPolitics();
-        model.addAttribute("stupol",stupol);
+        model.addAttribute("stupol", stupol);
         return "view/student/addStudent";
     }
 
     //  添加学生
     @RequestMapping("addStudent") //   用来处理请求地址映射的注解
     @ResponseBody   // 通常用来返回JSON数据给客户端
-    public LayuiResult<StudentDB> addStudent(StudentVO studentVO, String birthday, String tertime) throws Exception{
-        LayuiResult<StudentDB> result= new LayuiResult<>();
+    public LayuiResult<StudentDB> addStudent(StudentVO studentVO, String birthday, String tertime) throws Exception {
+        LayuiResult<StudentDB> result = new LayuiResult<>();
         //  将接收到的时间进行类型转换
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
-        Date date1=format.parse(birthday);
-        Date date2=format.parse(tertime);
+        Date date1 = format.parse(birthday);
+        Date date2 = format.parse(tertime);
         studentVO.setSbirthday(date1);
         studentVO.setEntertime(date2);
         //  判断该年份是否已存在学生
         Integer year = addStudentService.selectStuYear(studentVO.getClassid());
-        if(year !=0 ){
+        if (year != 0) {
             //  若该年份学生为空时 则添加一条分割线
             Integer fenge = addStudentService.stuSegmentation(studentVO.getClassid());
         }
@@ -63,9 +63,9 @@ public class AddStudentController {
         Integer mid = studentVO.getMid();
         //  根据学生专业查询该专业开设的必修课程
         List<CourseDB> selCourse = addStudentService.selCourse(mid);
-        for(CourseDB cou : selCourse){
+        for (CourseDB cou : selCourse) {
             //  将学生id以及必修课程的id添加至学生选课表
-            Integer addStuCourse = addStudentService.addStuCourse(sid,cou.getCid());
+            Integer addStuCourse = addStudentService.addStuCourse(sid, cou.getCid());
             System.out.println(addStuCourse);
         }
 

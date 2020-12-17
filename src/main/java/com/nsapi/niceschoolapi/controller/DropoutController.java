@@ -18,17 +18,17 @@ public class DropoutController {
     private DropoutService dropoutService;
 
     //  跳转页面
-    @RequestMapping("dropoutPage")
-    public String dropoutPage(){
-        return "view/student/selDropout";
+    @RequestMapping("dropoutSchool")
+    public String dropoutSchool() {
+        return "view/student/dropoutSchool";
     }
 
     @RequestMapping("selDropout")
     @ResponseBody
-    public LayuiResult<Map> selDropout(pageCount pageCount,StudentDB studentDB){
+    public LayuiResult<Map> selDropout(pageCount pageCount, StudentDB studentDB) {
         LayuiResult<Map> result = new LayuiResult<>();
         //  查询所有退学信息
-        List<Map> selDropout =  dropoutService.selDropout(pageCount,studentDB);
+        List<Map> selDropout = dropoutService.selDropout(pageCount, studentDB);
         //  查询所有信息数量
         int count = dropoutService.selDropoutCount(studentDB);
         result.setData(selDropout);

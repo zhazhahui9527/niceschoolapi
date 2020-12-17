@@ -13,26 +13,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="32e2b928-60b9-42c7-9397-233dbb3b89c8" name="Default Changelist" comment="2020/12/17 15:39">
+    <list default="true" id="32e2b928-60b9-42c7-9397-233dbb3b89c8" name="Default Changelist" comment="2020/12/17 16:47">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/AddStudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/AddStudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/AddTeacherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/AddTeacherController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/DeleteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/DeleteController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/DropoutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/DropoutController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/PageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/PageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/SelStuAllExamController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/SelStuAllExamController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/StudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/TchCourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/TchCourseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/TeacherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/TeacherController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/selTchExamController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/selTchExamController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/schoolManage/classManage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/schoolManage/classManage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/schoolManage/departmentManage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/schoolManage/departmentManage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/schoolManage/gradeManage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/schoolManage/gradeManage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/schoolManage/majorManage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/schoolManage/majorManage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/teacher/addTeacher.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/teacher/addTeacher.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/teacher/selTeacher.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/teacher/findTeacher.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/teacher/tchcoursemanage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/teacher/tchCourseManage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/student/selDropout.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/student/dropoutSchool.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/student/selStudent.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/student/findStudent.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -417,7 +404,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608190804276</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="2020/12/17 16:47">
+      <created>1608194850633</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1608194850633</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -507,7 +501,8 @@
     <MESSAGE value="2020/12/16 16:15" />
     <MESSAGE value="2020/12/16 17:27" />
     <MESSAGE value="2020/12/17 15:39" />
-    <option name="LAST_COMMIT_MESSAGE" value="2020/12/17 15:39" />
+    <MESSAGE value="2020/12/17 16:47" />
+    <option name="LAST_COMMIT_MESSAGE" value="2020/12/17 16:47" />
   </component>
   <component name="WindowStateProjectService">
     <state x="702" y="387" width="456" height="273" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1608102269138">
@@ -538,38 +533,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="602" y="220" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607678094212" />
-    <state width="1653" height="368" key="GridCell.Tab.0.bottom" timestamp="1608194687050">
+    <state width="1653" height="185" key="GridCell.Tab.0.bottom" timestamp="1608195422215">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1653" height="368" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608194687050" />
-    <state width="1653" height="368" key="GridCell.Tab.0.center" timestamp="1608194687050">
+    <state width="1653" height="185" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608195422215" />
+    <state width="1653" height="185" key="GridCell.Tab.0.center" timestamp="1608195422215">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1653" height="368" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608194687050" />
-    <state width="1653" height="368" key="GridCell.Tab.0.left" timestamp="1608194687050">
+    <state width="1653" height="185" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608195422215" />
+    <state width="1653" height="185" key="GridCell.Tab.0.left" timestamp="1608195422214">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1653" height="368" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608194687050" />
-    <state width="1653" height="368" key="GridCell.Tab.0.right" timestamp="1608194687050">
+    <state width="1653" height="185" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608195422214" />
+    <state width="1653" height="185" key="GridCell.Tab.0.right" timestamp="1608195422215">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1653" height="368" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608194687050" />
-    <state width="1653" height="368" key="GridCell.Tab.1.bottom" timestamp="1608194687050">
+    <state width="1653" height="185" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608195422215" />
+    <state width="1653" height="185" key="GridCell.Tab.1.bottom" timestamp="1608195422215">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1653" height="368" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608194687050" />
-    <state width="1653" height="368" key="GridCell.Tab.1.center" timestamp="1608194687050">
+    <state width="1653" height="185" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608195422215" />
+    <state width="1653" height="185" key="GridCell.Tab.1.center" timestamp="1608195422215">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1653" height="368" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608194687050" />
-    <state width="1653" height="368" key="GridCell.Tab.1.left" timestamp="1608194687050">
+    <state width="1653" height="185" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608195422215" />
+    <state width="1653" height="185" key="GridCell.Tab.1.left" timestamp="1608195422215">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1653" height="368" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608194687050" />
-    <state width="1653" height="368" key="GridCell.Tab.1.right" timestamp="1608194687050">
+    <state width="1653" height="185" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608195422215" />
+    <state width="1653" height="185" key="GridCell.Tab.1.right" timestamp="1608195422215">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1653" height="368" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608194687050" />
+    <state width="1653" height="185" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608195422215" />
     <state x="751" y="221" key="RollbackChangesDialog" timestamp="1608189700807">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -578,10 +573,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="462" y="167" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1607677043977" />
-    <state x="553" y="256" key="Vcs.Push.Dialog.v2" timestamp="1608190809438">
+    <state x="553" y="256" key="Vcs.Push.Dialog.v2" timestamp="1608194857243">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="553" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1608190809438" />
+    <state x="553" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1608194857243" />
     <state x="608" y="196" width="1099" height="688" key="find.popup" timestamp="1608193203656">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
