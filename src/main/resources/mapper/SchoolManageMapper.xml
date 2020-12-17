@@ -24,6 +24,10 @@
     <update id="editOneDpm" parameterType="DepartmentDB">
         update department set dname=#{dname} where did=#{did}
     </update>
+    <!--删除系部-->
+    <update id="delOneDpm" parameterType="int">
+        update department set is_del=1 where did=#{did}
+    </update>
     <!--**************************************************************专业管理***********************************************************************-->
     <!--查询全部专业-->
     <select id="findAllMajor" resultType="SchoolManageVO">
@@ -49,7 +53,10 @@
     <update id="editOneMajor" parameterType="MajorDB">
         update major set mname=#{mname},did=#{did} where mid=#{mid}
     </update>
-
+    <!--删除专业-->
+    <update id="delOneMajor" parameterType="int">
+        update major set is_del=1 where mid={mid}
+    </update>
     <!--**************************************************************年级管理***********************************************************************-->
     <!--查询全部年级-->
     <select id="findAllGrade" resultType="SchoolManageVO">
@@ -83,7 +90,10 @@
     <update id="editOneGrade" parameterType="MajorDB">
         update grade set gname=#{gname},mid=#{mid} where gid=#{gid}
     </update>
-
+     <!--删除年级-->
+    <update id="delOneGrade" parameterType="int">
+        update grade set is_del=1 where gid=#{gid}
+    </update>
     <!--**************************************************************班级管理***********************************************************************-->
     <!--查询全部班级-->
     <select id="findAllClass" resultType="SchoolManageVO">
@@ -121,11 +131,19 @@
     <update id="editOneClass" parameterType="ClassinfoDB">
         update classinfo set classname=#{classname},gid=#{gid} where classid=#{classid}
     </update>
-
+    <!--删除班级-->
+    <update id="delOneClass" parameterType="int">
+        update classinfo set is_del=1 where classid=#{classid}
+    </update>
     <!--**************************************************************条件查询***********************************************************************-->
     <!--条件查询classname-->
     <select id="tjSelClass" resultType="SchoolManageVO">
-        select classid,classname from classinfo where is_del=0 group by classname order by classid
+        select c.classid,c.classname from classinfo c
+        inner join grade g on c.gid=g.gid
+        inner join major m on g.mid=m.mid
+        inner join department d on m.did=d.did
+        where c.is_del=0 and g.is_del=0 and m.is_del=0 and d.is_del=0
+        group by c.classname order by c.classid
     </select>
     <!--条件查询department-->
     <select id="tjSelDpm" resultType="SchoolManageVO">
@@ -133,31 +151,30 @@
     </select>
     <!--条件查询major-->
     <select id="tjSelMajor" resultType="SchoolManageVO">
-        select mid,mname from major where is_del=0
-        <if test="dname != null">
-            and did in(select did from department where dname=#{dname} and is_del=0)
-        </if>
-         group by mname order by mid
+        select m.mid,m.mname from major m
+        inner join department d on m.did = d.did
+        where m.is_del=0 and d.is_del=0
+        group by m.mname order by m.mid
     </select>
     <!--条件查询grade-->
     <select id="tjSelGrade" resultType="SchoolManageVO">
-        select gid,gname from grade where is_del=0
-        <if test="mname != null">
-            and mid in(select mid from major where mname=#{mname} and is_del=0)
-        </if>
-         group by gname order by gid
+        select g.gid,g.gname from grade g
+        inner join major m on g.mid=m.mid
+        inner join department d on m.did=d.did
+        where g.is_del=0 and m.is_del=0 and d.is_del=0
+        group by g.gname order by g.gid
     </select>
     <!--**************************************************************重复验证***********************************************************************-->
     <select id="checkOneDpm" resultType="Integer">
-        select count(*) from department where dname=#{dname}
+        select count(*) from department where dname=#{dname} and is_del=0
     </select>
     <select id="checkOneMajor" resultType="Integer">
-        select count(*) from major where mname=#{mname} and did=#{did}
+        select count(*) from major where mname=#{mname} and did=#{did} and is_del=0
     </select>
     <select id="checkOneGrade" resultType="Integer">
-        select count(*) from grade where gname=#{gname} and mid=#{mid}
+        select count(*) from grade where gname=#{gname} and mid=#{mid} and is_del=0
     </select>
     <select id="checkOneClass" resultType="Integer">
-        select count(*) from classinfo where classname=#{classname} and gid=#{gid}
+        select count(*) from classinfo where classname=#{classname} and gid=#{gid} and is_del=0
     </select>
 </mapper>

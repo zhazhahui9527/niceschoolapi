@@ -131,6 +131,7 @@
 </html>
 <script type="text/html" id="barBtn">
     <a class="layui-btn layui-btn-sm" lay-event="edit">编辑</a>
+    <a class="layui-btn layui-btn-sm layui-btn-danger" lay-event="del">删除</a>
 </script>
 
 <script>
@@ -156,7 +157,7 @@
                     , {field: 'mname', title: '所属专业', align: 'center'}
                     , {field: 'dname', title: '所属系部', align: 'center'}
                     , {field: 'gcount', title: '年级人数', align: 'center'}
-                    , {fixed: 'right', title: '操作', toolbar: '#barBtn', width: 100, align: 'center'}
+                    , {fixed: 'right', title: '操作', toolbar: '#barBtn', width: 150, align: 'center'}
                 ]
             ]
             ,
@@ -382,6 +383,31 @@
 
 
                     }
+                });
+            }else if (obj.event === 'del') {
+                //删除问题
+                layer.confirm('确定要删除吗？', function (index) {
+                    $.ajax({
+                        type: 'post',
+                        url: '/schoolManage/deleteGrade',
+                        data: {
+                            gid: data.gid
+                        },
+                        success: function (deldata) {
+                            if (deldata == true) {
+                                obj.del();
+                                layer.open({
+                                    content: '删除成功！',
+                                    yes: function (index) {
+                                        layer.close(index);
+                                    }
+                                });
+                            } else {
+                                layer.msg('删除失败，请稍后重试！');
+                            }
+                        }
+                    });
+                    layer.close(index);
                 });
             }
 
