@@ -15,22 +15,11 @@
   <component name="ChangeListManager">
     <list default="true" id="32e2b928-60b9-42c7-9397-233dbb3b89c8" name="Default Changelist" comment="2020/12/17 18:32">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/CourseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/SelectCourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/SelectCourseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/entity/TchCourseVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/entity/TchCourseVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/mapper/CourseMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/mapper/CourseMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/service/courselService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/service/courseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/service/impl/courselServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/CourselMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/CourseMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/StudentExam.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/StudentExam.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/chooseCourse.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/chooseCourse.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/exitCourse.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/exitCourse.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/selCou.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/findCourse.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/appraise/evaTeacher.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/appraise/evaTeacher.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/student/dropoutSchool.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/student/dropoutSchool.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/student/findStudent.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/student/findStudent.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/teacher/findTeacher.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/teacher/findTeacher.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/teacher/tchCourseManage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/teacher/tchCourseManage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/SelStuAllExamController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/SelStuAllExamController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/selTchExamController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/selTchExamController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/SelAllExamMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/SelAllExamMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/student/selStuAllExam.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/student/findAllStuExam.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/teacher/selTchExam.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/teacher/findTchExam.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -558,38 +547,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="602" y="220" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607678094212" />
-    <state width="1752" height="180" key="GridCell.Tab.0.bottom" timestamp="1608269429406">
+    <state width="1752" height="180" key="GridCell.Tab.0.bottom" timestamp="1608272698642">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1752" height="180" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608269429406" />
-    <state width="1752" height="180" key="GridCell.Tab.0.center" timestamp="1608269429406">
+    <state width="1752" height="180" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608272698642" />
+    <state width="1752" height="180" key="GridCell.Tab.0.center" timestamp="1608272698642">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1752" height="180" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608269429406" />
-    <state width="1752" height="180" key="GridCell.Tab.0.left" timestamp="1608269429406">
+    <state width="1752" height="180" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608272698642" />
+    <state width="1752" height="180" key="GridCell.Tab.0.left" timestamp="1608272698641">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1752" height="180" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608269429406" />
-    <state width="1752" height="180" key="GridCell.Tab.0.right" timestamp="1608269429406">
+    <state width="1752" height="180" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608272698641" />
+    <state width="1752" height="180" key="GridCell.Tab.0.right" timestamp="1608272698642">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1752" height="180" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608269429406" />
-    <state width="1752" height="180" key="GridCell.Tab.1.bottom" timestamp="1608269429406">
+    <state width="1752" height="180" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608272698642" />
+    <state width="1752" height="180" key="GridCell.Tab.1.bottom" timestamp="1608272698642">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1752" height="180" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608269429406" />
-    <state width="1752" height="180" key="GridCell.Tab.1.center" timestamp="1608269429406">
+    <state width="1752" height="180" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608272698642" />
+    <state width="1752" height="180" key="GridCell.Tab.1.center" timestamp="1608272698642">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1752" height="180" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608269429406" />
-    <state width="1752" height="180" key="GridCell.Tab.1.left" timestamp="1608269429406">
+    <state width="1752" height="180" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608272698642" />
+    <state width="1752" height="180" key="GridCell.Tab.1.left" timestamp="1608272698642">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1752" height="180" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608269429406" />
-    <state width="1752" height="180" key="GridCell.Tab.1.right" timestamp="1608269429406">
+    <state width="1752" height="180" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608272698642" />
+    <state width="1752" height="180" key="GridCell.Tab.1.right" timestamp="1608272698642">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1752" height="180" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608269429406" />
+    <state width="1752" height="180" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608272698642" />
     <state x="751" y="221" key="RollbackChangesDialog" timestamp="1608189700807">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -602,10 +591,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="553" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1608195594884" />
-    <state x="608" y="196" width="1099" height="688" key="find.popup" timestamp="1608263800837">
+    <state x="608" y="196" width="1099" height="688" key="find.popup" timestamp="1608271508731">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="608" y="196" width="1099" height="688" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1608263800837" />
+    <state x="608" y="196" width="1099" height="688" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1608271508731" />
     <state x="580" y="242" key="run.anything.popup" timestamp="1608172081266">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

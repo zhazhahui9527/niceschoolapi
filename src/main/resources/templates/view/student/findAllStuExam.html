@@ -99,14 +99,15 @@
             ,
             cols: [
                 [
-                    {field: 'sname', title: '学生'}
-                    ,{field: 'cname', title: '课程'}
-                    ,{field: 'ccredit', title: '学分'}
-                    ,{field: 'type', title: '类别'}
-                    ,{field: 'normalexam', title: '平时成绩'}
-                    ,{field: 'testexam', title: '考试成绩'}
-                    ,{field: 'sumexam', title: '综合成绩'}
-                    ,{field: 'stime', title: '学期',templet: function (data) {
+                    {field: 'stuid', title: '学号',align: 'center',sort: true},
+                    {field: 'sname', title: '姓名',align: 'center'}
+                    ,{field: 'cname', title: '课程',align: 'center'}
+                    ,{field: 'ccredit', title: '学分',align: 'center'}
+                    ,{field: 'type', title: '类别',align: 'center'}
+                    ,{field: 'normalexam', title: '平时成绩',align: 'center'}
+                    ,{field: 'testexam', title: '考试成绩',align: 'center'}
+                    ,{field: 'sumexam', title: '综合成绩',align: 'center'}
+                    ,{field: 'stime', title: '学期',align: 'center',templet: function (data) {
                         if (data.stime =='1'){
                             return '大一上学期'
                         }else if (data.stime =='2'){

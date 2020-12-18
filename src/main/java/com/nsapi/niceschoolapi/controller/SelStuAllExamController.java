@@ -19,20 +19,22 @@ import java.util.Map;
 public class SelStuAllExamController {
     @Autowired
     private SelAllExamService selAllExamService;
-    @RequestMapping("selStuAllExam")
-    public String selStuAllExam(){
-        return "view/student/selStuAllExam";
+
+    @RequestMapping("findAllStuExam")
+    public String findAllStuExam() {
+        return "view/student/findAllStuExam";
     }
+
     @RequestMapping("selAllExam")
     @ResponseBody
-    public LayuiResult<Map> selAllExam(SelAllExamVO selAllExamVO, Integer page, Integer limit){
+    public LayuiResult<Map> selAllExam(SelAllExamVO selAllExamVO, Integer page, Integer limit) {
         PageHelper.startPage(page, limit);
         List<Map> exam = selAllExamService.selAllExam(selAllExamVO);
         PageInfo pageInfo = new PageInfo(exam);
         LayuiResult<Map> result = new LayuiResult<>();
         //这是layui要求返回的json数据格式
         result.setCode(0);
-        result.setMsg( "");
+        result.setMsg("");
         //将全部数据的条数作为count传给前台（一共多少条）
         result.setCount((int) pageInfo.getTotal());
         //将分页后的数据返回（每页要显示的数据）

@@ -20,21 +20,21 @@ public class selTchExamController {
     @Autowired
     private SelTchExamService selTchExamService;
 
-    @RequestMapping("tchExam")
-    public String tchExam(){
-        return "view/teacher/selTchExam";
+    @RequestMapping("findTchExam")
+    public String findTchExam() {
+        return "view/teacher/findTchExam";
     }
 
     @RequestMapping("selTchExam")
     @ResponseBody
-    public LayuiResult<Map> selTchExam(SelTchExamVO selTchExamVO, Integer page, Integer limit){
+    public LayuiResult<Map> selTchExam(SelTchExamVO selTchExamVO, Integer page, Integer limit) {
         PageHelper.startPage(page, limit);
         List<Map> selTchExam = selTchExamService.selTchExam(selTchExamVO);
         PageInfo pageInfo = new PageInfo(selTchExam);
         LayuiResult<Map> result = new LayuiResult<>();
         //这是layui要求返回的json数据格式
         result.setCode(0);
-        result.setMsg( "");
+        result.setMsg("");
         //将全部数据的条数作为count传给前台（一共多少条）
         result.setCount((int) pageInfo.getTotal());
         //将分页后的数据返回（每页要显示的数据）

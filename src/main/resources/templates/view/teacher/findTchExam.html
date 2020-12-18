@@ -9,7 +9,7 @@
 <body>
 <div class="layui-form">
     <div class="layui-inline" style="margin-top: 10px;margin-left: 30px">
-        教师编号：
+        教师工号：
         <div class="layui-inline">
             <input class="layui-input" name="tid" id="tid" autocomplete="off">
         </div>
@@ -41,12 +41,12 @@
             ,title: '成绩查询'
             ,cols: [
                 [ //表头
-                    {field: 'tname', title: '教师姓名'}
-                    ,{field: 'tid', title: '教师工号'}
-                    ,{field: 'exam', title: '教评成绩'}
-                    ,{field: 'pcount', title: '教评人数'}
-                    ,{field: 'tetime', title: '成绩年份'}
-                    ,{field: 'semester', title: '成绩学期',templet: function (d) {
+                    {field: 'tid', title: '教师工号',align: 'center',sort: true},
+                    {field: 'tname', title: '教师姓名',align: 'center'}
+                    ,{field: 'exam', title: '教评成绩',align: 'center'}
+                    ,{field: 'pcount', title: '教评人数',align: 'center'}
+                    ,{field: 'tetime', title: '成绩年份',align: 'center',sort: true}
+                    ,{field: 'semester', title: '成绩学期',align: 'center',templet: function (d) {
                         if (d.semester =='1'){
                             return '上学期'
                         }else if (d.semester =='2'){
