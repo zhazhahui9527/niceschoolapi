@@ -50,8 +50,8 @@ public class SelectCourseController {
 
     //查询课程类别
     @ResponseBody
-    @RequestMapping("selCourseType")
-    public Object selCourseType() {
+    @RequestMapping("selectCourseType")
+    public Object selectCourseType() {
         List<CourseTypeDB> selType = selectCourseService.selType();
         Map<String, Object> tableData = new HashMap<String, Object>();
         //这是layui要求返回的json数据格式

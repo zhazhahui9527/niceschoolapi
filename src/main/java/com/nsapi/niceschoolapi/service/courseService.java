@@ -1,14 +1,12 @@
-package com.nsapi.niceschoolapi.mapper;
+package com.nsapi.niceschoolapi.service;
 
 import com.nsapi.niceschoolapi.entity.CourseTypeDB;
 import com.nsapi.niceschoolapi.entity.CourseVO;
 import com.nsapi.niceschoolapi.entity.MajorDB;
-import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
 
-@Mapper
-public interface CourseMapper {
+public interface courseService {
     List<CourseVO> selCourse(CourseVO CourseVO);
     List<MajorDB> selMajor();
     List<CourseTypeDB> selCourseType();

@@ -10,7 +10,7 @@
 
 <div>
     <div class="demoTable"  style="margin-top: 10px;margin-left: 15px">
-        学生编号：
+        学生学号：
         <div class="layui-inline">
             <input class="layui-input" name="sid" id="demoReload" autocomplete="off">
         </div>&nbsp;&nbsp;
@@ -53,12 +53,12 @@
             ,url: 'selDropout' //数据接口
             ,title: '退学信息表'
             ,page: true //开启分页
-            ,limits:[5,10,15]
+            ,limits:[10,15,20]
 
             ,cols: [
                 [ //表头
                     //{field: "sid", title: '学生编号'},
-                    {field: "stuid", title: '学号', align: 'center'},
+                    {field: "stuid", title: '学号', align: 'center',sort: true},
                     {field: "sname", title: '姓名', align: 'center'},
                     {field: "sgender", title: '性别', align: 'center'},
                     {field: "scardid", title: '身份证号', align: 'center'},

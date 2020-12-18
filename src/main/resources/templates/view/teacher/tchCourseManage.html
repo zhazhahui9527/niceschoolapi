@@ -86,7 +86,7 @@
             </div>
         </div>
         <div class="layui-form-item">
-            <label class="layui-form-label">选择课目</label>
+            <label class="layui-form-label">选择课程</label>
             <div class="layui-input-block">
                 <select id="editSelCourse" name="editSelCourse" lay-filter="editSelCourse" lay-verify="editSelCourse"
                         lay-search></select>
@@ -137,7 +137,7 @@
                 [
                     {field: 'tid', title: '教师工号', align: 'center'}
                     , {field: 'tname', title: '教师姓名', align: 'center'}
-                    , {field: 'cname', title: '课目', align: 'center'}
+                    , {field: 'cname', title: '课程', align: 'center'}
                     , {field: 'classname', title: '班级', align: 'center'}
                     , {field: 'gname', title: '年级', align: 'center'}
                     , {fixed: 'right', title: '操作', toolbar: '#delBarBtn', width: 100, align: 'center'}
@@ -252,7 +252,7 @@
                                                 }
                                                 $('#editSelClass').html(lists);
                                                 form.render();
-                                                //获取课目
+                                                //获取课程
                                                 $.ajax({
                                                     type: 'post',
                                                     url: '/findAllCourseByMajorName?page=1&limit=1000',
@@ -368,7 +368,7 @@
                     type: 1,
                     resize: false,
                     area: ['1000px', '500px'],
-                    title: '查看【' + data.tname + '】所授课目，教师工号：' + data.tchid,
+                    title: '查看【' + data.tname + '】所授课程，教师工号：' + data.tchid,
                     content: $('#selDiv'),
                     btn: ['确认'],
                     yes: function (index) {
@@ -427,7 +427,7 @@
                                     }
                                     $('#editSelClass').html(lists);
                                     form.render();
-                                    //获取课目
+                                    //获取课程
                                     $.ajax({
                                         type: 'post',
                                         url: '/findAllCourseByMajorName?page=1&limit=1000',
@@ -488,7 +488,7 @@
                             }
                             $('#editSelClass').html(lists);
                             form.render();
-                            //获取课目
+                            //获取课程
                             $.ajax({
                                 type: 'post',
                                 url: '/findAllCourseByMajorName?page=1&limit=1000',

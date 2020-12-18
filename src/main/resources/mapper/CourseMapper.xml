@@ -10,27 +10,27 @@
             </if>
 
     </select>
-    <select id="selJson" resultType="com.nsapi.niceschoolapi.entity.MajorDB">
+    <select id="selMajor" resultType="com.nsapi.niceschoolapi.entity.MajorDB">
        select * from major
 
     </select>
-    <select id="selCoutu" resultType="com.nsapi.niceschoolapi.entity.CourseTypeDB">
+    <select id="selCourseType" resultType="com.nsapi.niceschoolapi.entity.CourseTypeDB">
        select * from course_type
 
     </select>
-    <update id="update" parameterType="com.nsapi.niceschoolapi.entity.CourseVO">
+    <update id="updateCourse" parameterType="com.nsapi.niceschoolapi.entity.CourseVO">
          update course set cname=#{cname},ccredit=#{ccredit},cperiod=#{cperiod},cstate=#{cstate},cselcount=#{cselcount},cmaxcount=#{cmaxcount},studytype=#{studytype},ctid=#{ctid},mid=#{mid} where cid=#{cid}
     </update>
-    <insert id="addcou" parameterType="com.nsapi.niceschoolapi.entity.CourseVO">
+    <insert id="addCourse" parameterType="com.nsapi.niceschoolapi.entity.CourseVO">
        insert into course (cname,ccredit,cperiod,cstate,cselcount,cmaxcount,studytype,ctid,mid,is_del)values(#{cname},#{ccredit},#{cperiod},#{cstate},0,#{cmaxcount},#{studytype},#{ctid},#{mid},0)
     </insert>
-    <update id="delcou" parameterType="Integer">
+    <update id="deleteCourse" parameterType="Integer">
        update course set is_del=1 where cid=#{cid}
     </update>
-    <update id="hfcou" parameterType="Integer">
+    <update id="renewCourse" parameterType="Integer">
        update course set is_del=0 where cid=#{cid}
     </update>
-    <select id="delercou" resultType="Integer">
+    <select id="selCount" resultType="Integer">
         select cselcount from course where cid=#{cid}
     </select>
 

@@ -59,7 +59,7 @@
         });
         //获取对应年级
         $.ajax({
-            url: '/selCourseType',
+            url: '/selectCourseType',
             success: function (alldata) {
                 var result = alldata.data;
                 var lists = '';
@@ -70,7 +70,7 @@
                 form.render();
             }
         });
-        form.on('select(selCourseType)', function (seldata) {
+        form.on('select(selectCourseType)', function (seldata) {
             tableid.reload({
                 url: '/selectCourse?ctname=' + seldata.value
             })

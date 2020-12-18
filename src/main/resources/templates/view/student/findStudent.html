@@ -14,7 +14,7 @@
 <div>
     <form class="layui-form" style="margin-left: -60px">
         <div class="layui-inline">
-            <label class="layui-form-label">系：</label>
+            <label class="layui-form-label">系院：</label>
             <div class="layui-input-inline">
                 <select th:name="did" lay-search="" lay-verify="required1" id="required1" lay-filter="required1">
                     <option th:value="0">请选择</option>
@@ -47,7 +47,7 @@
         </div>
     </form>
     <div class="demoTable" style="margin-top: 10px;margin-left: 15px">
-        学生编号：
+        学生学号：
         <div class="layui-inline">
             <input class="layui-input" name="sid" id="demoReload" autocomplete="off">
         </div>&nbsp;&nbsp;
@@ -271,21 +271,21 @@
             url: 'selStudent', //数据接口
             title: '用户表',
             page: true //开启分页
-            , limits: [5, 10, 15],
+            , limits: [10, 15,20],
             cols: [
                 [ //表头
                     //{field: "sid", title: '学生编号'},
-                    {field: "stuid", title: '学号'},
-                    {field: "sname", title: '姓名'},
-                    {field: "sgender", title: '性别'},
+                    {field: "stuid", title: '学号', align: 'center',sort: true},
+                    {field: "sname", title: '姓名', align: 'center'},
+                    {field: "sgender", title: '性别', align: 'center'},
                     // {field: "sbirthday", title: '出生日期',templet:"<div>{{layui.util.toDateString(d.sbirthday, 'yyyy年MM月dd日')}}</div>"},
                     //{field: "pname", title: '政治面貌'},
                     //{field: "snation", title: '民族'},
                     //{field: "scardid", title: '身份证号'},
                     //{field: "sphone", title: '手机号'},
                     //{field: "saddress", title: '地址'},
-                    {field: "stustate", title: '状态'},
-                    {field: "classname", title: '班级'},
+                    {field: "stustate", title: '状态', align: 'center'},
+                    {field: "classname", title: '班级', align: 'center'},
                     {fixed: 'right', title: '操作', width: 165, align: 'center', toolbar: '#barDemo'}
                 ]]
             , id: 'selStudent',
