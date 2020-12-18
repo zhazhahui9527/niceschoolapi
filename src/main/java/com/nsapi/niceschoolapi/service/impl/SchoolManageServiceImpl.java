@@ -76,13 +76,13 @@ public class SchoolManageServiceImpl implements SchoolManageService {
     }
     //添加年级
     @Override
-    public int addOneGrade(GradeDB gradeDB) {
-        return schoolManageMapper.addOneGrade(gradeDB);
+    public int addOneGrade(GradeDB examGradeDB) {
+        return schoolManageMapper.addOneGrade(examGradeDB);
     }
     //编辑年级
     @Override
-    public int editOneGrade(GradeDB gradeDB) {
-        return schoolManageMapper.editOneGrade(gradeDB);
+    public int editOneGrade(GradeDB examGradeDB) {
+        return schoolManageMapper.editOneGrade(examGradeDB);
     }
     //删除年级
     @Override
@@ -156,8 +156,8 @@ public class SchoolManageServiceImpl implements SchoolManageService {
     }
 
     @Override
-    public int checkOneGrade(GradeDB gradeDB) {
-        return schoolManageMapper.checkOneGrade(gradeDB);
+    public int checkOneGrade(GradeDB examGradeDB) {
+        return schoolManageMapper.checkOneGrade(examGradeDB);
     }
 
     @Override

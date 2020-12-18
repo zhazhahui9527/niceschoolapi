@@ -9,7 +9,7 @@
     <select id="selMa" resultType="com.nsapi.niceschoolapi.entity.MajorDB" parameterType="Integer">
         select * from major where did=#{did}
     </select>
-    <select id="selGr" resultType="com.nsapi.niceschoolapi.entity.GradeDB"  parameterType="Integer">
+    <select id="selGr" resultType="com.nsapi.niceschoolapi.entity.GradeDB" parameterType="Integer">
         select * from grade where mid=#{mid}
     </select>
     <select id="selClass" resultType="com.nsapi.niceschoolapi.entity.ClassInfoDB" parameterType="Integer">

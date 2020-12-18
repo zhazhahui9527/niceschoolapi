@@ -2,7 +2,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.nsapi.niceschoolapi.mapper.GradeMapper">
+<mapper namespace="com.nsapi.niceschoolapi.mapper.ExamGradeMapper">
    <!-- 查询学生个人信息 -->
     <select id="selStudentMessage" resultType="map" parameterType="map">
         select s.stuid,s.sname,d.dname,concat(g.gname,m.mname,class.classname) gmc from student s

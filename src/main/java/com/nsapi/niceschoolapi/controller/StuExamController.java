@@ -61,9 +61,9 @@ public class StuExamController {
     @ResponseBody
     public Object selGrs(Integer mid){
         //System.out.println(mid);
-        List<GradeDB> gradeDBS = studentExamService.selGrs(mid);
+        List<GradeDB> examGradeDBS = studentExamService.selGrs(mid);
         // System.out.println(gradeDBS);
-        return gradeDBS;
+        return examGradeDBS;
     }
     @RequestMapping("selCls")
     @ResponseBody

@@ -206,12 +206,12 @@ public class SchoolManageController extends BaseController {
      */
     @RequestMapping("addGrade")
     @ResponseBody
-    public Object addGrade(GradeDB gradeDB) {
-        int check = schoolManageService.checkOneGrade(gradeDB);
+    public Object addGrade(GradeDB examGradeDB) {
+        int check = schoolManageService.checkOneGrade(examGradeDB);
         if (check > 0) {
             return false;
         } else {
-            int r = schoolManageService.addOneGrade(gradeDB);
+            int r = schoolManageService.addOneGrade(examGradeDB);
             if (r == 1) {
                 return true;
             } else {
@@ -260,12 +260,12 @@ public class SchoolManageController extends BaseController {
      */
     @RequestMapping("editGrade")
     @ResponseBody
-    public Object editGrade(GradeDB gradeDB) {
-        int check = schoolManageService.checkOneGrade(gradeDB);
+    public Object editGrade(GradeDB examGradeDB) {
+        int check = schoolManageService.checkOneGrade(examGradeDB);
         if (check > 0) {
             return false;
         } else {
-            int r = schoolManageService.editOneGrade(gradeDB);
+            int r = schoolManageService.editOneGrade(examGradeDB);
             if (r == 1) {
                 return true;
             } else {

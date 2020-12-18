@@ -39,9 +39,9 @@ public interface SchoolManageMapper {
     //级联系部查询对应专业
     List<SchoolManageVO> jlSelMajor(SchoolManageVO schoolManageVO);
     //添加年级
-    int addOneGrade(GradeDB gradeDB);
+    int addOneGrade(GradeDB examGradeDB);
     //编辑年级
-    int editOneGrade(GradeDB gradeDB);
+    int editOneGrade(GradeDB examGradeDB);
     //删除年级
     int delOneGrade(Integer gid);
 
@@ -76,6 +76,6 @@ public interface SchoolManageMapper {
      */
     int checkOneDpm(DepartmentDB departmentDB);
     int checkOneMajor(MajorDB majorDB);
-    int checkOneGrade(GradeDB gradeDB);
+    int checkOneGrade(GradeDB examGradeDB);
     int checkOneClass(ClassInfoDB classinfoDB);
 }
