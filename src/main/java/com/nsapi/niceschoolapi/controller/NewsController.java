@@ -21,33 +21,35 @@ public class NewsController extends BaseController {
 
     /**
      * 进入发布文章页面
+     *
      * @return
      */
-    @RequestMapping("addnews")
-    public String addnews() {
-        return "view/news/addnews";
+    @RequestMapping("releaseNews")
+    public String releaseNews() {
+        return "view/news/releaseNews";
     }
 
     /**
      * 进入新闻公示管理页面
+     *
      * @return
      */
-    @RequestMapping("newscontrol")
+    @RequestMapping("newsControl")
     public String newscontrol() {
-        return "view/news/newscontrol";
+        return "view/news/newsControl";
     }
 
 
     /**
      * 发布新闻
      */
-    @RequestMapping("addingnews")
+    @RequestMapping("addNews")
     @ResponseBody
-    public Object addingNews(NewsInfoDB newsInfoDB){
+    public Object addNews(NewsInfoDB newsInfoDB) {
         int r = newsService.addNews(newsInfoDB);
-        if(r==1){
+        if (r == 1) {
             return true;
-        }else{
+        } else {
             return false;
         }
     }
@@ -55,9 +57,9 @@ public class NewsController extends BaseController {
     /**
      * 获取新闻列表
      */
-    @RequestMapping("findallnews")
+    @RequestMapping("findAllNews")
     @ResponseBody
-    public Object findallnews(NewsInfoDB newsInfoDB, Integer page, Integer limit){
+    public Object findAllNews(NewsInfoDB newsInfoDB, Integer page, Integer limit) {
         PageHelper.startPage(page, limit);
         List<NewsInfoDB> listAll = newsService.findAllNews(newsInfoDB);
         PageInfo pageInfo = new PageInfo(listAll);
@@ -74,14 +76,14 @@ public class NewsController extends BaseController {
 
     /**
      * 删除新闻
-     * */
-    @RequestMapping("deletenews")
+     */
+    @RequestMapping("deleteNews")
     @ResponseBody
-    public Object deleteNews(Integer nid){
+    public Object deleteNews(Integer nid) {
         int r = newsService.deleteNews(nid);
-        if(r==1){
+        if (r == 1) {
             return true;
-        }else{
+        } else {
             return false;
         }
     }
@@ -89,13 +91,13 @@ public class NewsController extends BaseController {
     /**
      * 编辑新闻
      */
-    @RequestMapping("editingnews")
+    @RequestMapping("editNews")
     @ResponseBody
-    public Object editNews(NewsInfoDB newsInfoDB){
+    public Object editNews(NewsInfoDB newsInfoDB) {
         int r = newsService.editNews(newsInfoDB);
-        if(r==1){
+        if (r == 1) {
             return true;
-        }else{
+        } else {
             return false;
         }
     }

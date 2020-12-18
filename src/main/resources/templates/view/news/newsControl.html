@@ -97,14 +97,14 @@
         //获取分页数据列表
         table.render({
             elem: '#newslist'
-            , url: '/news/findallnews'
+            , url: '/news/findAllNews'
             , cols: [
                 [
-                    {field: 'nid', width: 100, title: '新闻ID', sort: true}
-                    , {field: 'ntitle', title: '新闻标题'}
-                    , {field: 'ncontent', width: 200, title: '新闻内容'}
-                    , {field: 'nauthor', title: '新闻作者'}
-                    , {field: 'ntime', title: '发布时间',templet: function (d) {
+                    {field: 'nid', width: 100, title: '新闻ID', sort: true, align: 'center'}
+                    , {field: 'ntitle', title: '新闻标题', align: 'center'}
+                    , {field: 'ncontent', width: 200, title: '新闻内容', align: 'center'}
+                    , {field: 'nauthor', title: '新闻作者', align: 'center'}
+                    , {field: 'ntime', title: '发布时间', align: 'center',templet: function (d) {
                         return fDate(d.ntime);
                     }}
                     , {fixed: 'right', title: '操作', toolbar: '#barBtn', width: 150}
@@ -133,7 +133,7 @@
                     yes: function(index){
                         $.ajax({
                             type: 'post',
-                            url: '/news/editingnews',
+                            url: '/news/editNews',
                             data: {
                                 nid:$('#nid').val(),
                                 ntitle:$('#ntitle').val(),
@@ -162,7 +162,7 @@
                 layer.confirm('确定要删除吗？', function (index) {
                         $.ajax({
                             type: 'post',
-                            url: '/news/deletenews',
+                            url: '/news/deleteNews',
                             data: {
                                 nid:data.nid
                             },
