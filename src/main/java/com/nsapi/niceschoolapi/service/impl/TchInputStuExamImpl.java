@@ -1,56 +1,56 @@
 package com.nsapi.niceschoolapi.service.impl;
 
 import com.nsapi.niceschoolapi.entity.*;
-import com.nsapi.niceschoolapi.mapper.StuExamMapper;
-import com.nsapi.niceschoolapi.service.StudentExamService;
+import com.nsapi.niceschoolapi.mapper.TchInputStuExamMapper;
+import com.nsapi.niceschoolapi.service.TchInputStuExamService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.List;
 
 @Service
-public class StudentExamImpl implements StudentExamService {
+public class TchInputStuExamImpl implements TchInputStuExamService {
 @Resource
-private StuExamMapper stuExamMapper;
+private TchInputStuExamMapper tchInputStuExamMapper;
 
     @Override
     public List<DepartmentDB> selDes() {
-        return stuExamMapper.selDes();
+        return tchInputStuExamMapper.selDes();
     }
 
     @Override
     public List<MajorDB> selMas(Integer did) {
-        return stuExamMapper.selMas(did);
+        return tchInputStuExamMapper.selMas(did);
     }
 
     @Override
     public List<GradeDB> selGrs(Integer mid) {
-        return stuExamMapper.selGrs(mid);
+        return tchInputStuExamMapper.selGrs(mid);
     }
 
     @Override
     public List<ClassInfoDB> selClasss(Integer gid) {
-        return stuExamMapper.selClasss(gid);
+        return tchInputStuExamMapper.selClasss(gid);
     }
 
     @Override
     public List<StuExamVO> selScs(StuExamVO stuExamVO) {
-        return stuExamMapper.selScs(stuExamVO);
+        return tchInputStuExamMapper.selScs(stuExamVO);
     }
 
     @Override
     public int add(StuExamVO stuExamVO) {
-        return stuExamMapper.add(stuExamVO);
+        return tchInputStuExamMapper.add(stuExamVO);
     }
 
     @Override
     public int selExam(StuExamVO stuExamVO) {
-        return stuExamMapper.selExam(stuExamVO);
+        return tchInputStuExamMapper.selExam(stuExamVO);
     }
 
 
     @Override
     public int updateExam(StuExamDB stuExamDB) {
-        return stuExamMapper.updateExam(stuExamDB);
+        return tchInputStuExamMapper.updateExam(stuExamDB);
     }
 }

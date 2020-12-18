@@ -4,7 +4,7 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.nsapi.niceschoolapi.common.config.MySysUser;
 import com.nsapi.niceschoolapi.entity.*;
-import com.nsapi.niceschoolapi.service.StudentExamService;
+import com.nsapi.niceschoolapi.service.TchInputStuExamService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,9 +15,9 @@ import java.util.List;
 import java.util.Map;
 
 @Controller
-public class StuExamController {
+public class TchInputStuExamController {
     @Autowired
-    private StudentExamService studentExamService;
+    private TchInputStuExamService tchInputStuExamService;
     @RequestMapping("selstudentExam")
     public String selCourses(){
         return "StudentExam";
@@ -27,7 +27,7 @@ public class StuExamController {
     public Object selSc(Integer page, Integer limit, StuExamVO stuExamVO){
         stuExamVO.setTid(Integer.valueOf(MySysUser.loginName()));
         PageHelper.startPage(page, limit);
-        List<StuExamVO> stuCourseVOS = studentExamService.selScs(stuExamVO);
+        List<StuExamVO> stuCourseVOS = tchInputStuExamService.selScs(stuExamVO);
         PageInfo pageInfo = new PageInfo(stuCourseVOS);
         Map<String, Object> tableData = new HashMap<String, Object>();
         //这是layui要求返回的json数据格式
@@ -45,7 +45,7 @@ public class StuExamController {
     @RequestMapping("selDes")
     @ResponseBody
     public Object selDes(){
-        List<DepartmentDB> departmentDBS = studentExamService.selDes();
+        List<DepartmentDB> departmentDBS = tchInputStuExamService.selDes();
         //System.out.println(departmentDBS);
         return departmentDBS;
     }
@@ -53,7 +53,7 @@ public class StuExamController {
     @ResponseBody
     public Object selMas(Integer did){
         //System.out.println(did);
-        List<MajorDB> majors = studentExamService.selMas(did);
+        List<MajorDB> majors = tchInputStuExamService.selMas(did);
         //System.out.println(majors);
         return majors;
     }
@@ -61,7 +61,7 @@ public class StuExamController {
     @ResponseBody
     public Object selGrs(Integer mid){
         //System.out.println(mid);
-        List<GradeDB> examGradeDBS = studentExamService.selGrs(mid);
+        List<GradeDB> examGradeDBS = tchInputStuExamService.selGrs(mid);
         // System.out.println(gradeDBS);
         return examGradeDBS;
     }
@@ -69,7 +69,7 @@ public class StuExamController {
     @ResponseBody
     public Object selCls(Integer gid){
          System.out.println(gid);
-        List<ClassInfoDB> classInfoDBS = studentExamService.selClasss(gid);
+        List<ClassInfoDB> classInfoDBS = tchInputStuExamService.selClasss(gid);
         // System.out.println(classinfoDBS);
         return classInfoDBS;
     }
@@ -77,11 +77,11 @@ public class StuExamController {
     @RequestMapping("selmessage")
     public Object selmessage(StuExamVO stuExamVO){
         String msg="";
-        int i = studentExamService.selExam(stuExamVO);
+        int i = tchInputStuExamService.selExam(stuExamVO);
         if(i==1){
            msg="请不要重复导入成绩";
         }else{
-        int num = studentExamService.add(stuExamVO);
+        int num = tchInputStuExamService.add(stuExamVO);
         if (num==1){
             msg="添加成功";
         }
@@ -95,7 +95,7 @@ public class StuExamController {
     @RequestMapping("saveupdate")
     public  Object saveupdate(StuExamDB stuExamDB){
         String msg="";
-        int nums = studentExamService.updateExam(stuExamDB);
+        int nums = tchInputStuExamService.updateExam(stuExamDB);
         if(nums==1){
             msg="修改成功";
         }

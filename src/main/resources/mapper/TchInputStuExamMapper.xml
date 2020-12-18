@@ -2,7 +2,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.nsapi.niceschoolapi.mapper.StuExamMapper">
+<mapper namespace="com.nsapi.niceschoolapi.mapper.TchInputStuExamMapper">
     <select id="selDes" resultType="com.nsapi.niceschoolapi.entity.DepartmentDB">
         select * from department
     </select>

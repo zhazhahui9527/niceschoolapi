@@ -6,7 +6,7 @@ import org.apache.ibatis.annotations.Mapper;
 import java.util.List;
 
 @Mapper
-public interface StuExamMapper {
+public interface TchInputStuExamMapper {
     List<DepartmentDB> selDes();
     List<MajorDB> selMas(Integer did);
     List<GradeDB> selGrs(Integer mid);
