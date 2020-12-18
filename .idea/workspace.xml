@@ -13,13 +13,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="32e2b928-60b9-42c7-9397-233dbb3b89c8" name="Default Changelist" comment="2020/12/18 16:34">
+    <list default="true" id="32e2b928-60b9-42c7-9397-233dbb3b89c8" name="Default Changelist" comment="2020/12/18 17:01">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/StuExamController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/TchInputStuExamController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/mapper/StuExamMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/mapper/TchInputStuExamMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/service/StudentExamService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/service/TchInputStuExamService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/service/impl/StudentExamImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/service/impl/TchInputStuExamImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/StuExamMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/TchInputStuExamMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/TchInputStuExamController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/controller/TchInputStuExamController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/StudentExam.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/InputStudentExam.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/student/tchSelStuExam.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/student/tchSelStuExam.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -441,7 +439,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608280456149</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="2020/12/18 17:01">
+      <created>1608282077984</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1608282077984</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -511,7 +516,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="提交测试" />
     <MESSAGE value="首页完善-11-06" />
     <MESSAGE value="打包配置1" />
     <MESSAGE value="修复崩溃" />
@@ -536,7 +540,8 @@
     <MESSAGE value="2020/12/18 14:27" />
     <MESSAGE value="2020/12/18 14:51" />
     <MESSAGE value="2020/12/18 16:34" />
-    <option name="LAST_COMMIT_MESSAGE" value="2020/12/18 16:34" />
+    <MESSAGE value="2020/12/18 17:01" />
+    <option name="LAST_COMMIT_MESSAGE" value="2020/12/18 17:01" />
   </component>
   <component name="WindowStateProjectService">
     <state x="779" y="225" key="#com.intellij.ide.util.MemberChooser" timestamp="1608197827834">
@@ -611,14 +616,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="462" y="167" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1607677043977" />
-    <state x="553" y="256" key="Vcs.Push.Dialog.v2" timestamp="1608280461039">
+    <state x="553" y="256" key="Vcs.Push.Dialog.v2" timestamp="1608282081071">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="553" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1608280461039" />
-    <state x="408" y="352" width="1099" height="688" key="find.popup" timestamp="1608279792305">
+    <state x="553" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1608282081071" />
+    <state x="408" y="352" width="1099" height="688" key="find.popup" timestamp="1608282655144">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="408" y="352" width="1099" height="688" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1608279792305" />
+    <state x="408" y="352" width="1099" height="688" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1608282655144" />
     <state x="580" y="242" key="run.anything.popup" timestamp="1608276370263">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

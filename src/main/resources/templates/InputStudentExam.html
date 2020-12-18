@@ -162,7 +162,7 @@
                             var testexam=$("#testexam").val();
                             var sumexam=$("#sumexam").val();
                             var stime=$("#stime").val();
-                            $.post("/selmessage",{ sid:sid, scid:scid, normalexam:normalexam, testexam:testexam, sumexam:sumexam, stime:stime},function(res){
+                            $.post("/selMessage",{ sid:sid, scid:scid, normalexam:normalexam, testexam:testexam, sumexam:sumexam, stime:stime},function(res){
                                 layer.msg(res)
                                 window.setTimeout('window.location.href="/selstudentExam"',2000);
                             })

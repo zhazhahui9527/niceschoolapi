@@ -156,7 +156,7 @@
                         var testexam=$("#testexams").val();
                         var sumexam=$("#sumexams").val();
                         var stime=$("#stimes").val();
-                        $.post("/saveupdate",{scid:data.scid,normalexam:normalexam, testexam:testexam, sumexam:sumexam, stime:stime},function(res){
+                        $.post("/saveUpdate",{scid:data.scid,normalexam:normalexam, testexam:testexam, sumexam:sumexam, stime:stime},function(res){
                             layer.msg(res)
                             window.setTimeout('window.location.href="/tchSelExam"',2000);
                         })

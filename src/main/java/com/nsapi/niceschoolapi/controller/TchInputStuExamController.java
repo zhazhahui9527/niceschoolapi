@@ -18,9 +18,9 @@ import java.util.Map;
 public class TchInputStuExamController {
     @Autowired
     private TchInputStuExamService tchInputStuExamService;
-    @RequestMapping("selstudentExam")
-    public String selCourses(){
-        return "StudentExam";
+    @RequestMapping("InputStudentExam")
+    public String InputStudentExam(){
+        return "InputStudentExam";
     }
     @RequestMapping("selScs")
     @ResponseBody
@@ -74,8 +74,8 @@ public class TchInputStuExamController {
         return classInfoDBS;
     }
     @ResponseBody
-    @RequestMapping("selmessage")
-    public Object selmessage(StuExamVO stuExamVO){
+    @RequestMapping("selMessage")
+    public Object selMessage(StuExamVO stuExamVO){
         String msg="";
         int i = tchInputStuExamService.selExam(stuExamVO);
         if(i==1){
@@ -92,8 +92,8 @@ public class TchInputStuExamController {
         return msg;
     }
     @ResponseBody
-    @RequestMapping("saveupdate")
-    public  Object saveupdate(StuExamDB stuExamDB){
+    @RequestMapping("saveUpdate")
+    public  Object saveUpdate(StuExamDB stuExamDB){
         String msg="";
         int nums = tchInputStuExamService.updateExam(stuExamDB);
         if(nums==1){
