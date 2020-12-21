@@ -18,8 +18,10 @@ import java.util.Map;
 @Controller
 
 public class IndexController {
+
     @Autowired
     private NewsService newsService;
+
     private ScheduleService scheduleService;
 
     public IndexController(ScheduleService scheduleService) {

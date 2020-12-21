@@ -20,6 +20,7 @@ import java.util.Map;
 @Controller
 @RequestMapping("appraise")
 public class AppraiseController extends BaseController {
+
     @Autowired
     private AppraiseService appraiseService;
 

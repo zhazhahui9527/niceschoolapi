@@ -46,6 +46,7 @@ public class DropCourseController {
         return tableData;
     }
 
+
     @RequestMapping("dropCourse")
     @ResponseBody
     public Object dropCourse(Integer cid) {

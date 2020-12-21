@@ -17,6 +17,7 @@ import java.util.Map;
 
 @Controller
 public class CourseController {
+
     @Autowired
     private courseService courseService;
 
@@ -25,6 +26,14 @@ public class CourseController {
         return "findCourse";
     }
 
+    /**
+     * 查询课程
+     * @param page
+     * @param limit
+     * @param CourseVO
+     * @param cname
+     * @return
+     */
     @RequestMapping("selCourse")
     @ResponseBody
     public Object selCourse(Integer page, Integer limit, CourseVO CourseVO, String cname) {
@@ -47,7 +56,10 @@ public class CourseController {
         return tableData;
     }
 
-
+    /**
+     * 查询专业
+     * @return
+     */
     @RequestMapping("selMajor")
     @ResponseBody
     public Object selMajor() {
@@ -55,6 +67,10 @@ public class CourseController {
         return major;
     }
 
+    /**
+     * 查询课程类型
+     * @return
+     */
     @RequestMapping("selCourseType")
     @ResponseBody
     public Object selCourseType() {
@@ -63,6 +79,11 @@ public class CourseController {
         return coursetype;
     }
 
+    /**
+     * 更新课程
+     * @param CourseVO
+     * @return
+     */
     @RequestMapping("updateCourse")
     @ResponseBody
     public Object updateCourse(CourseVO CourseVO) {
@@ -75,6 +96,11 @@ public class CourseController {
 
     }
 
+    /**
+     * 增加课程
+     * @param CourseVO
+     * @return
+     */
     @RequestMapping("addCourse")
     @ResponseBody
     public Object addCourse(CourseVO CourseVO) {
@@ -87,6 +113,11 @@ public class CourseController {
 
     }
 
+    /**
+     * 删除课程
+     * @param cid
+     * @return
+     */
     @RequestMapping("deleteCourse")
     @ResponseBody
     public Object deleteCourse(Integer cid) {
@@ -105,6 +136,9 @@ public class CourseController {
 
     }
 
+    /**
+     * 恢复课程
+     */
     @RequestMapping("renewCourse")
     @ResponseBody
     public Object renewCourse(Integer cid) {

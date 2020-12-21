@@ -43,6 +43,7 @@ public class LoginController {
     public final static String LOGIN_TYPE = "loginType";
 
     @Autowired
+
     @Qualifier("captchaProducer")
     DefaultKaptcha captchaProducer;
 
@@ -77,7 +78,6 @@ public class LoginController {
             LoginTypeEnum attribute = (LoginTypeEnum) session.getAttribute(LOGIN_TYPE);
             loginType = attribute == null ? loginType : attribute.name();
         }
-
         if (LoginTypeEnum.ADMIN.name().equals(loginType)) {
             session.setAttribute(LOGIN_TYPE, LoginTypeEnum.ADMIN);
             return "admin/login";

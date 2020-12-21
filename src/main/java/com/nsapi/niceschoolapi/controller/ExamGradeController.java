@@ -14,6 +14,7 @@ import java.util.Map;
 
 @Controller
 public class ExamGradeController {
+
     @Autowired
     private ExamGradeService examGradeService;
 

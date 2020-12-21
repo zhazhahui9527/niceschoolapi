@@ -17,10 +17,11 @@ import java.util.List;
 import java.util.Map;
 
 @Controller
-//使用它标记的类就是一个SpringMVC Controller 对象。分发处理器将会扫描使用了该注解的类的方法
 public class AddStudentController {
-    @Autowired  //  自动注入
+
+    @Autowired
     private StudentService studentService;
+
     @Autowired
     private AddStudentService addStudentService;
 
@@ -33,7 +34,7 @@ public class AddStudentController {
     }
 
     //  添加学生
-    @RequestMapping("addStudent") //   用来处理请求地址映射的注解
+    @RequestMapping("addStudent")
     @ResponseBody   // 通常用来返回JSON数据给客户端
     public LayuiResult<StudentDB> addStudent(StudentVO studentVO, String birthday, String tertime) throws Exception {
         LayuiResult<StudentDB> result = new LayuiResult<>();
@@ -50,9 +51,9 @@ public class AddStudentController {
             Integer fenge = addStudentService.stuSegmentation(studentVO.getClassid());
         }
         //  生成学生学号
-        String stui = addStudentService.selStuid(studentVO.getGid());
-        studentVO.setStuid(stui);
-        studentVO.setSid(Integer.valueOf(stui));
+        String studentid = addStudentService.selStuid(studentVO.getGid());
+        studentVO.setStuid(studentid);
+        studentVO.setSid(Integer.valueOf(studentid));
         //  根据前台传来信息添加学生
         Integer addStudent = addStudentService.addStudent(studentVO);
         //  获取学号

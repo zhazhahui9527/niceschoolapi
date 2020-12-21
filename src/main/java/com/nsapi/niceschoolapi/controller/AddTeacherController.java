@@ -18,8 +18,10 @@ import java.util.Map;
 
 @Controller
 public class AddTeacherController {
+
     @Autowired
     private StudentService studentService;
+
     @Autowired
     private AddTeacherService addTeacherService;
 
@@ -44,8 +46,8 @@ public class AddTeacherController {
         teacherDB.setTbirthday(date1);
         teacherDB.setEntertime(date2);
         //  查询教师数量
-        Integer teacount = addTeacherService.selTeacherCount();
-        if (teacount == 0) {
+        Integer tchcount = addTeacherService.selTeacherCount();
+        if (tchcount == 0) {
             //  添加一条分割线
             Integer aa = addTeacherService.teaSegmentation();
         }
