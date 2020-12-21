@@ -10,6 +10,8 @@ import java.util.List;
 public interface DropCourseMapper {
     //多个参数传递需要加@param注解传递
     List<CourseVO> seledCourse(@Param("cname") String cname, @Param("sid") Integer sid);
+
     int dropcou(@Param("sid") Integer sid, @Param("cid") Integer cid);
+
     int updatecou(Integer cid);
 }

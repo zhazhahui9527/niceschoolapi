@@ -12,14 +12,15 @@ import java.util.List;
 public class DropCourseServiceImpl implements DropCourseService {
     @Resource
     private DropCourseMapper dropCourseMapper;
+
     @Override
     public List<CourseVO> seledCourse(String cname, Integer sid) {
-        return dropCourseMapper.seledCourse(cname,sid);
+        return dropCourseMapper.seledCourse(cname, sid);
     }
 
     @Override
     public int dropcou(Integer sid, Integer cid) {
-        return dropCourseMapper.dropcou(sid,cid);
+        return dropCourseMapper.dropcou(sid, cid);
     }
 
     @Override

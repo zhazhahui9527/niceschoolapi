@@ -14,6 +14,7 @@ import java.util.List;
 public class SchoolManageServiceImpl implements SchoolManageService {
     @Resource
     private SchoolManageMapper schoolManageMapper;
+
     /**
      * 系部管理
      */
@@ -22,21 +23,25 @@ public class SchoolManageServiceImpl implements SchoolManageService {
     public List<SchoolManageVO> findAllDpm(SchoolManageVO schoolManageVO) {
         return schoolManageMapper.findAllDpm(schoolManageVO);
     }
+
     //添加系部
     @Override
     public int addOneDpm(DepartmentDB departmentDB) {
         return schoolManageMapper.addOneDpm(departmentDB);
     }
+
     //编辑系部
     @Override
     public int editOneDpm(DepartmentDB departmentDB) {
         return schoolManageMapper.editOneDpm(departmentDB);
     }
+
     //删除系部
     @Override
     public int delOneDpm(Integer did) {
         return schoolManageMapper.delOneDpm(did);
     }
+
     /**
      * 专业管理
      */
@@ -45,16 +50,19 @@ public class SchoolManageServiceImpl implements SchoolManageService {
     public List<SchoolManageVO> findAllMajor(SchoolManageVO schoolManageVO) {
         return schoolManageMapper.findAllMajor(schoolManageVO);
     }
+
     //添加专业
     @Override
     public int addOneMajor(MajorDB majorDB) {
         return schoolManageMapper.addOneMajor(majorDB);
     }
+
     //编辑专业
     @Override
     public int editOneMajor(MajorDB majorDB) {
         return schoolManageMapper.editOneMajor(majorDB);
     }
+
     //删除专业
     @Override
     public int delOneMajor(Integer mid) {
@@ -69,21 +77,25 @@ public class SchoolManageServiceImpl implements SchoolManageService {
     public List<SchoolManageVO> findAllGrade(SchoolManageVO schoolManageVO) {
         return schoolManageMapper.findAllGrade(schoolManageVO);
     }
+
     //级联系部查询对应专业
     @Override
     public List<SchoolManageVO> jlSelMajor(SchoolManageVO schoolManageVO) {
         return schoolManageMapper.jlSelMajor(schoolManageVO);
     }
+
     //添加年级
     @Override
     public int addOneGrade(GradeDB examGradeDB) {
         return schoolManageMapper.addOneGrade(examGradeDB);
     }
+
     //编辑年级
     @Override
     public int editOneGrade(GradeDB examGradeDB) {
         return schoolManageMapper.editOneGrade(examGradeDB);
     }
+
     //删除年级
     @Override
     public int delOneGrade(Integer gid) {
@@ -98,21 +110,25 @@ public class SchoolManageServiceImpl implements SchoolManageService {
     public List<SchoolManageVO> findAllClass(SchoolManageVO schoolManageVO) {
         return schoolManageMapper.findAllClass(schoolManageVO);
     }
+
     //级联专业查询对应年级
     @Override
     public List<SchoolManageVO> jlSelGrade(SchoolManageVO schoolManageVO) {
         return schoolManageMapper.jlSelGrade(schoolManageVO);
     }
+
     //添加班级
     @Override
     public int addOneClass(ClassInfoDB classinfoDB) {
         return schoolManageMapper.addOneClass(classinfoDB);
     }
+
     //编辑班级
     @Override
     public int editOneClass(ClassInfoDB classinfoDB) {
         return schoolManageMapper.editOneClass(classinfoDB);
     }
+
     //删除班级
     @Override
     public int delOneClass(Integer classid) {
@@ -127,21 +143,25 @@ public class SchoolManageServiceImpl implements SchoolManageService {
     public List<SchoolManageVO> tjSelClass(SchoolManageVO schoolManageVO) {
         return schoolManageMapper.tjSelClass(schoolManageVO);
     }
+
     //条件查询department
     @Override
     public List<SchoolManageVO> tjSelDpm(SchoolManageVO schoolManageVO) {
         return schoolManageMapper.tjSelDpm(schoolManageVO);
     }
+
     //条件查询major
     @Override
     public List<SchoolManageVO> tjSelMajor(SchoolManageVO schoolManageVO) {
         return schoolManageMapper.tjSelMajor(schoolManageVO);
     }
+
     //条件查询grade
     @Override
     public List<SchoolManageVO> tjSelGrade(SchoolManageVO schoolManageVO) {
         return schoolManageMapper.tjSelGrade(schoolManageVO);
     }
+
     /**
      * 重复验证
      */

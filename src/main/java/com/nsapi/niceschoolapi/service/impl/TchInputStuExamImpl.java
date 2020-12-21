@@ -10,8 +10,8 @@ import java.util.List;
 
 @Service
 public class TchInputStuExamImpl implements TchInputStuExamService {
-@Resource
-private TchInputStuExamMapper tchInputStuExamMapper;
+    @Resource
+    private TchInputStuExamMapper tchInputStuExamMapper;
 
     @Override
     public List<DepartmentDB> selDes() {

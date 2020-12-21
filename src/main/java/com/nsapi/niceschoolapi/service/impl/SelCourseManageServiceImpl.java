@@ -13,6 +13,7 @@ import java.util.List;
 public class SelCourseManageServiceImpl implements SelCourseManageService {
     @Resource
     private SelCourseManageMapper selCourseManageMapper;
+
     @Override
     public List<DepartmentDB> selDe() {
         return selCourseManageMapper.selDe();
@@ -45,7 +46,7 @@ public class SelCourseManageServiceImpl implements SelCourseManageService {
 
     @Override
     public int dropcou(Integer sid, Integer cid) {
-        return selCourseManageMapper.dropcou(sid,cid);
+        return selCourseManageMapper.dropcou(sid, cid);
     }
 
     @Override
@@ -55,7 +56,7 @@ public class SelCourseManageServiceImpl implements SelCourseManageService {
 
     @Override
     public int changeCou(@Param("ccd") Integer ccd, @Param("sid") Integer sid, @Param("cid") Integer cid) {
-        return selCourseManageMapper.changeCou(ccd,sid,cid);
+        return selCourseManageMapper.changeCou(ccd, sid, cid);
     }
 
 
@@ -66,6 +67,6 @@ public class SelCourseManageServiceImpl implements SelCourseManageService {
 
     @Override
     public int selStc(Integer ccd, Integer sid) {
-        return selCourseManageMapper.selStc(ccd,sid);
+        return selCourseManageMapper.selStc(ccd, sid);
     }
 }

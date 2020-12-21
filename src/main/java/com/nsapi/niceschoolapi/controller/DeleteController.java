@@ -16,18 +16,18 @@ public class DeleteController {
     private DeleteService deleteService;
 
     @RequestMapping("insertDropout")
-    public String insertDropout(String stuid,String sname, Model model){
-        model.addAttribute("stuid",stuid);
-        model.addAttribute("sname",sname);
+    public String insertDropout(String stuid, String sname, Model model) {
+        model.addAttribute("stuid", stuid);
+        model.addAttribute("sname", sname);
         return "view/student/dropout";
     }
 
     @RequestMapping("delStudent")
     @ResponseBody
-    public LayuiResult<Map> delStudent(String stuid,String drreason){
+    public LayuiResult<Map> delStudent(String stuid, String drreason) {
         LayuiResult result = new LayuiResult();
         //  将学生添加至dropout退学信息表
-        Integer aa = deleteService.insertDropout(stuid,drreason);
+        Integer aa = deleteService.insertDropout(stuid, drreason);
         //  删除学生信息
         Integer deleteStudent = deleteService.deleteStudent(stuid);
         //  删除学生选课信息

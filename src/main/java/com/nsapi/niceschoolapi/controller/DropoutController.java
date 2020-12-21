@@ -39,14 +39,14 @@ public class DropoutController {
 
     /**
      * 删除退学信息
-     * */
+     */
     @RequestMapping("deleteDropout")
     @ResponseBody
-    public Object deleteDropout(Integer drid){
+    public Object deleteDropout(Integer drid) {
         int r = dropoutService.deleteDropout(drid);
-        if(r==1){
+        if (r == 1) {
             return true;
-        }else{
+        } else {
             return false;
         }
     }

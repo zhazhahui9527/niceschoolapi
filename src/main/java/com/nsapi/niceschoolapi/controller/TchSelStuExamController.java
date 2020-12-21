@@ -21,27 +21,27 @@ public class TchSelStuExamController {
     private TchSelStuExamService tchSelStuExamService;
 
     @RequestMapping("/tchSelExam")
-    public String tchSelExam(Model model){
-        String tid=MySysUser.loginName();
+    public String tchSelExam(Model model) {
+        String tid = MySysUser.loginName();
         List<Map> tchClass = tchSelStuExamService.selTchClass(tid);
         List<Map> tchGrade = tchSelStuExamService.selTchGrade(tid);
-        model.addAttribute("tchClass",tchClass);
-        model.addAttribute("tchGrade",tchGrade);
+        model.addAttribute("tchClass", tchClass);
+        model.addAttribute("tchGrade", tchGrade);
         return "view/student/tchSelStuExam";
     }
 
     @RequestMapping("/tchSelStuExam")
     @ResponseBody
-    public LayuiResult<Map> tchSelStuExam(TchSelStuExamVO tchSelStuExamVO, Integer page, Integer limit){
+    public LayuiResult<Map> tchSelStuExam(TchSelStuExamVO tchSelStuExamVO, Integer page, Integer limit) {
         PageHelper.startPage(page, limit);
-        String tid=MySysUser.loginName();
+        String tid = MySysUser.loginName();
         tchSelStuExamVO.setTid(tid);
         List<Map> listAll = tchSelStuExamService.tchSelStuExam(tchSelStuExamVO);
         PageInfo pageInfo = new PageInfo(listAll);
         LayuiResult<Map> result = new LayuiResult<>();
         //这是layui要求返回的json数据格式
         result.setCode(0);
-        result.setMsg( "");
+        result.setMsg("");
         //将全部数据的条数作为count传给前台（一共多少条）
         result.setCount((int) pageInfo.getTotal());
         //将分页后的数据返回（每页要显示的数据）

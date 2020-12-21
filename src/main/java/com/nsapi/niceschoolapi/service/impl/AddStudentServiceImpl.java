@@ -39,7 +39,7 @@ public class AddStudentServiceImpl implements AddStudentService {
     //  将学生id以及必修课程的id添加至学生选课表
     @Override
     public Integer addStuCourse(Integer sid, Integer cid) {
-        return addStudentMapper.addStuCourse(sid,cid);
+        return addStudentMapper.addStuCourse(sid, cid);
     }
 
     //  生成学生学号

@@ -27,7 +27,8 @@
                 <div class="layui-form-item">
                     <label class="layui-form-label">新闻标题</label>
                     <div class="layui-input-block">
-                        <input type="text" name="ntitle" id="ntitle" lay-verify="required" placeholder="请输入" autocomplete="off" class="layui-input">
+                        <input type="text" name="ntitle" id="ntitle" lay-verify="required" placeholder="请输入"
+                               autocomplete="off" class="layui-input">
                     </div>
                 </div>
             </div>
@@ -37,7 +38,8 @@
                 <div class="layui-form-item">
                     <label class="layui-form-label">编辑人</label>
                     <div class="layui-input-block">
-                        <input type="text" name="nauthor" id="nauthor" lay-verify="required" placeholder="请输入" autocomplete="off" class="layui-input">
+                        <input type="text" name="nauthor" id="nauthor" lay-verify="required" placeholder="请输入"
+                               autocomplete="off" class="layui-input">
                     </div>
                 </div>
             </div>
@@ -58,8 +60,10 @@
             <div class="layui-card">
                 <div class="layui-card-header">编辑区</div>
                 <div class="layui-card-body">
-                    <textarea id="ncontent" name='ncontent' rows=1 cols=40 style='overflow:scroll;overflow-y:hidden;overflow-x:hidden;width: 100%;resize:none;'
-                              onfocus="window.activeobj=this;this.clock=setInterval(function(){activeobj.style.height=activeobj.scrollHeight+'px';},200);" onblur="clearInterval(this.clock);"></textarea>
+                    <textarea id="ncontent" name='ncontent' rows=1 cols=40
+                              style='overflow:scroll;overflow-y:hidden;overflow-x:hidden;width: 100%;resize:none;'
+                              onfocus="window.activeobj=this;this.clock=setInterval(function(){activeobj.style.height=activeobj.scrollHeight+'px';},200);"
+                              onblur="clearInterval(this.clock);"></textarea>
                 </div>
             </div>
         </div>
@@ -80,19 +84,19 @@
     <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
 </script>
 <script>
-    layui.use(['jquery', 'layer','form', 'table', 'laydate'], function(){
+    layui.use(['jquery', 'layer', 'form', 'table', 'laydate'], function () {
         var $ = layui.$ //重点处
-            ,layer = layui.layer
-            ,form = layui.form
+            , layer = layui.layer
+            , form = layui.form
             , table = layui.table
             , layer = layui.layer
-            ,laydate = layui.laydate;
-        $("#ncontent").on('keyup',function () {
+            , laydate = layui.laydate;
+        $("#ncontent").on('keyup', function () {
             $('#viewframe').html(marked($(this).val()));
         });
         laydate.render({
             elem: '#ntime',
-            type:'datetime'
+            type: 'datetime'
         });
         //获取分页数据列表
         table.render({
@@ -104,9 +108,11 @@
                     , {field: 'ntitle', title: '新闻标题', align: 'center'}
                     , {field: 'ncontent', width: 200, title: '新闻内容', align: 'center'}
                     , {field: 'nauthor', title: '新闻作者', align: 'center'}
-                    , {field: 'ntime', title: '发布时间', align: 'center',templet: function (d) {
+                    , {
+                    field: 'ntime', title: '发布时间', align: 'center', templet: function (d) {
                         return fDate(d.ntime);
-                    }}
+                    }
+                }
                     , {fixed: 'right', title: '操作', toolbar: '#barBtn', width: 150}
                 ]
             ]
@@ -127,63 +133,64 @@
                     type: 1,
                     maxmin: true,
                     area: ['800px', '500px'],
-                    title:'编辑：'+data.ntitle,
+                    title: '编辑：' + data.ntitle,
                     content: $('#editDiv'),
                     btn: ['提交修改', '取消'],
-                    yes: function(index){
+                    yes: function (index) {
                         $.ajax({
                             type: 'post',
                             url: '/news/editNews',
                             data: {
-                                nid:$('#nid').val(),
-                                ntitle:$('#ntitle').val(),
-                                nauthor:$('#nauthor').val(),
-                                ncontent:$('#ncontent').val(),
-                                ntime:$('#ntime').val()
+                                nid: $('#nid').val(),
+                                ntitle: $('#ntitle').val(),
+                                nauthor: $('#nauthor').val(),
+                                ncontent: $('#ncontent').val(),
+                                ntime: $('#ntime').val()
                             },
-                            success: function(data){
-                                if(data==true){
+                            success: function (data) {
+                                if (data == true) {
                                     layer.open({
                                         content: '已成功更新数据！',
-                                        yes: function(index){
+                                        yes: function (index) {
                                             layer.close(index);
                                             window.location.reload();
                                         }
                                     });
-                                }else{
+                                } else {
                                     layer.msg('更新失败，请稍后重试！');
                                 }
                             }
                         });
-                }
+                    }
                 });
                 $("#ncontent").focus();
             } else if (obj.event === 'del') {
                 layer.confirm('确定要删除吗？', function (index) {
-                        $.ajax({
-                            type: 'post',
-                            url: '/news/deleteNews',
-                            data: {
-                                nid:data.nid
-                            },
-                            success: function(deldata){
-                                if(deldata==true){
-                                    obj.del();
-                                    layer.open({
-                                        content: '删除成功！',
-                                        yes: function(index){
-                                            layer.close(index);
-                                        }
-                                    });
-                                }else{
-                                    layer.msg('删除失败，请稍后重试！');
-                                }
+                    $.ajax({
+                        type: 'post',
+                        url: '/news/deleteNews',
+                        data: {
+                            nid: data.nid
+                        },
+                        success: function (deldata) {
+                            if (deldata == true) {
+                                obj.del();
+                                layer.open({
+                                    content: '删除成功！',
+                                    yes: function (index) {
+                                        layer.close(index);
+                                    }
+                                });
+                            } else {
+                                layer.msg('删除失败，请稍后重试！');
                             }
-                        });
+                        }
+                    });
                     layer.close(index);
                 });
             }
         });
+
         /**
          * 转换时间格式
          */

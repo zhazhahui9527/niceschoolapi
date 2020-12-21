@@ -14,6 +14,7 @@ import java.util.List;
 public class CourseServiceImpl implements courseService {
     @Resource
     private CourseMapper CourseMapper;
+
     @Override
     public List<CourseVO> selCourse(CourseVO CourseVO) {
         return CourseMapper.selCourse(CourseVO);

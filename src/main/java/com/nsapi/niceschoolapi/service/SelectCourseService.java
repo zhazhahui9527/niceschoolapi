@@ -10,14 +10,19 @@ import java.util.List;
 public interface SelectCourseService {
     //查询开设课程
     public List<SelCourseVO> sel(SelCourseVO selCourseVO);
+
     //查询课程类别
     public List<CourseTypeDB> selType();
+
     //查询学生id
     public StudentDB selStuid(String stuid);
+
     //查询是否有该课程
-    public  int selCourse(StuCourseDB stuCourseDB);
+    public int selCourse(StuCourseDB stuCourseDB);
+
     //添加课程
     public int addCourse(StuCourseDB stuCourseDB);
+
     //修改可选人数
     public int updateCount(StuCourseDB stuCourseDB);
 }

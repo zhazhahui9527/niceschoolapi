@@ -24,35 +24,34 @@ public class AddTeacherController {
     private AddTeacherService addTeacherService;
 
     @RequestMapping("addTeacher")
-    public String addTeacher(Model model){
+    public String addTeacher(Model model) {
         //  查询政治面貌表
         List<PoliticsTypeDB> stupol = studentService.selPolitics();
-        model.addAttribute("stupol",stupol);
+        model.addAttribute("stupol", stupol);
         return "view/teacher/addTeacher";
     }
-
 
 
     //  添加教师
     @RequestMapping("addTch")
     @ResponseBody
-    public LayuiResult<TeacherDB> addTeacher(TeacherDB teacherDB, String birthday, String tertime) throws Exception{
-        LayuiResult<TeacherDB> result= new LayuiResult<>();
+    public LayuiResult<TeacherDB> addTeacher(TeacherDB teacherDB, String birthday, String tertime) throws Exception {
+        LayuiResult<TeacherDB> result = new LayuiResult<>();
         //  将接收到的时间进行类型转换
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
-        Date date1=format.parse(birthday);
-        Date date2=format.parse(tertime);
+        Date date1 = format.parse(birthday);
+        Date date2 = format.parse(tertime);
         teacherDB.setTbirthday(date1);
         teacherDB.setEntertime(date2);
         //  查询教师数量
         Integer teacount = addTeacherService.selTeacherCount();
-        if(teacount == 0){
+        if (teacount == 0) {
             //  添加一条分割线
             Integer aa = addTeacherService.teaSegmentation();
         }
         //  判断是否要插入新一年分割工号 1要插入，0不用插入
         Integer year = addTeacherService.selectYear();
-        if(year>0){
+        if (year > 0) {
             //  添加一条分割线
             Integer aa = addTeacherService.teaSegmentation();
         }

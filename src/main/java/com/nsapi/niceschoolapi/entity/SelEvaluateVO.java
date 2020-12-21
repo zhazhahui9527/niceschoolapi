@@ -38,7 +38,7 @@ public class SelEvaluateVO implements Serializable {
     private int scid; //学生选课记录编号
     private int cid; //课程编号
     private int giid;
-    private  String pname; //政治面貌名称
+    private String pname; //政治面貌名称
     private Date gitime;
     private String gaddress;
     private String cname; //课程名称

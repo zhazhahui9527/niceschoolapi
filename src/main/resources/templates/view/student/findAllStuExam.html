@@ -28,7 +28,7 @@
                         <div class="layui-form-item">
                             <label class="layui-form-label">学期</label>
                             <div class="layui-input-block">
-                                <select name="stime" id="stime"  lay-filter="stime"
+                                <select name="stime" id="stime" lay-filter="stime"
                                         lay-verify="stime" lay-search>
                                     <option value="" disabled selected hidden>请选择</option>
                                     <option value="1">大一上学期</option>
@@ -99,29 +99,31 @@
             ,
             cols: [
                 [
-                    {field: 'stuid', title: '学号',align: 'center',sort: true},
-                    {field: 'sname', title: '姓名',align: 'center'}
-                    ,{field: 'cname', title: '课程',align: 'center'}
-                    ,{field: 'ccredit', title: '学分',align: 'center'}
-                    ,{field: 'type', title: '类别',align: 'center'}
-                    ,{field: 'normalexam', title: '平时成绩',align: 'center'}
-                    ,{field: 'testexam', title: '考试成绩',align: 'center'}
-                    ,{field: 'sumexam', title: '综合成绩',align: 'center'}
-                    ,{field: 'stime', title: '学期',align: 'center',templet: function (data) {
-                        if (data.stime =='1'){
+                    {field: 'stuid', title: '学号', align: 'center', sort: true},
+                    {field: 'sname', title: '姓名', align: 'center'}
+                    , {field: 'cname', title: '课程', align: 'center'}
+                    , {field: 'ccredit', title: '学分', align: 'center'}
+                    , {field: 'type', title: '类别', align: 'center'}
+                    , {field: 'normalexam', title: '平时成绩', align: 'center'}
+                    , {field: 'testexam', title: '考试成绩', align: 'center'}
+                    , {field: 'sumexam', title: '综合成绩', align: 'center'}
+                    , {
+                    field: 'stime', title: '学期', align: 'center', templet: function (data) {
+                        if (data.stime == '1') {
                             return '大一上学期'
-                        }else if (data.stime =='2'){
+                        } else if (data.stime == '2') {
                             return '大一下学期'
-                        }else if (data.stime =='3'){
+                        } else if (data.stime == '3') {
                             return '大二上学期'
-                        }else if (data.stime =='4'){
+                        } else if (data.stime == '4') {
                             return '大二下学期'
-                        }else if (data.stime =='5'){
+                        } else if (data.stime == '5') {
                             return '大三上学期'
-                        }else if (data.stime =='6'){
+                        } else if (data.stime == '6') {
                             return '大三下学期'
                         }
-                    }}
+                    }
+                }
                 ]
             ]
             ,
@@ -170,24 +172,24 @@
         });
         //按班级名查询
         form.on('select(selByClassName)', function (seldata) {
-            if(seldata.value=='all'){
+            if (seldata.value == 'all') {
                 tableId.reload({
-                    url : '/selAllExam'
+                    url: '/selAllExam'
                 });
-            }else{
+            } else {
                 tableId.reload({
-                    url : '/selAllExam?classname=' + seldata.value
+                    url: '/selAllExam?classname=' + seldata.value
                 });
             }
             form.render();
         });
         //按系名查询
         form.on('select(selByDpm)', function (seldata) {
-            if(seldata.value=='all'){
+            if (seldata.value == 'all') {
 
-            }else{
+            } else {
                 tableId.reload({
-                    url : '/selAllExam?dname=' + seldata.value
+                    url: '/selAllExam?dname=' + seldata.value
                 });
             }
             //填充专业
@@ -195,7 +197,7 @@
                 type: 'post',
                 url: '/schoolManage/tjSelMajor?page=1&limit=1000',
                 data: {
-                    dname:$("#selByDpm option:selected").val()
+                    dname: $("#selByDpm option:selected").val()
                 },
                 success: function (alldata) {
 
@@ -213,11 +215,11 @@
         });
         //按专业名查询
         form.on('select(selByMajor)', function (seldata) {
-            if(seldata.value=='all'){
+            if (seldata.value == 'all') {
 
-            }else{
+            } else {
                 tableId.reload({
-                    url : '/selAllExam?mname=' + seldata.value
+                    url: '/selAllExam?mname=' + seldata.value
                 });
             }
             //填充年级
@@ -225,7 +227,7 @@
                 type: 'post',
                 url: '/schoolManage/tjSelGrade?page=1&limit=1000',
                 data: {
-                    mname:$("#selByMajor option:selected").val()
+                    mname: $("#selByMajor option:selected").val()
                 },
                 success: function (alldata) {
 
@@ -241,20 +243,20 @@
         });
         //按年级名查询
         form.on('select(selByGrade)', function (seldata) {
-            if(seldata.value=='all'){
-            }else{
+            if (seldata.value == 'all') {
+            } else {
                 tableId.reload({
-                    url : '/selAllExam?gname=' + seldata.value +'&mname='+$("#selByMajor option:selected").val()
+                    url: '/selAllExam?gname=' + seldata.value + '&mname=' + $("#selByMajor option:selected").val()
                 });
             }
         });
-        form.on('select(stime)', function(seldata){
+        form.on('select(stime)', function (seldata) {
             //执行重载
             table.reload('tableReload', {
                 page: {
                     curr: 1 //重新从第 1 页开始selTeacher
                 }
-                ,where: {
+                , where: {
                     stime: seldata.value
                 }
             });

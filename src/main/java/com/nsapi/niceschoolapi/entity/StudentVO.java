@@ -14,8 +14,8 @@ public class StudentVO implements Serializable {
     private Integer dcount;
     private Integer mid;
     private String mname;
-    private  Integer mcount;
-    private  Integer gid;
+    private Integer mcount;
+    private Integer gid;
     private String gname;
     private Integer gcount;
     private Integer classid;

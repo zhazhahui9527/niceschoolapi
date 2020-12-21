@@ -21,13 +21,13 @@ public class DropoutServiceImpl implements DropoutService {
     //  查询所有退学信息
     @Override
     public List<Map> selDropout(pageCount pageCount, StudentDB studentDB) {
-        int begin = pageCount.getLimit()*(pageCount.getPage()-1);
-        int end = pageCount.getLimit()*pageCount.getPage()-begin;
-        Map<String,Object> map = new HashMap<>();
-        map.put("begin",begin);
-        map.put("end",end);
-        map.put("stuid",studentDB.getStuid());
-        map.put("sname",studentDB.getSname());
+        int begin = pageCount.getLimit() * (pageCount.getPage() - 1);
+        int end = pageCount.getLimit() * pageCount.getPage() - begin;
+        Map<String, Object> map = new HashMap<>();
+        map.put("begin", begin);
+        map.put("end", end);
+        map.put("stuid", studentDB.getStuid());
+        map.put("sname", studentDB.getSname());
         return dropoutMapper.selDropout(map);
     }
 

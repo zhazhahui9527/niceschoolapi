@@ -36,24 +36,27 @@
             <div class="layui-card-body">
                 <form class="layui-form" th:action="@{/admin/login}">
                     <div class="layui-form-item">
-                        <input class="layui-input" name="username" placeholder="学号 / 工号 / 用户名" lay-verify="required" type="text" autocomplete="off">
+                        <input class="layui-input" name="username" placeholder="学号 / 工号 / 用户名" lay-verify="required"
+                               type="text" autocomplete="off">
                     </div>
                     <div class="layui-form-item">
-                        <input class="layui-input" name="password" placeholder="密码" lay-verify="required" type="password" autocomplete="off">
+                        <input class="layui-input" name="password" placeholder="密码" lay-verify="required"
+                               type="password" autocomplete="off">
                     </div>
 
                     <div class="layui-row">
                         <div class="layui-col-xs9">
                             <div class="layui-form-item form_code">
-                                <input class="layui-input" name="code" placeholder="验证码" lay-verify="required" type="text" autocomplete="off">
+                                <input class="layui-input" name="code" placeholder="验证码" lay-verify="required"
+                                       type="text" autocomplete="off">
 
                             </div>
                         </div>
                         <div class="layui-col-xs3">
-                            <div class="code"><img th:src="@{/getCaptcha}" width="116" height="36" th:id="randImage"></div>
+                            <div class="code"><img th:src="@{/getCaptcha}" width="116" height="36" th:id="randImage">
+                            </div>
                         </div>
                     </div>
-
 
 
                     <div class="layui-form-item" style="display: none;">
@@ -95,24 +98,24 @@
 <script type="text/javascript" th:src="@{/static/layui/layui.js}"></script>
 </html>
 <script>
-    layui.use(['form','layer'],function(){
+    layui.use(['form', 'layer'], function () {
         var form = layui.form,
             layer = parent.layer === undefined ? layui.layer : parent.layer;
         $ = layui.jquery;
 
         //登录按钮事件
-        form.on("submit(login)", function(data){
+        form.on("submit(login)", function (data) {
             var loadIndex = layer.load(2, {shade: [0.3, '#333']});
-            if($('form').find('input[type="checkbox"]')[0].checked){
+            if ($('form').find('input[type="checkbox"]')[0].checked) {
                 data.field.rememberMe = true;
-            }else{
+            } else {
                 data.field.rememberMe = false;
             }
-            $.post(data.form.action, data.field, function(res) {
+            $.post(data.form.action, data.field, function (res) {
                 layer.close(loadIndex);
-                if(res.success){
-                    location.href="/"+res.url;
-                }else{
+                if (res.success) {
+                    location.href = "/" + res.url;
+                } else {
                     layer.msg(res.message);
                     $("#randImage").click();
                 }
@@ -177,7 +180,7 @@
                 $.get('/newslist?page=' + page, function (res) {
                     //假设你的列表返回在data集合中
                     layui.each(res.data, function (index, item) {
-                        lis.push('<li class="layui-timeline-item"><i class="layui-icon layui-timeline-axis">&#xe63f;</i><div class="layui-timeline-content layui-text"><h1 style="color: #ca006f;" class="layui-timeline-title">'+ item.ntitle +'</h1><h4>'+ fDate(item.ntime) + ' - '+item.nauthor +'</h4><p>'+ marked(item.ncontent) +'</p></div></li>');
+                        lis.push('<li class="layui-timeline-item"><i class="layui-icon layui-timeline-axis">&#xe63f;</i><div class="layui-timeline-content layui-text"><h1 style="color: #ca006f;" class="layui-timeline-title">' + item.ntitle + '</h1><h4>' + fDate(item.ntime) + ' - ' + item.nauthor + '</h4><p>' + marked(item.ncontent) + '</p></div></li>');
 
                     });
                     next(lis.join(''), page < res.pages);

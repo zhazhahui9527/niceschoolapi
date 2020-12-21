@@ -19,13 +19,14 @@ public class SelCourseManageController {
     private SelCourseManageService selCourseManageService;
 
     @RequestMapping("selCourseManage")
-    public String selCourses(){
+    public String selCourses() {
 //        System.out.println("----------------------");
         return "selCourseManage";
     }
+
     @RequestMapping("selSc")
     @ResponseBody
-    public Object selSc(Integer page, Integer limit, StuCourseVO stuCourseVO){
+    public Object selSc(Integer page, Integer limit, StuCourseVO stuCourseVO) {
         System.out.println(stuCourseVO.getSname());
         PageHelper.startPage(page, limit);
         List<StuCourseVO> stuCourseVOS = selCourseManageService.selSc(stuCourseVO);
@@ -45,68 +46,75 @@ public class SelCourseManageController {
     //下面是下拉框
     @RequestMapping("selDe")
     @ResponseBody
-    public Object selDe(){
+    public Object selDe() {
         List<DepartmentDB> departmentDBS = selCourseManageService.selDe();
         //System.out.println(departmentDBS);
         return departmentDBS;
     }
+
     @RequestMapping("selMa")
     @ResponseBody
-    public Object selMa(Integer did){
+    public Object selMa(Integer did) {
         //System.out.println(did);
         List<MajorDB> majors = selCourseManageService.selMa(did);
         //System.out.println(majors);
         return majors;
     }
+
     @RequestMapping("selGr")
     @ResponseBody
-    public Object selGr(Integer mid){
+    public Object selGr(Integer mid) {
         //System.out.println(mid);
         List<GradeDB> examGradeDBS = selCourseManageService.selGr(mid);
-       // System.out.println(gradeDBS);
+        // System.out.println(gradeDBS);
         return examGradeDBS;
     }
+
     @RequestMapping("selCl")
     @ResponseBody
-    public Object selCl(Integer gid){
-       // System.out.println(gid);
+    public Object selCl(Integer gid) {
+        // System.out.println(gid);
         List<ClassInfoDB> classInfoDBS = selCourseManageService.selClass(gid);
-       // System.out.println(classinfoDBS);
+        // System.out.println(classinfoDBS);
         return classInfoDBS;
     }
+
     @RequestMapping("selSt")
     @ResponseBody
-    public Object selSt(Integer classid){
+    public Object selSt(Integer classid) {
         //System.out.println(classid);
         List<StudentDB> studentDBS = selCourseManageService.selSt(classid);
-       // System.out.println(studentDBS);
+        // System.out.println(studentDBS);
         return studentDBS;
     }
+
     @RequestMapping("selCo")
     @ResponseBody
-    public Object selCo(){
+    public Object selCo() {
         //System.out.println(classid);
         List<CourseDB> courseDBS = selCourseManageService.selCo();
         // System.out.println(studentDBS);
         return courseDBS;
     }
+
     //退课
     @RequestMapping("dropCou")
     @ResponseBody
-    public Object dropCou(Integer sid,Integer cid){
+    public Object dropCou(Integer sid, Integer cid) {
 
         int dropcou = selCourseManageService.dropcou(sid, cid);
         int updatecou = selCourseManageService.updatecou(cid);
-        if(dropcou>0 && updatecou>0){
+        if (dropcou > 0 && updatecou > 0) {
             return "退课成功";
-        }else{
+        } else {
             return "退课失败,请稍后再试或联系管理员";
         }
     }
+
     //换课
     @RequestMapping("changeCou")
     @ResponseBody
-    public Object changeCou( Integer ccd,  Integer sid,Integer cid) {
+    public Object changeCou(Integer ccd, Integer sid, Integer cid) {
         /*System.out.println(ccd+"8888888");
         System.out.println(sid+"-----"+cid);*/
         int i = selCourseManageService.selStc(ccd, sid);

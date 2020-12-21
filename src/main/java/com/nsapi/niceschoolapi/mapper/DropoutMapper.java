@@ -10,9 +10,11 @@ import java.util.Map;
 @Mapper
 public interface DropoutMapper {
     //  查询所有退学信息
-    List<Map> selDropout(Map<String,Object> map);
+    List<Map> selDropout(Map<String, Object> map);
+
     //  查询所有信息数量
     int selDropoutCount(StudentDB studentDB);
+
     // 删除退学信息
     int deleteDropout(Integer drid);
 }

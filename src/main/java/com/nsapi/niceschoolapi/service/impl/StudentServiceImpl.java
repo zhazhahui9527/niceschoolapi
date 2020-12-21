@@ -17,20 +17,21 @@ public class StudentServiceImpl implements StudentService {
 
     @Resource
     private StudentMapper studentMapper;
+
     //  查询所有学生
     @Override
     public List<Map> selStudent(StudentVO studentVO, pageCount pageCount) {
-        int begin = pageCount.getLimit()*(pageCount.getPage()-1);
-        int end = pageCount.getLimit()*pageCount.getPage()-begin;
-        Map<String,Object> map = new HashMap<>();
-        map.put("begin",begin);
-        map.put("end",end);
-        map.put("stuid",studentVO.getStuid());
-        map.put("sname",studentVO.getSname());
-        map.put("did",studentVO.getDid());
-        map.put("mid",studentVO.getMid());
-        map.put("gid",studentVO.getGid());
-        map.put("classid",studentVO.getClassid());
+        int begin = pageCount.getLimit() * (pageCount.getPage() - 1);
+        int end = pageCount.getLimit() * pageCount.getPage() - begin;
+        Map<String, Object> map = new HashMap<>();
+        map.put("begin", begin);
+        map.put("end", end);
+        map.put("stuid", studentVO.getStuid());
+        map.put("sname", studentVO.getSname());
+        map.put("did", studentVO.getDid());
+        map.put("mid", studentVO.getMid());
+        map.put("gid", studentVO.getGid());
+        map.put("classid", studentVO.getClassid());
         return studentMapper.selStudent(map);
     }
 

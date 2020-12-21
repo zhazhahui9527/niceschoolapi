@@ -21,6 +21,7 @@ public class AddTeacherServiceImpl implements AddTeacherService {
     public Integer addTeacher(TeacherDB teacherDB) {
         return addTEacherMapper.addTeacher(teacherDB);
     }
+
     //  判断是否要插入新一年分割工号 1要插入，0不用插入
     @Override
     public Integer selectYear() {

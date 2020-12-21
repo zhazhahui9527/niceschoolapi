@@ -112,16 +112,17 @@ public class SchoolManageController extends BaseController {
 
     /**
      * 删除系院
+     *
      * @param did
      * @return
      */
     @RequestMapping("deleteDpm")
     @ResponseBody
-    public Object deleteDpm(Integer did){
+    public Object deleteDpm(Integer did) {
         int r = schoolManageService.delOneDpm(did);
-        if(r==1){
+        if (r == 1) {
             return true;
-        }else{
+        } else {
             return false;
         }
     }
@@ -186,16 +187,17 @@ public class SchoolManageController extends BaseController {
 
     /**
      * 删除专业
+     *
      * @param mid
      * @return
      */
     @RequestMapping("deleteMajor")
     @ResponseBody
-    public Object deleteMajor(Integer mid){
+    public Object deleteMajor(Integer mid) {
         int r = schoolManageService.delOneMajor(mid);
-        if(r==1){
+        if (r == 1) {
             return true;
-        }else{
+        } else {
             return false;
         }
     }
@@ -276,16 +278,17 @@ public class SchoolManageController extends BaseController {
 
     /**
      * 删除年级
+     *
      * @param gid
      * @return
      */
     @RequestMapping("deleteGrade")
     @ResponseBody
-    public Object deleteGrade(Integer gid){
+    public Object deleteGrade(Integer gid) {
         int r = schoolManageService.delOneGrade(gid);
-        if(r==1){
+        if (r == 1) {
             return true;
-        }else{
+        } else {
             return false;
         }
     }
@@ -363,18 +366,20 @@ public class SchoolManageController extends BaseController {
             }
         }
     }
+
     /**
      * 删除班级
+     *
      * @param classid
      * @return
      */
     @RequestMapping("deleteClass")
     @ResponseBody
-    public Object deleteClass(Integer classid){
+    public Object deleteClass(Integer classid) {
         int r = schoolManageService.delOneClass(classid);
-        if(r==1){
+        if (r == 1) {
             return true;
-        }else{
+        } else {
             return false;
         }
     }

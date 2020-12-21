@@ -18,13 +18,15 @@ import java.util.Map;
 public class TchInputStuExamController {
     @Autowired
     private TchInputStuExamService tchInputStuExamService;
+
     @RequestMapping("InputStudentExam")
-    public String InputStudentExam(){
+    public String InputStudentExam() {
         return "InputStudentExam";
     }
+
     @RequestMapping("selScs")
     @ResponseBody
-    public Object selSc(Integer page, Integer limit, StuExamVO stuExamVO){
+    public Object selSc(Integer page, Integer limit, StuExamVO stuExamVO) {
         stuExamVO.setTid(Integer.valueOf(MySysUser.loginName()));
         PageHelper.startPage(page, limit);
         List<StuExamVO> stuCourseVOS = tchInputStuExamService.selScs(stuExamVO);
@@ -44,60 +46,64 @@ public class TchInputStuExamController {
     //下面是下拉框
     @RequestMapping("selDes")
     @ResponseBody
-    public Object selDes(){
+    public Object selDes() {
         List<DepartmentDB> departmentDBS = tchInputStuExamService.selDes();
         //System.out.println(departmentDBS);
         return departmentDBS;
     }
+
     @RequestMapping("selMas")
     @ResponseBody
-    public Object selMas(Integer did){
+    public Object selMas(Integer did) {
         //System.out.println(did);
         List<MajorDB> majors = tchInputStuExamService.selMas(did);
         //System.out.println(majors);
         return majors;
     }
+
     @RequestMapping("selGrs")
     @ResponseBody
-    public Object selGrs(Integer mid){
+    public Object selGrs(Integer mid) {
         //System.out.println(mid);
         List<GradeDB> examGradeDBS = tchInputStuExamService.selGrs(mid);
         // System.out.println(gradeDBS);
         return examGradeDBS;
     }
+
     @RequestMapping("selCls")
     @ResponseBody
-    public Object selCls(Integer gid){
-         System.out.println(gid);
+    public Object selCls(Integer gid) {
+        System.out.println(gid);
         List<ClassInfoDB> classInfoDBS = tchInputStuExamService.selClasss(gid);
         // System.out.println(classinfoDBS);
         return classInfoDBS;
     }
+
     @ResponseBody
     @RequestMapping("selMessage")
-    public Object selMessage(StuExamVO stuExamVO){
-        String msg="";
+    public Object selMessage(StuExamVO stuExamVO) {
+        String msg = "";
         int i = tchInputStuExamService.selExam(stuExamVO);
-        if(i==1){
-           msg="请不要重复导入成绩";
-        }else{
-        int num = tchInputStuExamService.add(stuExamVO);
-        if (num==1){
-            msg="添加成功";
-        }
-        else {
-            msg="添加失败";
-        }
+        if (i == 1) {
+            msg = "请不要重复导入成绩";
+        } else {
+            int num = tchInputStuExamService.add(stuExamVO);
+            if (num == 1) {
+                msg = "添加成功";
+            } else {
+                msg = "添加失败";
+            }
         }
         return msg;
     }
+
     @ResponseBody
     @RequestMapping("saveUpdate")
-    public  Object saveUpdate(StuExamDB stuExamDB){
-        String msg="";
+    public Object saveUpdate(StuExamDB stuExamDB) {
+        String msg = "";
         int nums = tchInputStuExamService.updateExam(stuExamDB);
-        if(nums==1){
-            msg="修改成功";
+        if (nums == 1) {
+            msg = "修改成功";
         }
         return msg;
     }

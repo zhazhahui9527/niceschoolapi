@@ -13,19 +13,21 @@ import java.util.List;
 
 @Service
 public class SelectCourseImpl implements SelectCourseService {
-@Resource
-private SelectCourseMapper selectCourseMapper;
+    @Resource
+    private SelectCourseMapper selectCourseMapper;
 
     //查询开设课程
     @Override
     public List<SelCourseVO> sel(SelCourseVO selCourseVO) {
         return selectCourseMapper.sel(selCourseVO);
     }
-//查询课程类型
+
+    //查询课程类型
     @Override
     public List<CourseTypeDB> selType() {
         return selectCourseMapper.selType();
     }
+
     //查询学生id
     @Override
     public StudentDB selStuid(String stuid) {
@@ -37,17 +39,18 @@ private SelectCourseMapper selectCourseMapper;
     public int selCourse(StuCourseDB stuCourseDB) {
         return selectCourseMapper.selCourse(stuCourseDB);
     }
-//添加课程
+
+    //添加课程
     @Override
     public int addCourse(StuCourseDB stuCourseDB) {
         return selectCourseMapper.addCourse(stuCourseDB);
     }
-//修改可选人数
+
+    //修改可选人数
     @Override
     public int updateCount(StuCourseDB stuCourseDB) {
         return selectCourseMapper.updateCount(stuCourseDB);
     }
-
 
 
 }

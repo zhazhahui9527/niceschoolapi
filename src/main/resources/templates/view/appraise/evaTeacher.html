@@ -94,10 +94,12 @@
                                     for (var i in result) {
                                         lists += "<div class='layui-card'><div class='layui-card-header'>第" + adnum(i) + "题：</div><div class='layui-card-body'><div class='layui-form-item'>评价内容：" + result[i].elcontent + "</div><div class='layui-form-item'><div class='layui-input-block'><input type='radio' name='t" + i + "' value='5' title='很好'><input type='radio' name='t" + i + "' value='4' title='好'><input type='radio' name='t" + i + "' value='3' title='一般'><input type='radio' name='t" + i + "' value='2' title='较差'><input type='radio' name='t" + i + "' value='1' title='差'></div></div></div></div>";
                                     }
+
                                     function adnum(nums) {
                                         nums++;
                                         return nums;
                                     }
+
                                     $('#tmlist').html(lists);
                                     form.render();
                                     //弹出做题窗口
@@ -110,17 +112,17 @@
                                         btn: ['提交', '取消'],
                                         yes: function (index) {
                                             var sum = 0;
-                                            for (var i = 0;i < parseInt(tmdata.count);i++) {
-                                                var names='t'+i;
-                                                var ele = "input[name='"+ names + "']:checked";
+                                            for (var i = 0; i < parseInt(tmdata.count); i++) {
+                                                var names = 't' + i;
+                                                var ele = "input[name='" + names + "']:checked";
                                                 var temps = parseInt($(ele).val());
-                                                console.log(names+':'+temps);
-                                                if (!isNaN(temps)){
+                                                console.log(names + ':' + temps);
+                                                if (!isNaN(temps)) {
                                                     sum += temps;
-                                                }else {
-                                                    var err = i+1;
+                                                } else {
+                                                    var err = i + 1;
                                                     layer.open({
-                                                        content: '第'+err+'题未做！',
+                                                        content: '第' + err + '题未做！',
                                                         yes: function (index) {
                                                             layer.close(index);
                                                         }
@@ -128,25 +130,25 @@
                                                     return false;
                                                 }
                                             }
-                                            layer.confirm('最终打分为'+ sum +'分，确定要提交吗？', function (index) {
+                                            layer.confirm('最终打分为' + sum + '分，确定要提交吗？', function (index) {
                                                 $.ajax({
                                                     type: 'post',
                                                     url: '/appraise/addAppraise',
                                                     data: {
-                                                        tid:data.tchid,
-                                                        tchid:data.tchid,
-                                                        erscore:sum
+                                                        tid: data.tchid,
+                                                        tchid: data.tchid,
+                                                        erscore: sum
                                                     },
-                                                    success: function(data){
-                                                        if(data==true){
+                                                    success: function (data) {
+                                                        if (data == true) {
                                                             layer.open({
                                                                 content: '教评成功！',
-                                                                yes: function(index){
+                                                                yes: function (index) {
                                                                     layer.close(index);
                                                                     window.location.reload();
                                                                 }
                                                             });
-                                                        }else{
+                                                        } else {
                                                             layer.msg('提交失败，请稍后重试！');
                                                         }
                                                     }

@@ -103,6 +103,6 @@ public class DeleteServiceImpl implements DeleteService {
     //  将学生添加至dropout退学信息表
     @Override
     public Integer insertDropout(String stuid, String drreason) {
-        return deleteMapper.insertDropout(stuid,drreason);
+        return deleteMapper.insertDropout(stuid, drreason);
     }
 }

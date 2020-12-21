@@ -17,26 +17,31 @@ import java.util.List;
 public class AppraiseServiceImpl implements AppraiseService {
     @Resource
     private AppraiseMapper appraiseMapper;
+
     //查询全部对应教评的老师
     @Override
     public List<SelEvaluateVO> findEvaTch(SelEvaluateVO selEvaluateVO) {
         return appraiseMapper.findEvaTch(selEvaluateVO);
     }
+
     //查询全部教评题目
     @Override
     public List<EvaluateListDB> findEvaList(EvaluateListDB evaluateListDB) {
         return appraiseMapper.findEvaList(evaluateListDB);
     }
+
     //查询教评状态
     @Override
     public int selEvaState(EvaluateRecordDB evaluateRecordDB) {
         return appraiseMapper.selEvaState(evaluateRecordDB);
     }
+
     //添加教评
     @Override
     public int addAppraise(EvaluateVO evaluateVO) {
         return appraiseMapper.addAppraise(evaluateVO);
     }
+
     //判断是否有教师成绩记录
     @Override
     public int selTchExamState(EvaluateVO evaluateVO) {
@@ -51,14 +56,25 @@ public class AppraiseServiceImpl implements AppraiseService {
 
     //更新教师分数及教评人数
     @Override
-    public int updOneTchExam(EvaluateVO evaluateVO) { return appraiseMapper.updOneTchExam(evaluateVO); }
+    public int updOneTchExam(EvaluateVO evaluateVO) {
+        return appraiseMapper.updOneTchExam(evaluateVO);
+    }
+
     //删除问题
     @Override
-    public int deleteEva(Integer elid) { return appraiseMapper.deleteEva(elid); }
+    public int deleteEva(Integer elid) {
+        return appraiseMapper.deleteEva(elid);
+    }
+
     //编辑问题
     @Override
-    public int editEva(EvaluateListDB evaluateListDB) { return appraiseMapper.editEva(evaluateListDB); }
+    public int editEva(EvaluateListDB evaluateListDB) {
+        return appraiseMapper.editEva(evaluateListDB);
+    }
+
     //添加问题
     @Override
-    public int addEva(EvaluateListDB evaluateListDB) { return appraiseMapper.addEva(evaluateListDB); }
+    public int addEva(EvaluateListDB evaluateListDB) {
+        return appraiseMapper.addEva(evaluateListDB);
+    }
 }

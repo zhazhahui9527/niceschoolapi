@@ -9,8 +9,10 @@ import java.util.Map;
 public interface ExamGradeService {
     //  查询学生个人信息
     List<Map> selStudentMessage(String stuid);
+
     //  查询学生成绩信息
     List<Map> selGrade(String stuid, Integer stime);
+
     //  查询教师个人信息
     List<TeacherDB> selTea(Integer tid);
 

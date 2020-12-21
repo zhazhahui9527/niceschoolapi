@@ -16,7 +16,7 @@ import java.util.Properties;
 public class CaptchaConfig {
 
     @Bean(name = "captchaProducer")
-    public DefaultKaptcha getKaptchaBean(){
+    public DefaultKaptcha getKaptchaBean() {
         DefaultKaptcha defaultKaptcha = new DefaultKaptcha();
         Properties properties = new Properties();
         properties.setProperty(Constants.KAPTCHA_BORDER, "no");

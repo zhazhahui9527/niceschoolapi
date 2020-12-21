@@ -30,7 +30,7 @@ public class IndexController {
     /**
      * 无登陆主页显示
      */
-    @RequestMapping({"home","/"})
+    @RequestMapping({"home", "/"})
     public String index() {
         return "home";
     }
@@ -40,8 +40,8 @@ public class IndexController {
      */
     @RequestMapping("newslist")
     @ResponseBody
-    public Object NewsList(NewsInfoDB newsInfoDB, Integer page){
-        PageHelper.startPage(page,5);
+    public Object NewsList(NewsInfoDB newsInfoDB, Integer page) {
+        PageHelper.startPage(page, 5);
         List<NewsInfoDB> listAll = newsService.findAllNews(newsInfoDB);
         PageInfo pageInfo = new PageInfo(listAll);
         Map<String, Object> newsList = new HashMap<String, Object>();
@@ -58,7 +58,7 @@ public class IndexController {
      */
     @RequestMapping("schedulelist")
     @ResponseBody
-    public Object ScheduleList(ScheduleDB scheduleDB){
+    public Object ScheduleList(ScheduleDB scheduleDB) {
         List<ScheduleDB> listAll = scheduleService.findAllSchedule(scheduleDB);
         Map<String, Object> schedulelist = new HashMap<String, Object>();
         schedulelist.put("code", 0);

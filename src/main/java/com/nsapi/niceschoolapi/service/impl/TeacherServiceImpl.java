@@ -21,13 +21,13 @@ public class TeacherServiceImpl implements TeacherService {
     //  查询所有教师
     @Override
     public List<Map> selTeacher(TeacherDB teacherDB, pageCount pageCount) {
-        int begin = pageCount.getLimit()*(pageCount.getPage()-1);
-        int end = pageCount.getLimit()*pageCount.getPage()-begin;
-        Map<String,Object> map = new HashMap<>();
-        map.put("begin",begin);
-        map.put("end",end);
-        map.put("tchid",teacherDB.getTchid());
-        map.put("tname",teacherDB.getTname());
+        int begin = pageCount.getLimit() * (pageCount.getPage() - 1);
+        int end = pageCount.getLimit() * pageCount.getPage() - begin;
+        Map<String, Object> map = new HashMap<>();
+        map.put("begin", begin);
+        map.put("end", end);
+        map.put("tchid", teacherDB.getTchid());
+        map.put("tname", teacherDB.getTname());
         return teacherMapper.selTeacher(map);
     }
 

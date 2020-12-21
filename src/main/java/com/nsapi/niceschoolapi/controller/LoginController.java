@@ -53,7 +53,7 @@ public class LoginController {
     MenuService menuService;
 
     public enum LoginTypeEnum {
-        PAGE,ADMIN;
+        PAGE, ADMIN;
     }
 
 //    @RequestMapping(value = "")
@@ -61,11 +61,11 @@ public class LoginController {
 //        return "redirect:admin";
 //    }
 
-    @RequestMapping(value = {"admin","admin/index"})
+    @RequestMapping(value = {"admin", "admin/index"})
     public String adminIndex(RedirectAttributes attributes, ModelMap map) {
         Subject s = SecurityUtils.getSubject();
         attributes.addFlashAttribute(LOGIN_TYPE, LoginTypeEnum.ADMIN);
-        if(s.isAuthenticated()) {
+        if (s.isAuthenticated()) {
             return "redirect:index";
         }
         return "redirect:toLogin";
@@ -73,31 +73,31 @@ public class LoginController {
 
     @RequestMapping(value = "toLogin")
     public String adminToLogin(HttpSession session, @ModelAttribute(LOGIN_TYPE) String loginType) {
-        if(StringUtils.isBlank(loginType)) {
+        if (StringUtils.isBlank(loginType)) {
             LoginTypeEnum attribute = (LoginTypeEnum) session.getAttribute(LOGIN_TYPE);
             loginType = attribute == null ? loginType : attribute.name();
         }
 
-        if(LoginTypeEnum.ADMIN.name().equals(loginType)) {
-            session.setAttribute(LOGIN_TYPE,LoginTypeEnum.ADMIN);
+        if (LoginTypeEnum.ADMIN.name().equals(loginType)) {
+            session.setAttribute(LOGIN_TYPE, LoginTypeEnum.ADMIN);
             return "admin/login";
-        }else {
-            session.setAttribute(LOGIN_TYPE,LoginTypeEnum.PAGE);
+        } else {
+            session.setAttribute(LOGIN_TYPE, LoginTypeEnum.PAGE);
             return "login";
         }
     }
 
     @RequestMapping(value = "index")
     public String index(HttpSession session, @ModelAttribute(LOGIN_TYPE) String loginType) {
-        if(StringUtils.isBlank(loginType)) {
+        if (StringUtils.isBlank(loginType)) {
             LoginTypeEnum attribute = (LoginTypeEnum) session.getAttribute(LOGIN_TYPE);
             loginType = attribute == null ? loginType : attribute.name();
         }
-        if(LoginTypeEnum.ADMIN.name().equals(loginType)) {
+        if (LoginTypeEnum.ADMIN.name().equals(loginType)) {
             AuthRealm.ShiroUser principal = (AuthRealm.ShiroUser) SecurityUtils.getSubject().getPrincipal();
-            session.setAttribute("icon",StringUtils.isBlank(principal.getIcon()) ? "/static/admin/img/face.jpg" : principal.getIcon());
+            session.setAttribute("icon", StringUtils.isBlank(principal.getIcon()) ? "/static/admin/img/face.jpg" : principal.getIcon());
             return "admin/index";
-        }else {
+        } else {
             return "admin/index";
         }
 
@@ -131,82 +131,79 @@ public class LoginController {
         String driver = request.getParameter("driver");
         String errorMsg = null;
         //判断登陆设备
-        if(StringUtils.isBlank(driver)){
+        if (StringUtils.isBlank(driver)) {
             //电脑登录
-            if(StringUtils.isBlank(username) || StringUtils.isBlank(password)){
+            if (StringUtils.isBlank(username) || StringUtils.isBlank(password)) {
                 return ResponseEntity.failure("用户名或者密码不能为空");
-            }else if(StringUtils.isBlank(code)){
+            } else if (StringUtils.isBlank(code)) {
                 return ResponseEntity.failure("验证码不能为空");
             }
             HttpSession session = request.getSession();
-            if(session == null){
+            if (session == null) {
                 return ResponseEntity.failure("session超时");
             }
-            String trueCode = (String)session.getAttribute(Constants.VALIDATE_CODE);
-            if(StringUtils.isBlank(trueCode)){
+            String trueCode = (String) session.getAttribute(Constants.VALIDATE_CODE);
+            if (StringUtils.isBlank(trueCode)) {
                 return ResponseEntity.failure("验证码超时");
             }
-            if(StringUtils.isBlank(code) || !trueCode.toLowerCase().equals(code.toLowerCase())){
+            if (StringUtils.isBlank(code) || !trueCode.toLowerCase().equals(code.toLowerCase())) {
                 return ResponseEntity.failure("验证码错误");
-            }else {
+            } else {
                 Subject user = SecurityUtils.getSubject();
-                UsernamePasswordToken token = new UsernamePasswordToken(username,password,Boolean.valueOf(rememberMe));
+                UsernamePasswordToken token = new UsernamePasswordToken(username, password, Boolean.valueOf(rememberMe));
                 try {
                     user.login(token);
-                }catch (IncorrectCredentialsException e) {
+                } catch (IncorrectCredentialsException e) {
                     errorMsg = "用户名密码错误!";
-                }catch (UnknownAccountException e) {
+                } catch (UnknownAccountException e) {
                     errorMsg = "账户不存在!";
-                }catch (LockedAccountException e) {
+                } catch (LockedAccountException e) {
                     errorMsg = "账户已被锁定!";
-                }catch (UserTypeAccountException e) {
+                } catch (UserTypeAccountException e) {
                     errorMsg = "账户不是管理用户!";
                 }
-                if(StringUtils.isBlank(errorMsg)) {
+                if (StringUtils.isBlank(errorMsg)) {
                     ResponseEntity responseEntity = new ResponseEntity();
                     responseEntity.setSuccess(Boolean.TRUE);
-                    responseEntity.setAny("url","index");
+                    responseEntity.setAny("url", "index");
                     return responseEntity;
-                }else {
+                } else {
                     return ResponseEntity.failure(errorMsg);
                 }
             }
-        }else{
+        } else {
             //小程序或APP登录
-            if(StringUtils.isBlank(username) || StringUtils.isBlank(password)){
+            if (StringUtils.isBlank(username) || StringUtils.isBlank(password)) {
                 return ResponseEntity.failure("用户名或者密码不能为空");
             }
             Subject user = SecurityUtils.getSubject();
-            UsernamePasswordToken token = new UsernamePasswordToken(username,password,Boolean.valueOf(rememberMe));
+            UsernamePasswordToken token = new UsernamePasswordToken(username, password, Boolean.valueOf(rememberMe));
             try {
                 user.login(token);
-            }catch (IncorrectCredentialsException e) {
+            } catch (IncorrectCredentialsException e) {
                 errorMsg = "用户名或密码错误!";
-            }catch (UnknownAccountException e) {
+            } catch (UnknownAccountException e) {
                 errorMsg = "账户不存在!";
-            }catch (LockedAccountException e) {
+            } catch (LockedAccountException e) {
                 errorMsg = "账户已被锁定!";
-            }catch (UserTypeAccountException e) {
+            } catch (UserTypeAccountException e) {
                 errorMsg = "账户不是管理用户!";
             }
-            if(StringUtils.isBlank(errorMsg)) {
+            if (StringUtils.isBlank(errorMsg)) {
                 ResponseEntity responseEntity = new ResponseEntity();
                 responseEntity.setSuccess(Boolean.TRUE);
-                responseEntity.setAny("url","index");
+                responseEntity.setAny("url", "index");
                 return responseEntity;
-            }else {
+            } else {
                 return ResponseEntity.failure(errorMsg);
             }
         }
 
 
-
-
-
     }
 
     @RequestMapping("admin/main")
-    public String main(ModelMap map){
+    public String main(ModelMap map) {
         return "admin/main";
     }
 
@@ -216,7 +213,7 @@ public class LoginController {
      */
     @RequestMapping("/admin/user/getUserMenu")
     @ResponseBody
-    public List<ShowMenuVO> getUserMenu(){
+    public List<ShowMenuVO> getUserMenu() {
         String userId = MySysUser.id();
         List<ShowMenuVO> list = menuService.getShowMenuByUser(userId);
         return list;
@@ -224,7 +221,7 @@ public class LoginController {
 
     @RequestMapping("systemLogout")
     @SysLog("退出系统")
-    public String logOut(){
+    public String logOut() {
         SecurityUtils.getSubject().logout();
         return "redirect:home";
     }

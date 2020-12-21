@@ -21,7 +21,7 @@ public class User extends DataEntity<User> {
     /**
      * 昵称
      */
-    @TableField(value = "nick_name",strategy= FieldStrategy.IGNORED)
+    @TableField(value = "nick_name", strategy = FieldStrategy.IGNORED)
     private String nickName;
 
     /**
@@ -37,13 +37,13 @@ public class User extends DataEntity<User> {
     /**
      * 手机号码
      */
-    @TableField(strategy= FieldStrategy.IGNORED)
+    @TableField(strategy = FieldStrategy.IGNORED)
     private String tel;
 
     /**
      * 邮箱地址
      */
-    @TableField(strategy= FieldStrategy.IGNORED)
+    @TableField(strategy = FieldStrategy.IGNORED)
     private String email;
 
     /**
@@ -57,13 +57,13 @@ public class User extends DataEntity<User> {
     @TableField(value = "is_admin")
     private Boolean adminUser;
 
-    @TableField(strategy= FieldStrategy.IGNORED)
+    @TableField(strategy = FieldStrategy.IGNORED)
     private String icon;
 
-    @TableField(exist=false)
+    @TableField(exist = false)
     private Set<Role> roleLists = new HashSet();
 
-    @TableField(exist=false)
+    @TableField(exist = false)
     private Set<Menu> menus = new HashSet();
 
     public String getLoginName() {
@@ -82,7 +82,7 @@ public class User extends DataEntity<User> {
         this.nickName = nickName;
     }
 
-    @JSONField(serialize=false)
+    @JSONField(serialize = false)
     public String getPassword() {
         return password;
     }
@@ -91,7 +91,7 @@ public class User extends DataEntity<User> {
         this.password = password;
     }
 
-    @JSONField(serialize=false)
+    @JSONField(serialize = false)
     public String getSalt() {
         return salt;
     }

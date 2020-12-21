@@ -3,7 +3,7 @@ package com.nsapi.niceschoolapi.entity;
 import java.util.List;
 
 
-public class LayuiResult<T>{
+public class LayuiResult<T> {
     private int code;
     private String msg;
     private int count;

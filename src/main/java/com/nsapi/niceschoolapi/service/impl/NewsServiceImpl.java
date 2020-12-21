@@ -14,6 +14,7 @@ import java.util.List;
 public class NewsServiceImpl implements NewsService {
     @Resource
     private NewsMapper newsMapper;
+
     @Override
     public List<NewsInfoDB> findAllNews(NewsInfoDB newsInfoDB) {
         return newsMapper.findAllNews(newsInfoDB);

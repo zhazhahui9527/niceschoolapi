@@ -44,25 +44,25 @@ public class AppraiseController extends BaseController {
      */
     @RequestMapping("addEva")
     @ResponseBody
-    public Object addEva(EvaluateListDB evaluateListDB){
+    public Object addEva(EvaluateListDB evaluateListDB) {
         int r = appraiseService.addEva(evaluateListDB);
-        if(r==1){
+        if (r == 1) {
             return true;
-        }else{
+        } else {
             return false;
         }
     }
 
     /**
      * 删除问题
-     * */
+     */
     @RequestMapping("deleteEva")
     @ResponseBody
-    public Object deleteEva(Integer elid){
+    public Object deleteEva(Integer elid) {
         int r = appraiseService.deleteEva(elid);
-        if(r==1){
+        if (r == 1) {
             return true;
-        }else{
+        } else {
             return false;
         }
     }
@@ -72,11 +72,11 @@ public class AppraiseController extends BaseController {
      */
     @RequestMapping("editEva")
     @ResponseBody
-    public Object editEva(EvaluateListDB evaluateListDB){
+    public Object editEva(EvaluateListDB evaluateListDB) {
         int r = appraiseService.editEva(evaluateListDB);
-        if(r==1){
+        if (r == 1) {
             return true;
-        }else{
+        } else {
             return false;
         }
     }
@@ -86,7 +86,7 @@ public class AppraiseController extends BaseController {
      */
     @RequestMapping("findEvaTch")
     @ResponseBody
-    public Object findEvaTch(SelEvaluateVO selEvaluateVO){
+    public Object findEvaTch(SelEvaluateVO selEvaluateVO) {
         selEvaluateVO.setStuid(MySysUser.loginName());
         List<SelEvaluateVO> listAll = appraiseService.findEvaTch(selEvaluateVO);
         Map<String, Object> tchData = new HashMap<String, Object>();
@@ -102,7 +102,7 @@ public class AppraiseController extends BaseController {
      */
     @RequestMapping("findEvaList")
     @ResponseBody
-    public Object findEvaList(EvaluateListDB evaluateListDB, Integer page, Integer limit){
+    public Object findEvaList(EvaluateListDB evaluateListDB, Integer page, Integer limit) {
         PageHelper.startPage(page, limit);
         List<EvaluateListDB> listAll = appraiseService.findEvaList(evaluateListDB);
         PageInfo pageInfo = new PageInfo(listAll);
@@ -119,15 +119,15 @@ public class AppraiseController extends BaseController {
 
     /**
      * 查询教评状态
-     * */
+     */
     @RequestMapping("selEvaState")
     @ResponseBody
-    public Object selEvaState(EvaluateRecordDB evaluateRecordDB){
+    public Object selEvaState(EvaluateRecordDB evaluateRecordDB) {
         evaluateRecordDB.setStuid(MySysUser.loginName());
         int r = appraiseService.selEvaState(evaluateRecordDB);
-        if(r>0){
+        if (r > 0) {
             return true;
-        }else{
+        } else {
             return false;
         }
     }
@@ -137,21 +137,21 @@ public class AppraiseController extends BaseController {
      */
     @RequestMapping("addAppraise")
     @ResponseBody
-    public Object addAppraise(EvaluateVO evaluateVO){
+    public Object addAppraise(EvaluateVO evaluateVO) {
         evaluateVO.setStuid(MySysUser.loginName());
         //判断成绩是否存在
         int res1 = appraiseService.selTchExamState(evaluateVO);
-        if(res1>0){
+        if (res1 > 0) {
             //添加记录
             int res_addAppraise = appraiseService.addAppraise(evaluateVO);
             //更新成绩
             int res_updOneTchExam = appraiseService.updOneTchExam(evaluateVO);
-            if(res_addAppraise==1&&res_updOneTchExam==1){
+            if (res_addAppraise == 1 && res_updOneTchExam == 1) {
                 return true;
-            }else{
+            } else {
                 return false;
             }
-        }else if(res1==0){
+        } else if (res1 == 0) {
             //添加记录
             int res_addAppraise = appraiseService.addAppraise(evaluateVO);
             evaluateVO.setPcount(1);
@@ -159,12 +159,12 @@ public class AppraiseController extends BaseController {
             //新增成绩
             int res_addOneTchExam = appraiseService.addOneTchExam(evaluateVO);
 
-            if(res_addAppraise==1&&res_addOneTchExam==1){
+            if (res_addAppraise == 1 && res_addOneTchExam == 1) {
                 return true;
-            }else{
+            } else {
                 return false;
             }
-        }else {
+        } else {
             return false;
         }
 

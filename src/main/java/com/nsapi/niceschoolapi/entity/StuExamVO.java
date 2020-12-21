@@ -12,7 +12,7 @@ public class StuExamVO {
     private String classname;
     private Integer stime;
     private double normalexam;
-    private  double testexam;
+    private double testexam;
     private double sumexam;
 
     public Integer getTid() {

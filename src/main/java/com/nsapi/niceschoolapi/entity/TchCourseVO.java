@@ -403,7 +403,11 @@ public class TchCourseVO implements Serializable {
         this.isDel = isDel;
     }
 
-    public Integer getTcsid() { return tcsid; }
+    public Integer getTcsid() {
+        return tcsid;
+    }
 
-    public void setTcsid(Integer tcsid) { this.tcsid = tcsid; }
+    public void setTcsid(Integer tcsid) {
+        this.tcsid = tcsid;
+    }
 }

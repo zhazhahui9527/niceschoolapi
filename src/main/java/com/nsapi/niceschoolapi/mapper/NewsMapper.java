@@ -8,7 +8,10 @@ import java.util.List;
 @Mapper
 public interface NewsMapper {
     List<NewsInfoDB> findAllNews(NewsInfoDB newsInfoDB);
+
     int deleteNews(Integer nId);
+
     int addNews(NewsInfoDB newsInfoDB);
+
     int editNews(NewsInfoDB newsInfoDB);
 }

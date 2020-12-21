@@ -26,9 +26,9 @@ public class ExamExamGradeServiceImpl implements ExamGradeService {
     //  查询学生成绩信息
     @Override
     public List<Map> selGrade(String stuid, Integer stime) {
-        Map<String,Object> map = new HashMap<>();
-        map.put("stime",stime);
-        map.put("stuid",stuid);
+        Map<String, Object> map = new HashMap<>();
+        map.put("stime", stime);
+        map.put("stuid", stuid);
         return examGradeMapper.selGrade(map);
     }
 

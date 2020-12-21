@@ -1,6 +1,6 @@
 package com.nsapi.niceschoolapi.entity;
+
 /**
- *
  * 关联表：CourseTypeDB,TchCourseDB,TeacherDB,WeekDB,ScheduleDB,StudentDB
  */
 public class SelCourseVO {

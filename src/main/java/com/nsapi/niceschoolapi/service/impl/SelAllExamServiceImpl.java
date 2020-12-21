@@ -15,6 +15,7 @@ import java.util.Map;
 public class SelAllExamServiceImpl implements SelAllExamService {
     @Resource
     private SelAllExamMapper selAllExamMapper;
+
     @Override
     public List<Map> selAllExam(SelAllExamVO selAllExamVO) {
         return selAllExamMapper.selAllExam(selAllExamVO);

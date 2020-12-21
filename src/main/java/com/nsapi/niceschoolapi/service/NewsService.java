@@ -6,7 +6,10 @@ import java.util.List;
 
 public interface NewsService {
     List<NewsInfoDB> findAllNews(NewsInfoDB newsInfoDB);
+
     int deleteNews(Integer nId);
+
     int addNews(NewsInfoDB newsInfoDB);
+
     int editNews(NewsInfoDB newsInfoDB);
 }

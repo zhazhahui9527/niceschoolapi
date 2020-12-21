@@ -6,6 +6,8 @@ import java.util.List;
 
 public interface DropCourseService {
     List<CourseVO> seledCourse(String cname, Integer sid);
+
     int dropcou(Integer sid, Integer cid);
+
     int updatecou(Integer cid);
 }

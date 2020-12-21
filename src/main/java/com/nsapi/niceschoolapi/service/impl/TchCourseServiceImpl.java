@@ -29,11 +29,15 @@ public class TchCourseServiceImpl implements TchCourseService {
 
     //通过专业查询全部课程
     @Override
-    public List<TeacherDB> findAllCourseByMajorName(TchCourseVO tchCourseVO) { return tchCourseMapper.findAllCourseByMajorName(tchCourseVO); }
+    public List<TeacherDB> findAllCourseByMajorName(TchCourseVO tchCourseVO) {
+        return tchCourseMapper.findAllCourseByMajorName(tchCourseVO);
+    }
 
     //查询级联班级
     @Override
-    public List<TeacherDB> findTchCourseClassName(ClassInfoDB classinfoDB) { return tchCourseMapper.findTchCourseClassName(classinfoDB); }
+    public List<TeacherDB> findTchCourseClassName(ClassInfoDB classinfoDB) {
+        return tchCourseMapper.findTchCourseClassName(classinfoDB);
+    }
 
     //查询周
     @Override
@@ -67,11 +71,16 @@ public class TchCourseServiceImpl implements TchCourseService {
 
     //查询是否有冲突授课
     @Override
-    public int findTchCourseDanger(TchCourseVO tchCourseVO) { return tchCourseMapper.findTchCourseDanger(tchCourseVO); }
+    public int findTchCourseDanger(TchCourseVO tchCourseVO) {
+        return tchCourseMapper.findTchCourseDanger(tchCourseVO);
+    }
 
     //查询指定老师教授所有课程
     @Override
-    public List<TchCourseVO> findCourseByTch(TchCourseVO tchCourseVO) { return tchCourseMapper.findCourseByTch(tchCourseVO); }
+    public List<TchCourseVO> findCourseByTch(TchCourseVO tchCourseVO) {
+        return tchCourseMapper.findCourseByTch(tchCourseVO);
+    }
+
     //删除教师授课及班级
     @Override
     public int delTchCourse(TchCourseVO tchCourseVO) {
