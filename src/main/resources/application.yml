@@ -14,7 +14,7 @@ spring:
   aop:
     proxy-target-class: true
   datasource:
-      jdbc-url: jdbc:mysql://localhost/niceschool?useUnicode=true&characterEncoding=utf8
+      jdbc-url: jdbc:mysql://localhost2/niceschool?useUnicode=true&characterEncoding=utf8
 
       #jdbc-url: jdbc:mysql://localhost/niceschool?useUnicode=true&characterEncoding=utf8
 
@@ -63,7 +63,7 @@ spring:
   aop:
     proxy-target-class: true
   datasource:
-      url: jdbc:mysql://localhost/niceschool?useUnicode=true&characterEncoding=utf8
+      url: jdbc:mysql://localhost/niceschool2?useUnicode=true&characterEncoding=utf8
 
       #url: jdbc:mysql://server.natappfree.cc：45079/niceschool?useUnicode=true&characterEncoding=utf8
 

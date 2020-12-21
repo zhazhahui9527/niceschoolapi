@@ -18,7 +18,7 @@
         left join stu_course sc on se.scid = sc.scid
         left join course c on sc.cid = c.cid
         left join course_type ct on c.ctid = ct.ctid
-        <where>s.stuid = #{stuid}
+        <where>s.stuid = #{stuid} and se.is_del = 0 and s.is_del = 0 and sc.is_del = 0
             <if test="stime!=null and stime!=''">
                 and se.stime = #{stime}
             </if>

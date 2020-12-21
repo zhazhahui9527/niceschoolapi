@@ -4,12 +4,13 @@
 <mapper namespace="com.nsapi.niceschoolapi.mapper.SelAllExamMapper">
     <!--管理员查询学生成绩-->
     <select id="selAllExam" resultType="map" parameterType="map">
-        select stu.stuid,stu.sname,sex.*,cou.cname,cou.ccredit,concat(cty.ctname,'/',cou.studytype) type from
-        student stu,stu_exam sex,classinfo c,grade g,major m,department d,stu_course sco,course cou,course_type cty
-        where stu.sid = sex.sid and stu.classid = c.classid and c.gid = g.gid and g.mid = m.mid and m.did = d.did
-        and sco.sid = stu.sid and sex.scid=sco.scid and sco.cid = cou.cid and cou.mid = m.mid and stu.is_del =0 and cou.ctid = cty.ctid
+        select s.stuid,s.sname,se.*,c.cname,c.ccredit,concat(ct.ctname,'/',c.studytype) type
+        from student s,stu_exam se,classinfo ci,grade g,major m,department d,stu_course sc,course c,course_type ct
+        where s.sid = se.sid and s.classid = ci.classid and ci.gid = g.gid and g.mid = m.mid and m.did = d.did
+        and sc.sid = s.sid and se.scid=sc.scid and sc.cid = c.cid and c.mid = m.mid and c.ctid = ct.ctid
+        and se.is_del=0 and s.is_del =0
         <if test="classname != null">
-            and c.classname=#{classname}
+            and ci.classname=#{classname}
         </if>
         <if test="gname != null">
             and g.gname=#{gname}
@@ -21,7 +22,7 @@
             and d.dname=#{dname}
         </if>
         <if test="stime != null">
-            and sex.stime=#{stime}
+            and se.stime=#{stime}
         </if>
     </select>
 </mapper>
