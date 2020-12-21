@@ -14,10 +14,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="32e2b928-60b9-42c7-9397-233dbb3b89c8" name="Default Changelist" comment="2020/12/21 10:59">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/entity/Group.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/entity/TchClassDB.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/entity/TchCourseDB.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ExamGradeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ExamGradeMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/SelAllExamMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/SelAllExamMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/InputStudentExam.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/InputStudentExam.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -633,10 +636,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="553" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1608519643490" />
-    <state x="408" y="352" width="1099" height="688" key="find.popup" timestamp="1608520565777">
+    <state x="408" y="352" width="1099" height="688" key="find.popup" timestamp="1608543697353">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="408" y="352" width="1099" height="688" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1608520565777" />
+    <state x="408" y="352" width="1099" height="688" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1608543697353" />
     <state x="580" y="242" key="run.anything.popup" timestamp="1608276370263">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
