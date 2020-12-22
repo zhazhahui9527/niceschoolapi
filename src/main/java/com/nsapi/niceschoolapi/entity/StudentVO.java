@@ -3,40 +3,40 @@ package com.nsapi.niceschoolapi.entity;
 import java.io.Serializable;
 import java.util.Date;
 
-// StudentDB
-//  DepartmentDB
-//  MajorDB
-//  GradeDB
-//  ClassinfoDB
+
+/**
+ * 学生信息关联表：StudentDB、DepartmentDB、MajorDB、GradeDB、ClassinfoDB
+ */
+
 public class StudentVO implements Serializable {
-    private Integer did;
-    private String dname;
-    private Integer dcount;
-    private Integer mid;
-    private String mname;
-    private Integer mcount;
-    private Integer gid;
-    private String gname;
-    private Integer gcount;
-    private Integer classid;
-    private String classname;
-    private Date begintime;
-    private Date endtime;
-    private Integer ccount;
-    private Integer sid;
-    private String stuid;
-    private String sname;
-    private String sgender;
-    private Date sbirthday;
-    private Integer pid;
-    private String snation;
-    private String scardid;
-    private String sphone;
-    private String saddress;
-    private Date entertime;
-    private Date leavetime;
-    private Integer stustate;
-    private Integer isDel;
+    private Integer did; //院系编号
+    private String dname; //院系名称
+    private Integer dcount; //院系人数
+    private Integer mid; //专业
+    private String mname; //专业名称
+    private Integer mcount; //专业人数
+    private Integer gid; //年级编号
+    private String gname; //年级名称
+    private Integer gcount; //年级人数
+    private Integer classid; //班级编号
+    private String classname; //班级名称
+    private Date begintime; //开班时间
+    private Date endtime; //闭班时间
+    private Integer ccount; //班级人数
+    private Integer sid; //学生编号
+    private String stuid; //学生学号
+    private String sname; //学生名字
+    private String sgender; //学生性别
+    private Date sbirthday; //出生年月
+    private Integer pid; //政治面貌编号
+    private String snation; //民族
+    private String scardid; //身份证号
+    private String sphone; //手机号
+    private String saddress; //家庭住址
+    private Date entertime; //入学时间
+    private Date leavetime; //毕业时间
+    private Integer stustate; //学生状态
+    private Integer isDel; //逻辑删除
 
     public Integer getDid() {
         return did;

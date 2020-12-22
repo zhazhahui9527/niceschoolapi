@@ -16,6 +16,7 @@ import java.util.Map;
 
 @Controller
 public class TchInputStuExamController {
+
     @Autowired
     private TchInputStuExamService tchInputStuExamService;
 
@@ -24,6 +25,13 @@ public class TchInputStuExamController {
         return "InputStudentExam";
     }
 
+    /**
+     * 获取学生课程
+     * @param page
+     * @param limit
+     * @param stuExamVO
+     * @return
+     */
     @RequestMapping("selScs")
     @ResponseBody
     public Object selSc(Integer page, Integer limit, StuExamVO stuExamVO) {
@@ -44,6 +52,11 @@ public class TchInputStuExamController {
     }
 
     //下面是下拉框
+
+    /**
+     * 获取部系
+     * @return
+     */
     @RequestMapping("selDes")
     @ResponseBody
     public Object selDes() {
@@ -52,6 +65,11 @@ public class TchInputStuExamController {
         return departmentDBS;
     }
 
+    /**
+     * 获取专业
+     * @param did
+     * @return
+     */
     @RequestMapping("selMas")
     @ResponseBody
     public Object selMas(Integer did) {
@@ -61,6 +79,11 @@ public class TchInputStuExamController {
         return majors;
     }
 
+    /**
+     * 获取年级
+     * @param mid
+     * @return
+     */
     @RequestMapping("selGrs")
     @ResponseBody
     public Object selGrs(Integer mid) {
@@ -70,6 +93,11 @@ public class TchInputStuExamController {
         return examGradeDBS;
     }
 
+    /**
+     * 获取班级
+     * @param gid
+     * @return
+     */
     @RequestMapping("selCls")
     @ResponseBody
     public Object selCls(Integer gid) {
@@ -79,6 +107,11 @@ public class TchInputStuExamController {
         return classInfoDBS;
     }
 
+    /**
+     * 获取成绩
+     * @param stuExamVO
+     * @return
+     */
     @ResponseBody
     @RequestMapping("selMessage")
     public Object selMessage(StuExamVO stuExamVO) {
@@ -97,6 +130,11 @@ public class TchInputStuExamController {
         return msg;
     }
 
+    /**
+     * 保存更新
+     * @param stuExamDB
+     * @return
+     */
     @ResponseBody
     @RequestMapping("saveUpdate")
     public Object saveUpdate(StuExamDB stuExamDB) {

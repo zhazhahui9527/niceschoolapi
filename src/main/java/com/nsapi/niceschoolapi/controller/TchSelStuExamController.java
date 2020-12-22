@@ -17,9 +17,11 @@ import java.util.Map;
 
 @Controller
 public class TchSelStuExamController {
+
     @Autowired
     private TchSelStuExamService tchSelStuExamService;
 
+    //跳转教师端查询学生成绩页面
     @RequestMapping("/tchSelExam")
     public String tchSelExam(Model model) {
         String tid = MySysUser.loginName();
@@ -30,6 +32,13 @@ public class TchSelStuExamController {
         return "view/student/tchSelStuExam";
     }
 
+    /**
+     * 教师端查询学生成绩
+     * @param tchSelStuExamVO
+     * @param page
+     * @param limit
+     * @return
+     */
     @RequestMapping("/tchSelStuExam")
     @ResponseBody
     public LayuiResult<Map> tchSelStuExam(TchSelStuExamVO tchSelStuExamVO, Integer page, Integer limit) {

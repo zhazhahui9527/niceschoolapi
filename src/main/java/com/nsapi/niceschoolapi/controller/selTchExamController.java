@@ -25,6 +25,13 @@ public class selTchExamController {
         return "view/teacher/findTchExam";
     }
 
+    /**
+     * 查询所有教师成绩
+     * @param selTchExamVO
+     * @param page
+     * @param limit
+     * @return
+     */
     @RequestMapping("selTchExam")
     @ResponseBody
     public LayuiResult<Map> selTchExam(SelTchExamVO selTchExamVO, Integer page, Integer limit) {

@@ -1,12 +1,16 @@
 package com.nsapi.niceschoolapi.entity;
 
+/**
+ * 教师查询学生成绩
+ * 关联表：TeacherDB、StuExamDB、GradeDB、ClassDB、StudentDB
+ */
 public class TchSelStuExamVO {
-    private String tid;
-    private Integer stime;
-    private String gname;
-    private Integer classid;
-    private String classname;
-    private String sname;
+    private String tid; //教师编号
+    private Integer stime; //成绩时间
+    private String gname; //年级名称
+    private Integer classid; //班级编号
+    private String classname; //班级名称
+    private String sname; //学生姓名
 
     public String getSname() {
         return sname;

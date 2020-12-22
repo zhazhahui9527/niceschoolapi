@@ -1,5 +1,8 @@
 package com.nsapi.niceschoolapi.entity;
 
+/**
+ * 学生成绩关联表
+ */
 public class StuExamVO {
     private Integer scid;
     private Integer sid;

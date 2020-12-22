@@ -9,8 +9,8 @@ import java.io.Serializable;
 
 public class CourseTypeDB implements Serializable {
 
-    private Integer ctid; //类型编号
-    private String ctname; //类型名称
+    private Integer ctid; //课程类型编号
+    private String ctname; //课程类型名称
 
     public Integer getCtid() {
         return ctid;

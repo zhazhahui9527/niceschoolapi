@@ -21,6 +21,7 @@ public class SelectCourseController {
     @Autowired
     private SelectCourseService selectCourseService;
 
+    //跳转到选课页面
     @RequestMapping("chooseCourse")
     public String chooseCourse(Model model) {
         String stuid = MySysUser.loginName();

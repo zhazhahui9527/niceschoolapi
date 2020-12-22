@@ -3,7 +3,9 @@ package com.nsapi.niceschoolapi.entity;
 import java.io.Serializable;
 import java.util.Date;
 
-
+/**
+ * 教师授课关联表
+ */
 public class TchCourseVO implements Serializable {
     private Integer cid; //课程编号
     private String cname; //课程名称

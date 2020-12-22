@@ -9,9 +9,9 @@ import java.io.Serializable;
 
 public class DepartmentDB implements Serializable {
 
-    private Integer did; //系部编号
-    private String dname; //系部名称
-    private Integer dcount; //系部人数
+    private Integer did; //院系编号
+    private String dname; //院系名称
+    private Integer dcount; //院系人数
     private Integer isDel; //逻辑删除
 
     public Integer getDid() {

@@ -15,6 +15,7 @@ import java.util.Map;
 
 @Controller
 public class StudentController extends BaseController {
+
     @Autowired
     private StudentService studentService;
 
@@ -56,6 +57,7 @@ public class StudentController extends BaseController {
         result.setData(major);
         return result;
     }
+
     //  根据专业查询年级
     @RequestMapping("findByMid")
     @ResponseBody

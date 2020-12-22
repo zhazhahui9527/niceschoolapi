@@ -20,10 +20,13 @@ import java.util.Map;
 
 @Controller
 public class TeacherController {
+
     @Autowired
     private TeacherService teacherService;
+
     @Autowired
     private StudentService studentService;
+
     @Autowired
     private DeleteService deleteService;
 

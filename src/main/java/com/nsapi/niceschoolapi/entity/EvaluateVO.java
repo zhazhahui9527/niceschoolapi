@@ -3,7 +3,7 @@ package com.nsapi.niceschoolapi.entity;
 import java.util.Date;
 
 /**
- * 关联表：EvaluateRecordDB,TeacherDB,TchExamDB,MajorDB
+ * 评价关联表：EvaluateRecordDB,TeacherDB,TchExamDB,MajorDB
  */
 public class EvaluateVO {
     private Integer eid;
@@ -12,7 +12,7 @@ public class EvaluateVO {
     private Integer erscore; //评教分数
     private Integer erstate;
     private Integer tid; //教师编号
-    private String tname; //姓名
+    private String tname; //教师姓名
     private String tgender; //性别
     private Date tbirthday; //出生年月
     private Integer pid; //政治面貌编号

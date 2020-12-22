@@ -18,9 +18,9 @@ public class SelCourseManageController {
     @Autowired
     private SelCourseManageService selCourseManageService;
 
+
     @RequestMapping("selCourseManage")
     public String selCourses() {
-//        System.out.println("----------------------");
         return "selCourseManage";
     }
 
@@ -39,7 +39,6 @@ public class SelCourseManageController {
         tableData.put("count", pageInfo.getTotal());
         //将分页后的数据返回（每页要显示的数据）
         tableData.put("data", pageInfo.getList());
-        // System.out.print(cs);
         return tableData;
     }
 
@@ -48,52 +47,41 @@ public class SelCourseManageController {
     @ResponseBody
     public Object selDe() {
         List<DepartmentDB> departmentDBS = selCourseManageService.selDe();
-        //System.out.println(departmentDBS);
         return departmentDBS;
     }
 
     @RequestMapping("selMa")
     @ResponseBody
     public Object selMa(Integer did) {
-        //System.out.println(did);
         List<MajorDB> majors = selCourseManageService.selMa(did);
-        //System.out.println(majors);
         return majors;
     }
 
     @RequestMapping("selGr")
     @ResponseBody
     public Object selGr(Integer mid) {
-        //System.out.println(mid);
         List<GradeDB> examGradeDBS = selCourseManageService.selGr(mid);
-        // System.out.println(gradeDBS);
         return examGradeDBS;
     }
 
     @RequestMapping("selCl")
     @ResponseBody
     public Object selCl(Integer gid) {
-        // System.out.println(gid);
         List<ClassInfoDB> classInfoDBS = selCourseManageService.selClass(gid);
-        // System.out.println(classinfoDBS);
         return classInfoDBS;
     }
 
     @RequestMapping("selSt")
     @ResponseBody
     public Object selSt(Integer classid) {
-        //System.out.println(classid);
         List<StudentDB> studentDBS = selCourseManageService.selSt(classid);
-        // System.out.println(studentDBS);
         return studentDBS;
     }
 
     @RequestMapping("selCo")
     @ResponseBody
     public Object selCo() {
-        //System.out.println(classid);
         List<CourseDB> courseDBS = selCourseManageService.selCo();
-        // System.out.println(studentDBS);
         return courseDBS;
     }
 
@@ -115,8 +103,6 @@ public class SelCourseManageController {
     @RequestMapping("changeCou")
     @ResponseBody
     public Object changeCou(Integer ccd, Integer sid, Integer cid) {
-        /*System.out.println(ccd+"8888888");
-        System.out.println(sid+"-----"+cid);*/
         int i = selCourseManageService.selStc(ccd, sid);
 
         if (i > 0) {

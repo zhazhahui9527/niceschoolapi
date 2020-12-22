@@ -1,16 +1,19 @@
 package com.nsapi.niceschoolapi.entity;
 
+/**
+ * 学生课程关联表：StuCourseDB、StudentDB、CourseDB、ClassInfoDB
+ */
 public class StuCourseVO {
-    private Integer scid;
-    private Integer sid;
-    private Integer cid;
-    private String stuid;
-    private String sname;
-    private String cname;
-    private Integer classid;
+    private Integer scid; //学生课程编号
+    private Integer sid; //学生编号
+    private Integer cid; //课程编号
+    private String stuid; //学生学号
+    private String sname; //学生姓名
+    private String cname; //课程名称
+    private Integer classid; //班级编号
     private String classname; //班级名称
-    private String studytype; //班级名称
-    private Integer isDel;
+    private String studytype; //修读类型
+    private Integer isDel; //逻辑删除
 
     public String getStudytype() {
         return studytype;

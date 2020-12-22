@@ -12,8 +12,8 @@ public class TeacherDB implements Serializable {
 
     private Integer tid; //教师编号
     private String tchid; //教师工号
-    private String tname; //姓名
-    private String tgender; //性别
+    private String tname; //教师姓名
+    private String tgender; //教师性别
     private Date tbirthday; //出生年月
     private Integer pid; //政治面貌编号
     private String tnation; //民族

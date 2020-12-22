@@ -5,7 +5,7 @@ import java.util.Date;
 
 /**
  * 查询教评教师
- * 用到 教师表、学生表、教师授课表、班级表、
+ * 关联表：TeacherDB、StudentDB、TchCourseDB、ClassInfoDB
  */
 
 public class SelEvaluateVO implements Serializable {

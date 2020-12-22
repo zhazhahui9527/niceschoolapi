@@ -11,9 +11,9 @@ import java.util.Date;
 public class StudentDB implements Serializable {
 
     private Integer sid; //学生编号
-    private String stuid; //学号
-    private String sname; //姓名
-    private String sgender; //性别
+    private String stuid; //学生学号
+    private String sname; //学生姓名
+    private String sgender; //学生性别
     private Date sbirthday; //出生年月
     private Integer pid; //政治面貌编号
     private String snation; //民族

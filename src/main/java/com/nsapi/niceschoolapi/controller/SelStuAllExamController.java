@@ -17,14 +17,23 @@ import java.util.Map;
 
 @Controller
 public class SelStuAllExamController {
+
     @Autowired
     private SelAllExamService selAllExamService;
 
+    //跳转到查询所有学生成绩页面
     @RequestMapping("findAllStuExam")
     public String findAllStuExam() {
         return "view/student/findAllStuExam";
     }
 
+    /**
+     * 查询所有学生的成绩
+     * @param selAllExamVO
+     * @param page
+     * @param limit
+     * @return
+     */
     @RequestMapping("selAllExam")
     @ResponseBody
     public LayuiResult<Map> selAllExam(SelAllExamVO selAllExamVO, Integer page, Integer limit) {

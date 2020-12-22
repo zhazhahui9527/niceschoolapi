@@ -15,7 +15,7 @@ public class CourseDB implements Serializable {
     private double cperiod; //学时
     private Integer cstate; //课程状态
     private Integer cselcount; //已选人数
-    private Integer cmaxcount; //限定人数
+    private Integer cmaxcount; //限选人数
     private String studytype; //修读类型
     private Integer ctid; //课程类型编号
     private Integer mid; //专业编号

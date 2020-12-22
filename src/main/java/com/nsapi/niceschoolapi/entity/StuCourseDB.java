@@ -4,12 +4,12 @@ package com.nsapi.niceschoolapi.entity;
 import java.io.Serializable;
 
 /**
- * 学生选课表
+ * 学生课程表
  */
 
 public class StuCourseDB implements Serializable {
 
-    private Integer scid; //学生选课记录编号
+    private Integer scid; //学生课程编号
     private Integer sid; //学生编号
     private Integer cid; //课程编号
     private Integer isDel; //逻辑删除

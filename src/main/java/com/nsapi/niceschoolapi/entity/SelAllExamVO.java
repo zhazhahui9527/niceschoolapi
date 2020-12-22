@@ -1,7 +1,8 @@
 package com.nsapi.niceschoolapi.entity;
 
 /**
- * 关联表：classInfoDB,GradeDB,MajorDB,DepartmentDB,StuExamDB
+ * 查询所有学生
+ * 成绩关联表：classInfoDB,GradeDB,MajorDB,DepartmentDB,StuExamDB
  */
 public class SelAllExamVO {
     private String classname; //班级名称

@@ -16,8 +16,8 @@ import java.util.Map;
 
 @Transactional
 @Controller
-//@RequestMapping("tchcoursemanage")
 public class TchCourseController extends BaseController {
+
     @Autowired
     private TchCourseService tchCourseService;
 

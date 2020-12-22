@@ -1,8 +1,11 @@
 package com.nsapi.niceschoolapi.entity;
 
+/**
+ * 查询教师成绩
+ */
 public class SelTchExamVO {
-    private String tname;
-    private String tid;
+    private String tname; //教师姓名
+    private String tid; //教师编号
 
     public String getTid() {
         return tid;
