@@ -44,8 +44,8 @@ public class TchCourseVO implements Serializable {
     private Date entertime; //入职时间
     private Date leavetime; //离职时间
     private Integer tchstate; //教师状态
-    private Date begintime; //开班时间
-    private Date endtime; //闭班时间
+//    private Date begintime; //开班时间
+//    private Date endtime; //闭班时间
     private Integer ccount; //班级人数
     private Integer gcount; //年级人数
     private String timeinterval; //时段
@@ -341,21 +341,21 @@ public class TchCourseVO implements Serializable {
         this.tchstate = tchstate;
     }
 
-    public Date getBegintime() {
-        return begintime;
-    }
-
-    public void setBegintime(Date begintime) {
-        this.begintime = begintime;
-    }
-
-    public Date getEndtime() {
-        return endtime;
-    }
-
-    public void setEndtime(Date endtime) {
-        this.endtime = endtime;
-    }
+//    public Date getBegintime() {
+//        return begintime;
+//    }
+//
+//    public void setBegintime(Date begintime) {
+//        this.begintime = begintime;
+//    }
+//
+//    public Date getEndtime() {
+//        return endtime;
+//    }
+//
+//    public void setEndtime(Date endtime) {
+//        this.endtime = endtime;
+//    }
 
     public Integer getCcount() {
         return ccount;

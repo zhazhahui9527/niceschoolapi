@@ -20,8 +20,8 @@ public class StudentVO implements Serializable {
     private Integer gcount; //年级人数
     private Integer classid; //班级编号
     private String classname; //班级名称
-    private Date begintime; //开班时间
-    private Date endtime; //闭班时间
+//    private Date begintime; //开班时间
+//    private Date endtime; //闭班时间
     private Integer ccount; //班级人数
     private Integer sid; //学生编号
     private String stuid; //学生学号
@@ -126,21 +126,21 @@ public class StudentVO implements Serializable {
         this.classname = classname;
     }
 
-    public Date getBegintime() {
-        return begintime;
-    }
-
-    public void setBegintime(Date begintime) {
-        this.begintime = begintime;
-    }
-
-    public Date getEndtime() {
-        return endtime;
-    }
-
-    public void setEndtime(Date endtime) {
-        this.endtime = endtime;
-    }
+//    public Date getBegintime() {
+//        return begintime;
+//    }
+//
+//    public void setBegintime(Date begintime) {
+//        this.begintime = begintime;
+//    }
+//
+//    public Date getEndtime() {
+//        return endtime;
+//    }
+//
+//    public void setEndtime(Date endtime) {
+//        this.endtime = endtime;
+//    }
 
     public Integer getCcount() {
         return ccount;

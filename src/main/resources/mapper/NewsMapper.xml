@@ -10,7 +10,7 @@
                 nid =#{nid}
             </if>
         </where>
-        order by nid DESC
+        order by nid asc
     </select>
     <insert id="addNews" parameterType="NewsInfoDB">
         insert into newsinfo(ntitle,ncontent,nauthor) values(#{ntitle},#{ncontent},#{nauthor})

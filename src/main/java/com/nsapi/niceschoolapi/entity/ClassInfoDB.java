@@ -11,8 +11,8 @@ public class ClassInfoDB implements Serializable {
 
     private Integer classid; //班级编号
     private String classname; //班级名称
-    private Date begintime; //开班时间
-    private Date endtime; //闭班时间
+//    private Date begintime; //开班时间
+//    private Date endtime; //闭班时间
     private Integer ccount; //班级人数
     private Integer gid; //年级编号
     private Integer isDel; //逻辑删除
@@ -33,21 +33,21 @@ public class ClassInfoDB implements Serializable {
         this.classname = classname;
     }
 
-    public Date getBegintime() {
-        return begintime;
-    }
-
-    public void setBegintime(Date begintime) {
-        this.begintime = begintime;
-    }
-
-    public Date getEndtime() {
-        return endtime;
-    }
-
-    public void setEndtime(Date endtime) {
-        this.endtime = endtime;
-    }
+//    public Date getBegintime() {
+//        return begintime;
+//    }
+//
+//    public void setBegintime(Date begintime) {
+//        this.begintime = begintime;
+//    }
+//
+//    public Date getEndtime() {
+//        return endtime;
+//    }
+//
+//    public void setEndtime(Date endtime) {
+//        this.endtime = endtime;
+//    }
 
     public Integer getCcount() {
         return ccount;
