@@ -24,7 +24,7 @@
     <div class="layui-row">
         <div class="layui-col-xs12 layui-col-sm12 layui-col-md6">
             <fieldset class="layui-elem-field">
-                <legend>教师查询</legend>
+                <legend>工号查询</legend>
                 <div class="layui-field-box">
                     <div class="layui-col-xs12 layui-col-sm12 layui-col-md6">
                         <div class="layui-form-item">
@@ -36,14 +36,21 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </fieldset>
+        </div>
+        <div class="layui-col-xs12 layui-col-sm12 layui-col-md6">
+            <fieldset class="layui-elem-field">
+                <legend>姓名查询</legend>
+                <div class="layui-field-box">
                     <div class="layui-col-xs12 layui-col-sm12 layui-col-md6">
-                        <div class="layui-form-item">
-                            <label class="layui-form-label">教师姓名</label>
-                            <div class="layui-input-block">
-                                <select id="selByTchName" name="selByTchName" lay-filter="selByTchName"
-                                        lay-verify="selByTchName" lay-search></select>
-                            </div>
-                        </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">教师姓名</label>
+                <div class="layui-input-block">
+                    <select id="selByTchName" name="selByTchName" lay-filter="selByTchName"
+                            lay-verify="selByTchName" lay-search></select>
+                </div>
+            </div>
                     </div>
                 </div>
             </fieldset>
@@ -561,7 +568,7 @@
             success: function (alldata) {
 
                 var result = alldata.data;
-                var lists = "<option value='all'>请选择</option>";
+                var lists = "<option value='all'>全部</option>";
                 for (var i in result) {
                     lists += "<option value='" + result[i].tname + "'>" + result[i].tname + "</option>";
                 }
