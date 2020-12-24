@@ -31,7 +31,7 @@ public interface AddStudentService {
     //  专业人数+1
     Integer selecteMajor(Integer mid);
 
-    //  系部人数+1
+    //  院系人数+1
     Integer selecteDepartment(Integer did);
 
     //  判断该年份是否已存在学生

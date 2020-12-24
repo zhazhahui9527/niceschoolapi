@@ -8,18 +8,18 @@ import java.util.List;
 @Mapper
 public interface SchoolManageMapper {
     /**
-     * 系部管理
+     * 院系管理
      */
-    //查询全部系部
+    //查询全部院系
     List<SchoolManageVO> findAllDpm(SchoolManageVO schoolManageVO);
 
-    //添加系部
+    //添加院系
     int addOneDpm(DepartmentDB departmentDB);
 
-    //编辑系部
+    //编辑院系
     int editOneDpm(DepartmentDB departmentDB);
 
-    //删除系部
+    //删除院系
     int delOneDpm(Integer did);
 
     /**
@@ -40,10 +40,10 @@ public interface SchoolManageMapper {
     /**
      * 年级管理
      */
-    //查询全部系部
+    //查询全部院系
     List<SchoolManageVO> findAllGrade(SchoolManageVO schoolManageVO);
 
-    //级联系部查询对应专业
+    //级联院系查询对应专业
     List<SchoolManageVO> jlSelMajor(SchoolManageVO schoolManageVO);
 
     //添加年级

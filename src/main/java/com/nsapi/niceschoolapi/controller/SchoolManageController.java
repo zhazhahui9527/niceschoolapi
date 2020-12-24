@@ -44,17 +44,17 @@ public class SchoolManageController extends BaseController {
     }
 
     /**
-     * 进入系院管理页面
+     * 进入院系管理页面
      */
     @RequestMapping("departmentManage")
     public String departmentManage() {
         return "view/schoolManage/departmentManage";
     }
 
-    /*******************************************************************系院管理*********************************************************************/
+    /*******************************************************************院系管理*********************************************************************/
 
     /**
-     * 添加系院
+     * 添加院系
      */
     @RequestMapping("addDepartment")
     @ResponseBody
@@ -74,7 +74,7 @@ public class SchoolManageController extends BaseController {
     }
 
     /**
-     * 获取系院列表
+     * 获取院系列表
      */
     @RequestMapping("findDepartment")
     @ResponseBody
@@ -92,7 +92,7 @@ public class SchoolManageController extends BaseController {
 
 
     /**
-     * 编辑系院
+     * 编辑院系
      */
     @RequestMapping("editDepartment")
     @ResponseBody
@@ -111,7 +111,7 @@ public class SchoolManageController extends BaseController {
     }
 
     /**
-     * 删除系院
+     * 删除院系
      *
      * @param did
      * @return
@@ -403,7 +403,7 @@ public class SchoolManageController extends BaseController {
     }
 
     /**
-     * 条件查询系院
+     * 条件查询院系
      */
     @RequestMapping("tjSelDepartment")
     @ResponseBody

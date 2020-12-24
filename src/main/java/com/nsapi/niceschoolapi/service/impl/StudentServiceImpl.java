@@ -66,14 +66,14 @@ public class StudentServiceImpl implements StudentService {
     }
 
 
-    //  查询系部
+    //  查询院系
     @Override
     public List<DepartmentDB> selDepartment() {
         return studentMapper.selDepartment();
     }
 
 
-    //  根据系部查询专业
+    //  根据院系查询专业
     @Override
     public List<MajorDB> selMajorDB(Integer did) {
         return studentMapper.selMajorDB(did);

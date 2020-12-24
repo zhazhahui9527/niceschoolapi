@@ -43,7 +43,7 @@ public class DeleteController {
         Integer deleteGrade = deleteService.deleteGrade(stuid);
         //  专业人数-1
         Integer deleteMajor = deleteService.deleteMajor(stuid);
-        //  系部人数-1
+        //  院系人数-1
         Integer deleteDepartment = deleteService.deleteDepartment(stuid);
         //  改用户登录状态改为（1）锁定状态
         Integer deleteUser = deleteService.deleteUser(stuid);

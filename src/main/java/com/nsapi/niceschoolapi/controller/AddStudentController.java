@@ -76,7 +76,7 @@ public class AddStudentController {
         Integer selGrade = addStudentService.selecteGrade(studentVO.getGid());
         //  专业人数+1
         Integer selMajor = addStudentService.selecteMajor(studentVO.getMid());
-        //  系部人数+1
+        //  院系、院人数+1
         Integer selDepartment = addStudentService.selecteDepartment(studentVO.getDid());
 
         //  根据学号查询信息

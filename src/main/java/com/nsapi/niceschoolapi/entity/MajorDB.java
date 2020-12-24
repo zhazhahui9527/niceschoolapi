@@ -12,7 +12,7 @@ public class MajorDB implements Serializable {
     private Integer mid; //专业编号
     private String mname; //专业名称
     private Integer mcount; //专业人数
-    private Integer did; //系部编号
+    private Integer did; //院系编号
     private Integer isDel; //逻辑删除
 
     public Integer getMid() {

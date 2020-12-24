@@ -8,7 +8,7 @@ public class SelAllExamVO {
     private String classname; //班级名称
     private String gname; //年级名称
     private String mname; //专业名称
-    private String dname; //系部名称
+    private String dname; //院系名称
     private Integer stime; //成绩时间
 
     public String getClassname() {

@@ -24,10 +24,10 @@ public interface StudentService {
     //  修改学生信息
     public int updateStudent(StudentDB studentDB);
 
-    //  查询系部
+    //  查询院系
     public List<DepartmentDB> selDepartment();
 
-    //  根据系部查询专业
+    //  根据院系查询专业
     public List<MajorDB> selMajorDB(Integer did);
 
     //  根据专业查询年级

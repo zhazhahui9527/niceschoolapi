@@ -114,7 +114,7 @@
     <div class="layui-col-xs12">
         <div class="layui-col-xs12 layui-col-sm6 layui-col-md3">
             <div class="layui-form-item">
-                <label class="layui-form-label">选择系部</label>
+                <label class="layui-form-label">选择院系</label>
                 <div class="layui-input-block">
                     <select th:name="did" lay-search="" lay-verify="required" id="required1" lay-filter="required1">
                         <option value="0">请选择</option>
@@ -244,7 +244,7 @@
                 }
             });
         }
-        //  监听系部下拉框 根据所选系部查询专业
+        //  监听院系下拉框 根据所选院系查询专业
         form.on('select(required1)', function (data) {
             if (data.value == 0) {
                 layui.$('#required2').html("");
@@ -253,7 +253,7 @@
                 form.render();
             }
 
-            //  若系部下拉框值不等于0
+            //  若院系下拉框值不等于0
             else {
                 //  移除专业下拉框所有值
                 $("#required2").find("option").remove();
@@ -333,12 +333,12 @@
             }
         });
 
-        //  监听专业下拉框 根据所选系部查询专业
+        //  监听专业下拉框 根据所选院系查询专业
         form.on('select(required2)', function (data) {
             //  移除专业下拉框所有值
             $("#required3").find("option").remove();
             $("#required4").find("option").remove();
-            //  若系部下拉框值不等于0
+            //  若院系下拉框值不等于0
             if (data.value != 0) {
                 layui.$.ajax({
                     type: 'post',
@@ -392,7 +392,7 @@
         form.on('select(required3)', function (data) {
             //  移除专业下拉框所有值
             $("#required4").find("option").remove();
-            //  若系部下拉框值不等于0
+            //  若院系下拉框值不等于0
             if (data.value != 0) {
                 layui.$.ajax({
                     type: 'post',

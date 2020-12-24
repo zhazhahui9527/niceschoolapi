@@ -16,27 +16,27 @@ public class SchoolManageServiceImpl implements SchoolManageService {
     private SchoolManageMapper schoolManageMapper;
 
     /**
-     * 系部管理
+     * 院系管理
      */
-    //查询全部系部
+    //查询全部院系
     @Override
     public List<SchoolManageVO> findAllDpm(SchoolManageVO schoolManageVO) {
         return schoolManageMapper.findAllDpm(schoolManageVO);
     }
 
-    //添加系部
+    //添加院系
     @Override
     public int addOneDpm(DepartmentDB departmentDB) {
         return schoolManageMapper.addOneDpm(departmentDB);
     }
 
-    //编辑系部
+    //编辑院系
     @Override
     public int editOneDpm(DepartmentDB departmentDB) {
         return schoolManageMapper.editOneDpm(departmentDB);
     }
 
-    //删除系部
+    //删除院系
     @Override
     public int delOneDpm(Integer did) {
         return schoolManageMapper.delOneDpm(did);
@@ -78,7 +78,7 @@ public class SchoolManageServiceImpl implements SchoolManageService {
         return schoolManageMapper.findAllGrade(schoolManageVO);
     }
 
-    //级联系部查询对应专业
+    //级联院系查询对应专业
     @Override
     public List<SchoolManageVO> jlSelMajor(SchoolManageVO schoolManageVO) {
         return schoolManageMapper.jlSelMajor(schoolManageVO);

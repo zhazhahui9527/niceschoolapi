@@ -56,7 +56,7 @@ public class DeleteServiceImpl implements DeleteService {
         return deleteMapper.deleteMajor(stuid);
     }
 
-    //  系部人数-1
+    //  院系人数-1
     @Override
     public Integer deleteDepartment(String stuid) {
         return deleteMapper.deleteDepartment(stuid);

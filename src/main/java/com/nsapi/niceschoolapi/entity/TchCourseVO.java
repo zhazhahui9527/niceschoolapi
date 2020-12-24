@@ -25,7 +25,7 @@ public class TchCourseVO implements Serializable {
     private Integer ctid; //课程类型编号
     private Integer mid; //专业编号
     private Integer mcount; //专业人数
-    private Integer did; //系部编号
+    private Integer did; //院系编号
     private Integer tcsid; //教师班级编号
     private Integer tcid; //教师授课编号
     private Integer tid; //教师编号

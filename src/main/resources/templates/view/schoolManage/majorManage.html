@@ -46,7 +46,7 @@
                 <div class="layui-field-box">
                     <div class="layui-col-xs12 layui-col-sm12 layui-col-md4">
                         <div class="layui-form-item">
-                            <label class="layui-form-label">系部名称</label>
+                            <label class="layui-form-label">院系名称</label>
                             <div class="layui-input-block">
                                 <select id="selByDpm" name="selByDpm" lay-filter="selByDpm" lay-verify="selByDpm"
                                         lay-search></select>
@@ -132,7 +132,7 @@
                 [
                     {field: 'mid', title: '专业编号', width: 200, align: 'center', sort: true}
                     , {field: 'mname', title: '专业名称', align: 'center'}
-                    , {field: 'dname', title: '所属系部', align: 'center'}
+                    , {field: 'dname', title: '所属院系', align: 'center'}
                     , {field: 'mcount', title: '专业人数', align: 'center'}
                     , {fixed: 'right', title: '操作', toolbar: '#barBtn', width: 150, align: 'center'}
                 ]
@@ -148,7 +148,7 @@
         table.on('toolbar(majorTable)', function (obj) {
             if (obj.event == 'addMajorBtn') {
                 $("#addMajorText").val("");
-                //获取系部表
+                //获取院系表
                 $.ajax({
                     type: 'post',
                     url: '/schoolManage/findDepartment?page=1&limit=1000',
@@ -213,7 +213,7 @@
             var data = obj.data;
             if (obj.event === 'edit') {
                 $("#editMajorText").val(data.mname);
-                //获取系部表
+                //获取院系表
                 $.ajax({
                     type: 'post',
                     url: '/schoolManage/findDepartment?page=1&limit=1000',
@@ -330,7 +330,7 @@
                 form.render();
             }
         });
-        //填充系部
+        //填充院系
         $.ajax({
             type: 'post',
             url: '/schoolManage/tjSelDepartment?page=1&limit=1000',

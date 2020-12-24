@@ -48,7 +48,7 @@ public class StudentController extends BaseController {
         return result;
     }
 
-    //  根据系部查询专业
+    //  根据院系查询专业
     @RequestMapping("findByDid")
     @ResponseBody
     public LayuiResult<Map> selMajorDB(Integer did){

@@ -45,7 +45,7 @@
                 <div class="layui-field-box">
                     <div class="layui-col-xs12 layui-col-sm12 layui-col-md4">
                         <div class="layui-form-item">
-                            <label class="layui-form-label">系部名称</label>
+                            <label class="layui-form-label">院系名称</label>
                             <div class="layui-input-block">
                                 <select id="selByDpm" name="selByDpm" lay-filter="selByDpm" lay-verify="selByDpm"
                                         lay-search></select>
@@ -103,7 +103,7 @@
     <form class="layui-form layui-form-pane" style="padding: 10px;">
 
         <div class="layui-form-item">
-            <label class="layui-form-label">所属系部</label>
+            <label class="layui-form-label">所属院系</label>
             <div class="layui-input-block">
                 <select id="addSelDpm" name="addSelDpm" lay-filter="addSelDpm" lay-verify="addSelDpm"
                         lay-search></select>
@@ -155,7 +155,7 @@
                     {field: 'gid', title: '年级编号', width: 200, align: 'center', sort: true}
                     , {field: 'gname', title: '年级名称', align: 'center'}
                     , {field: 'mname', title: '所属专业', align: 'center'}
-                    , {field: 'dname', title: '所属系部', align: 'center'}
+                    , {field: 'dname', title: '所属院系', align: 'center'}
                     , {field: 'gcount', title: '年级人数', align: 'center'}
                     , {fixed: 'right', title: '操作', toolbar: '#barBtn', width: 150, align: 'center'}
                 ]
@@ -211,7 +211,7 @@
         table.on('toolbar(gradeTable)', function (obj) {
             if (obj.event == 'addGradeBtn') {
                 $("#addMajorText").val("");
-                //获取系部表
+                //获取院系表
                 $.ajax({
                     type: 'post',
                     url: '/schoolManage/findDepartment?page=1&limit=1000',
@@ -294,7 +294,7 @@
             var data = obj.data;
             if (obj.event === 'edit') {
                 $("#editGradeText").val(data.gname);
-                //获取系部表
+                //获取院系表
                 $.ajax({
                     type: 'post',
                     url: '/schoolManage/findDepartment?page=1&limit=1000',
@@ -433,7 +433,7 @@
                 form.render();
             }
         });
-        //填充系部
+        //填充院系
         $.ajax({
             type: 'post',
             url: '/schoolManage/tjSelDepartment?page=1&limit=1000',

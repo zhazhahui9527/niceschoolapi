@@ -26,7 +26,7 @@ public interface DeleteMapper {
     //  专业人数-1
     Integer deleteMajor(String stuid);
 
-    //  系部人数-1
+    //  院系人数-1
     Integer deleteDepartment(String stuid);
 
     //  修改教师为离职状态并逻辑删除

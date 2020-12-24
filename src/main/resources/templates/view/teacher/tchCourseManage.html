@@ -190,7 +190,7 @@
             var data = obj.data;
             if (obj.event === 'edit') {
                 $("#editClassText").val(data.classname);
-                //获取系部表
+                //获取院系表
                 $.ajax({
                     type: 'post',
                     url: '/schoolManage/findDepartment?page=1&limit=1000',

@@ -55,7 +55,7 @@
       update major set mcount=mcount+1 where mid = #{mid}
     </update>
 
-    <!-- 系部人数+1 -->
+    <!-- 院系人数+1 -->
     <update id="selecteDepartment" parameterType="int">
       update department set dcount=dcount+1 where did = #{did}
     </update>

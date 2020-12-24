@@ -80,12 +80,12 @@
        sphone=#{sphone},saddress=#{saddress},stustate=#{stustate},classid=#{classid} where sid=#{sid}
     </update>
 
-    <!-- 查询系部 -->
+    <!-- 查询院系 -->
     <select id="selDepartment" resultType="DepartmentDB">
       select * from department
     </select>
 
-    <!-- 根据系部查询专业 -->
+    <!-- 根据院系查询专业 -->
     <select id="selMajorDB" resultType="MajorDB">
         select * from major where did = #{did}
     </select>

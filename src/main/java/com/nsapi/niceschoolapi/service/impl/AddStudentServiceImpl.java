@@ -66,7 +66,7 @@ public class AddStudentServiceImpl implements AddStudentService {
         return addStudentMapper.selecteMajor(mid);
     }
 
-    //  系部人数+1
+    //  院系人数+1
     @Override
     public Integer selecteDepartment(Integer did) {
         return addStudentMapper.selecteDepartment(did);

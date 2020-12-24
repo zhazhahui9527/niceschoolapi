@@ -3,8 +3,8 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.nsapi.niceschoolapi.mapper.SchoolManageMapper">
-<!--**************************************************************系部管理***********************************************************************-->
-    <!--查询全部系部-->
+<!--**************************************************************院系管理***********************************************************************-->
+    <!--查询全部院系-->
     <select id="findAllDpm" resultType="SchoolManageVO">
         select *
         from  department d
@@ -16,15 +16,15 @@
         </where>
         order by d.did asc
     </select>
-    <!--添加系部-->
+    <!--添加院系-->
     <insert id="addOneDpm" parameterType="DepartmentDB">
         insert into department(dname) values(#{dname})
     </insert>
-    <!--编辑系部-->
+    <!--编辑院系-->
     <update id="editOneDpm" parameterType="DepartmentDB">
         update department set dname=#{dname} where did=#{did}
     </update>
-    <!--删除系部-->
+    <!--删除院系-->
     <update id="delOneDpm" parameterType="int">
         update department set is_del=1 where did=#{did}
     </update>
@@ -78,7 +78,7 @@
         </where>
         order by g.gid asc
     </select>
-    <!--级联系部查询对应专业-->
+    <!--级联院系查询对应专业-->
     <select id="jlSelMajor" resultType="SchoolManageVO">
         select * from department d,major m where m.did=d.did and d.did=#{did}
     </select>

@@ -20,9 +20,9 @@ public class SchoolManageVO {
     private Integer mid; //专业编号
     private String mname; //专业名称
     private Integer mcount; //专业人数
-    private Integer did; //系部编号
-    private String dname; //系部名称
-    private Integer dcount; //系部人数
+    private Integer did; //院系编号
+    private String dname; //院系名称
+    private Integer dcount; //院系人数
 
     public Integer getClassid() {
         return classid;

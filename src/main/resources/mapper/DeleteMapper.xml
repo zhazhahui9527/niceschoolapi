@@ -38,7 +38,7 @@
       update major set mcount=mcount-1 where mid = (select mid from grade where gid=(select gid from classinfo where classid=(select classid from student where stuid = #{stuid})))
     </update>
 
-    <!-- 系部人数-1 -->
+    <!-- 院系人数-1 -->
     <update id="deleteDepartment" parameterType="String">
       update department set dcount=dcount-1 where did = (select did from major where mid = (select mid from grade where gid=(select gid from classinfo where classid=(select classid from student where stuid = #{stuid}))))
     </update>
