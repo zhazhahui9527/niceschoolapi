@@ -107,7 +107,7 @@
         <div class="layui-form-item layui-form-text">
             <label class="layui-form-label" style="color: red;">请确保名称是全称。</label>
             <div class="layui-input-block">
-                <textarea id="editClassText" placeholder="请输入名称" class="layui-textarea"></textarea>
+                <textarea id="editClassText" placeholder="请输入班级名称" class="layui-textarea"></textarea>
             </div>
         </div>
     </form>
@@ -142,7 +142,7 @@
         <div class="layui-form-item layui-form-text">
             <label class="layui-form-label" style="color: red;">请确保名称是全称。</label>
             <div class="layui-input-block">
-                <textarea id="addMajorText" placeholder="请输入名称" class="layui-textarea"></textarea>
+                <textarea id="addMajorText" placeholder="请输入班级名称" class="layui-textarea"></textarea>
             </div>
         </div>
     </form>
@@ -374,7 +374,7 @@
                     yes: function (index) {
                         var addCname = $("#addMajorText").val();
                         if (addCname.trim() == "") {
-                            layer.alert('请输入年级名称！');
+                            layer.alert('请输入班级名称！');
                             $("#addMajorText").val("");
                         } else {
                             layer.confirm('确定要添加吗？', function (index) {
@@ -490,7 +490,7 @@
                     yes: function (index) {
                         var editCname = $("#editClassText").val();
                         if (editCname.trim() == "") {
-                            layer.alert('请输入年级名称！');
+                            layer.alert('请输入班级名称！');
                             $("#editClassText").val("");
                         } else if (editCname.trim() == data.gname.trim() && $("#editSelDpm option:selected").val() == data.did && $("#editSelMajor option:selected").val() == data.mid) {
                             layer.alert('未做任何修改！');
