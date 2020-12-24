@@ -13,13 +13,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="32e2b928-60b9-42c7-9397-233dbb3b89c8" name="Default Changelist" comment="2020/12/24 14:53">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/schoolManage/classManage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/schoolManage/classManage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/schoolManage/gradeManage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/schoolManage/gradeManage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/schoolManage/majorManage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/schoolManage/majorManage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/teacher/tchCourseManage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/teacher/tchCourseManage.html" afterDir="false" />
-    </list>
+    <list default="true" id="32e2b928-60b9-42c7-9397-233dbb3b89c8" name="Default Changelist" comment="2020/12/24 17:00" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
