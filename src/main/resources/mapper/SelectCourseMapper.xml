@@ -24,7 +24,7 @@
                and  ctname =#{ctname}
            </if>
        </where>
-       and a.studytype='选修'
+--        and a.studytype='选修'
        GROUP BY a.cname
    </select>
     <!-- 查询课程类型 -->

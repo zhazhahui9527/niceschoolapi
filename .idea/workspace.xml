@@ -13,22 +13,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="32e2b928-60b9-42c7-9397-233dbb3b89c8" name="Default Changelist" comment="2020/12/23 14:21">
+    <list default="true" id="32e2b928-60b9-42c7-9397-233dbb3b89c8" name="Default Changelist" comment="2020/12/23 17:40">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/entity/ClassInfoDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/entity/ClassInfoDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/entity/SchoolManageVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/entity/SchoolManageVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/entity/StudentVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/entity/StudentVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/entity/TchCourseVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nsapi/niceschoolapi/entity/TchCourseVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/DropoutMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/DropoutMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/NewsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/NewsMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/SchoolManageMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/SchoolManageMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/StudentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/StudentMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/TeacherMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/TeacherMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/selCourseManage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/selCourseManage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/schoolManage/classManage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/schoolManage/classManage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/schoolManage/departmentManage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/schoolManage/departmentManage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/schoolManage/gradeManage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/schoolManage/gradeManage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/schoolManage/majorManage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/schoolManage/majorManage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/SelectCourseMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/SelectCourseMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +68,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -101,17 +88,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="NiceschoolapiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="niceschoolapi" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.nsapi.niceschoolapi.NiceschoolapiApplication" />
@@ -632,46 +608,46 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="602" y="220" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607678094212" />
-    <state width="1752" height="162" key="GridCell.Tab.0.bottom" timestamp="1608710166208">
+    <state width="1584" height="164" key="GridCell.Tab.0.bottom" timestamp="1608779329613">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1752" height="162" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608710166208" />
-    <state width="1752" height="162" key="GridCell.Tab.0.center" timestamp="1608710166208">
+    <state width="1584" height="164" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608779329613" />
+    <state width="1584" height="164" key="GridCell.Tab.0.center" timestamp="1608779329613">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1752" height="162" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608710166208" />
-    <state width="1752" height="162" key="GridCell.Tab.0.left" timestamp="1608710166208">
+    <state width="1584" height="164" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608779329613" />
+    <state width="1584" height="164" key="GridCell.Tab.0.left" timestamp="1608779329613">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1752" height="162" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608710166208" />
-    <state width="1752" height="162" key="GridCell.Tab.0.right" timestamp="1608710166208">
+    <state width="1584" height="164" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608779329613" />
+    <state width="1584" height="164" key="GridCell.Tab.0.right" timestamp="1608779329613">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1752" height="162" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608710166208" />
-    <state width="1752" height="162" key="GridCell.Tab.1.bottom" timestamp="1608710166208">
+    <state width="1584" height="164" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608779329613" />
+    <state width="1584" height="164" key="GridCell.Tab.1.bottom" timestamp="1608779329613">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1752" height="162" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608710166208" />
-    <state width="1752" height="162" key="GridCell.Tab.1.center" timestamp="1608710166208">
+    <state width="1584" height="164" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608779329613" />
+    <state width="1584" height="164" key="GridCell.Tab.1.center" timestamp="1608779329613">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1752" height="162" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608710166208" />
-    <state width="1752" height="162" key="GridCell.Tab.1.left" timestamp="1608710166208">
+    <state width="1584" height="164" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608779329613" />
+    <state width="1584" height="164" key="GridCell.Tab.1.left" timestamp="1608779329613">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1752" height="162" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608710166208" />
-    <state width="1752" height="162" key="GridCell.Tab.1.right" timestamp="1608710166208">
+    <state width="1584" height="164" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608779329613" />
+    <state width="1584" height="164" key="GridCell.Tab.1.right" timestamp="1608779329613">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1752" height="162" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608710166208" />
+    <state width="1584" height="164" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608779329613" />
     <state x="751" y="221" key="RollbackChangesDialog" timestamp="1608189700807">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="751" y="221" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1608189700807" />
-    <state x="462" y="167" key="SettingsEditor" timestamp="1607677043977">
+    <state x="462" y="167" key="SettingsEditor" timestamp="1608776656024">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="462" y="167" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1607677043977" />
+    <state x="462" y="167" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1608776656024" />
     <state x="553" y="256" key="Vcs.Push.Dialog.v2" timestamp="1608704516155">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
