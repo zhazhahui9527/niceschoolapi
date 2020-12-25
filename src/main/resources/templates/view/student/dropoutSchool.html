@@ -2,25 +2,31 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>退学信息查询</title>
+    <title>退学信息</title>
     <script type="text/javascript" th:src="@{/static/layui/layui.js}"></script>
     <link rel="stylesheet" type="text/css" th:href="@{/static/layui/css/layui.css}"/>
 </head>
 <body>
 
 <div>
-    <div class="demoTable" style="margin-top: 10px;margin-left: 15px">
+    <form class="demoTable" style="margin-top: 10px;margin-left: 25px">
+        <div class="layui-inline">
         学生学号：
         <div class="layui-inline">
             <input class="layui-input" name="sid" id="demoReload" autocomplete="off">
         </div>&nbsp;&nbsp;
+        </div>
+        <div class="layui-inline">
         学生姓名：
         <div class="layui-inline">
             <input class="layui-input" name="sid" id="demoReload1" autocomplete="off">
         </div>
+        </div>
+    </form>
+    <div class="layui-form-item" style="margin: 25px 25px">
+    <button class="layui-btn" type="button" id="selBtn">开始搜索</button>
+    <button class="layui-btn" type="button" id="qxBtn">取消搜索</button>
     </div>
-    <button class="layui-btn" type="button" id="selBtn" style="margin-left: 580px;margin-top: -53px">开始搜索</button>
-    <button class="layui-btn" type="button" id="qxBtn" style="margin-top: -53px">取消搜索</button>
     <table class="layui-hide" id="demo" lay-filter="test">
     </table>
 

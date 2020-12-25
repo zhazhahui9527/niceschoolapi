@@ -59,7 +59,7 @@ public class TeacherController {
         List<PoliticsTypeDB> selpol = studentService.selPolitics();
         model.addAttribute("tea", tea);
         model.addAttribute("selpol", selpol);
-        return "view/teacher/updTeacher";
+        return "view/teacher/updateTeacher";
     }
 
     //  根据教师编号查询教师详细信息

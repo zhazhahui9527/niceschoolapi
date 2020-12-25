@@ -2,24 +2,29 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>成绩查询</title>
+    <title>教师成绩查询</title>
     <script type="text/javascript" th:src="@{/static/layui/layui.js}"></script>
     <link rel="stylesheet" type="text/css" th:href="@{/static/layui/css/layui.css}"/>
 </head>
 <body>
 <div class="layui-form">
-    <div class="layui-inline" style="margin-top: 10px;margin-left: 30px">
+    <form style="margin-top: 10px;margin-left: 50px">
+    <div class="layui-inline">
         教师工号：
         <div class="layui-inline">
             <input class="layui-input" name="tid" id="tid" autocomplete="off">
         </div>
+    </div>
+        <div class="layui-inline">
         教师姓名：
         <div class="layui-inline">
             <input class="layui-input" name="tname" id="tname" autocomplete="off">
         </div>
-    </div>
-
+        </div>
+    </form>
+    <div class="layui-form-item" style="margin: 5px 50px">
     <button class="layui-btn" type="button" id="selBtn" style="margin-top: 10px">开始搜索</button>
+    </div>
 </div>
 <table class="layui-hide" id="demo1" lay-filter="test"></table>
 <script>
