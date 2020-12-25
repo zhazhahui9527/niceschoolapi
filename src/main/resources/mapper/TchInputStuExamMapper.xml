@@ -15,13 +15,17 @@
     <select id="selClasss" resultType="com.nsapi.niceschoolapi.entity.ClassInfoDB" parameterType="Integer">
         select * from classinfo where gid=#{gid}
     </select>
+<!--    录入成绩查询学生课程-->
     <select id="selScs" parameterType="com.nsapi.niceschoolapi.entity.StuExamVO" resultType="com.nsapi.niceschoolapi.entity.StuExamVO">
-        select ci.classname,ci.classid,s.sname,c.cname,s.sid,sc.scid from stu_course sc,student s,course c,classinfo ci,tch_course thc
+        select ci.classname,ci.classid,s.sname,c.cname,s.sid,sc.scid
+        from stu_course sc,student s,course c,classinfo ci,tch_course thc,tch_class tcl
         where sc.sid=s.sid
         and c.cid=sc.cid
         and ci.classid=s.classid
         and c.cid=thc.cid
         and thc.tid=#{tid}
+        and thc.tcid=tcl.tcid
+        and tcl.classid=ci.classid
         <if test="classid!=null">
         and  ci.classid =#{classid}
         </if>
