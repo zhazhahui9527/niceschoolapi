@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>选课管理</title>
+    <title>学生选课管理</title>
     <script type="text/javascript" th:src="@{/static/layui/layui.js}"></script>
     <link rel="stylesheet" type="text/css" th:href="@{/static/layui/css/layui.css}"/>
 </head>
@@ -105,32 +105,27 @@
         tableIns = table.render({
             elem: '#userTable'   //渲染的目标对象
             , url: 'selSc' //数据接口
-            , title: '选课表'//数据导出来的标题
+            , title: '学生选课表'//数据导出来的标题
             , toolbar: "#userToolBar"   //表格的工具条
-            , cellMinWidth: 200 //设置列的最小默认宽度
+            // , cellMinWidth: 200 //设置列的最小默认宽度
             , page: 1  //是否启用分页, limits: [10, 20, 30]
             , limit: 10//每页数据默认采用
             , cols: [
                 [   //列表数据
 
 
-                    {field: 'scid', title: 'ID', align: 'center', width: "130", sort: true}
-                    , {field: 'stuid', title: '学号', align: 'center', width: "130", sort: true}
-
-                    , {field: 'sname', title: '学生名', align: 'center', width: "150", sort: true}
-                    , {field: 'cname', title: '课程名', align: 'center', width: "200", sort: true}
-                    , {field: 'classname', title: '班级名字', align: 'center', width: "200", sort: true}
-                    , {field: 'studytype', title: '选修类型', align: 'center', width: "200", sort: true}
-
-                    , {
-                    fixed: '', title: '操作', align: 'center', width: '270', templet: function (data) {
+                    {field: 'scid', title: 'ID', align: 'center', sort: true}
+                    , {field: 'stuid', title: '学号', align: 'center', sort: true}
+                    , {field: 'sname', title: '学生名', align: 'center', sort: true}
+                    , {field: 'cname', title: '课程名', align: 'center', sort: true}
+                    , {field: 'classname', title: '班级名字', align: 'center', sort: true}
+                    , {field: 'studytype', title: '选修类型', align: 'center', sort: true}
+                    , {fixed: '', title: '操作', align: 'center', width: '270', templet: function (data) {
                         if (data.studytype == '选修') {
                             return '<a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">强制退课</a><a class="layui-btn layui-btn-danger layui-btn-xs" style="background-color: #98AB6F;" lay-event="dels">换课</a>'
                         } else {
                             return '必修不可操作';
                         }
-
-
                     }
                 }
                 ]

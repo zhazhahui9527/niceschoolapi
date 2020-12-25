@@ -46,18 +46,24 @@
             </div>
         </div>
     </form>
-    <div class="demoTable" style="margin-top: 10px;margin-left: 15px">
+    <form class="demoTable" style="margin-top: 10px;margin-left: 50px">
+    <div class="layui-inline">
         学生学号：
         <div class="layui-inline">
             <input class="layui-input" name="sid" id="demoReload" autocomplete="off">
         </div>&nbsp;&nbsp;
+    </div>
+        <div class="layui-inline">
         学生姓名：
         <div class="layui-inline">
             <input class="layui-input" name="sid" id="demoReload1" autocomplete="off">
         </div>
+        </div>
+    </form>
+    <div class="layui-form-item" style="margin: 5px 50px">
+    <button class="layui-btn" type="button" id="selBtn">开始搜索</button>
+    <button class="layui-btn" type="button" id="qxBtn">取消搜索</button>
     </div>
-    <button class="layui-btn" type="button" id="selBtn" style="margin-left: 580px;margin-top: -53px">开始搜索</button>
-    <button class="layui-btn" type="button" id="qxBtn" style="margin-top: -53px">取消搜索</button>
     <table class="layui-hide" id="demo" lay-filter="test">
     </table>
     <script type="text/html" id="barDemo">
