@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>课目管理</title>
+    <title>学生课程管理</title>
     <script type="text/javascript" th:src="@{/static/layui/layui.js}"></script>
     <link rel="stylesheet" type="text/css" th:href="@{/static/layui/css/layui.css}"/>
 </head>
@@ -15,7 +15,7 @@
 <form class="layui-form" method="post" id="searchFrm">
     <div class="layui-form-item">
         <div class="layui-inline">
-            <label class="layui-form-label">课程姓名:</label>
+            <label class="layui-form-label">课程名称:</label>
             <div class="layui-input-inline">
                 <input type="text" name="cname" id="name" autocomplete="off" class="layui-input">
             </div>
@@ -45,7 +45,7 @@
                 <label class="layui-form-label">课程:</label>
                 <div class="layui-input-inline">
 
-                    <input type="text" name="cname" lay-verify="required" placeholder="请输入课程姓名" autocomplete="off"
+                    <input type="text" name="cname" lay-verify="required" placeholder="请输入课程名称" autocomplete="off"
                            class="layui-input">
                 </div>
             </div>

@@ -5,8 +5,10 @@
 <mapper namespace="com.nsapi.niceschoolapi.mapper.AppraiseMapper">
     <!--查询全部对应教评的老师-->
     <select id="findEvaTch" resultType="SelEvaluateVO">
-select DISTINCT tc.*,c.cname from teacher tc,tch_course tco,tch_class tcl,course c,student s where
-tc.tid = tco.tid and tco.cid = c.cid and tc.tid = tcl.tid and tcl.classid = s.classid and s.sid = #{stuid}
+    select DISTINCT tc.*,c.cname
+    from teacher tc,tch_course tco,tch_class tcl,course c,student s,stu_course sc
+    where tc.tid = tco.tid and tco.cid = c.cid and tc.tid = tcl.tid
+    and tcl.classid = s.classid and s.sid = sc.sid and sc.cid = c.cid and s.sid = #{stuid}
     </select>
     <!--查询全部教评题目-->
     <select id="findEvaList" resultType="EvaluateListDB">

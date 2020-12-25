@@ -24,10 +24,10 @@
                and  ctname =#{ctname}
            </if>
        </where>
---        and a.studytype='选修'
+       and a.studytype='选修'
        GROUP BY a.cname
    </select>
-    <!-- 查询课程类型 -->
+    <!-- 查询课程通过类型 -->
    <select id="selType" resultType="CourseTypeDB">
        SELECT ctname FROM course_type
    </select>
