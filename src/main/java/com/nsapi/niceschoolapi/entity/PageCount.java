@@ -1,6 +1,6 @@
 package com.nsapi.niceschoolapi.entity;
 
-public class pageCount {
+public class PageCount {
     private Integer page = 1;
     private Integer limit = 10;
     private String q;

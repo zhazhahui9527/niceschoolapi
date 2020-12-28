@@ -1,7 +1,7 @@
 package com.nsapi.niceschoolapi.service.impl;
 
 import com.nsapi.niceschoolapi.entity.TeacherDB;
-import com.nsapi.niceschoolapi.entity.pageCount;
+import com.nsapi.niceschoolapi.entity.PageCount;
 import com.nsapi.niceschoolapi.mapper.TeacherMapper;
 import com.nsapi.niceschoolapi.service.TeacherService;
 import org.springframework.stereotype.Service;
@@ -20,7 +20,7 @@ public class TeacherServiceImpl implements TeacherService {
 
     //  查询所有教师
     @Override
-    public List<Map> selTeacher(TeacherDB teacherDB, pageCount pageCount) {
+    public List<Map> selTeacher(TeacherDB teacherDB, PageCount pageCount) {
         int begin = pageCount.getLimit() * (pageCount.getPage() - 1);
         int end = pageCount.getLimit() * pageCount.getPage() - begin;
         Map<String, Object> map = new HashMap<>();

@@ -1,7 +1,7 @@
 package com.nsapi.niceschoolapi.service.impl;
 
 import com.nsapi.niceschoolapi.entity.StudentDB;
-import com.nsapi.niceschoolapi.entity.pageCount;
+import com.nsapi.niceschoolapi.entity.PageCount;
 import com.nsapi.niceschoolapi.mapper.DropoutMapper;
 import com.nsapi.niceschoolapi.service.DropoutService;
 import org.springframework.stereotype.Service;
@@ -20,7 +20,7 @@ public class DropoutServiceImpl implements DropoutService {
 
     //  查询所有退学信息
     @Override
-    public List<Map> selDropout(pageCount pageCount, StudentDB studentDB) {
+    public List<Map> selDropout(PageCount pageCount, StudentDB studentDB) {
         int begin = pageCount.getLimit() * (pageCount.getPage() - 1);
         int end = pageCount.getLimit() * pageCount.getPage() - begin;
         Map<String, Object> map = new HashMap<>();

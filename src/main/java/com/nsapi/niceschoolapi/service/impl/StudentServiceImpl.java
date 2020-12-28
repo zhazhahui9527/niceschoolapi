@@ -20,7 +20,7 @@ public class StudentServiceImpl implements StudentService {
 
     //  查询所有学生
     @Override
-    public List<Map> selStudent(StudentVO studentVO, pageCount pageCount) {
+    public List<Map> selStudent(StudentVO studentVO, PageCount pageCount) {
         int begin = pageCount.getLimit() * (pageCount.getPage() - 1);
         int end = pageCount.getLimit() * pageCount.getPage() - begin;
         Map<String, Object> map = new HashMap<>();
@@ -33,6 +33,30 @@ public class StudentServiceImpl implements StudentService {
         map.put("gid", studentVO.getGid());
         map.put("classid", studentVO.getClassid());
         return studentMapper.selStudent(map);
+    }
+
+    //教师查询所教学生
+    @Override
+    public List<Map> tchSelStudent(StudentVO studentVO, PageCount pageCount) {
+        int begin = pageCount.getLimit() * (pageCount.getPage() - 1);
+        int end = pageCount.getLimit() * pageCount.getPage() - begin;
+        Map<String, Object> map = new HashMap<>();
+        map.put("begin", begin);
+        map.put("end", end);
+        map.put("stuid", studentVO.getStuid());
+        map.put("sname", studentVO.getSname());
+        map.put("did", studentVO.getDid());
+        map.put("mid", studentVO.getMid());
+        map.put("gid", studentVO.getGid());
+        map.put("classid", studentVO.getClassid());
+        map.put("tid",studentVO.getTid());
+        return studentMapper.tchSelStudent(map);
+    }
+
+    //  查询教师所教学生信息总条数
+    @Override
+    public int tchSelCount(StudentVO studentVO) {
+        return studentMapper.tchSelCount(studentVO);
     }
 
     //  查询信息总条数

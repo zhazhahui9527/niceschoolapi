@@ -32,6 +32,65 @@
             </if>
         </where> ORDER BY s.sid asc LIMIT #{begin},#{end}
     </select>
+    <!--教师查询所教学生-->
+    <select id="tchSelStudent" resultType="map" parameterType="map">
+        select * from student s
+        left join classinfo c on s.classid = c.classid
+        left join politics_type p on s.pid = p.pid
+        left join grade g on c.gid = g.gid
+        left join major m on g.mid = m.mid
+        left join department d on m.did = d.did
+        left join tch_class tc on c.classid = tc.classid
+        <where>s.is_del = 0 and tc.tid = #{tid}
+            <if test="stuid!=null and stuid!=''">
+                and s.stuid like concat('%',concat(#{stuid},'%'))
+            </if>
+            <if test="sname!=null and sname!=''">
+                and s.sname like concat('%',concat(#{sname},'%'))
+            </if>
+            <if test="did!=null and did!=''">
+                and d.did = #{did}
+            </if>
+            <if test="mid!=null and mid!=''">
+                and m.mid = #{mid}
+            </if>
+            <if test="gid!=null and gid!=''">
+                and g.gid = #{gid}
+            </if>
+            <if test="classid!=null and classid!=''">
+                and c.classid = #{classid}
+            </if>
+        </where> ORDER BY s.sid asc LIMIT #{begin},#{end}
+    </select>
+    <select id="tchSelCount" resultType="int">
+        select count(*) from student s
+        left join classinfo c on s.classid = c.classid
+        left join politics_type p on s.pid = p.pid
+        left join grade g on c.gid = g.gid
+        left join major m on g.mid = m.mid
+        left join department d on m.did = d.did
+        left join tch_class tc on c.classid = tc.classid
+        <where>s.is_del = 0 and tc.tid = #{tid}
+            <if test="stuid!=null and stuid!=''">
+                and s.stuid like concat('%',concat(#{stuid},'%'))
+            </if>
+            <if test="sname!=null and sname!=''">
+                and s.sname like concat('%',concat(#{sname},'%'))
+            </if>
+            <if test="did!=null and did!=''">
+                and d.did = #{did}
+            </if>
+            <if test="mid!=null and mid!=''">
+                and m.mid = #{mid}
+            </if>
+            <if test="gid!=null and gid!=''">
+                and g.gid = #{gid}
+            </if>
+            <if test="classid!=null and classid!=''">
+                and c.classid = #{classid}
+            </if>
+        </where> ORDER BY s.sid asc
+    </select>
     <!-- 查询学生信息数量 -->
     <select id="selCount" resultType="int">
         select count(*) from student s
@@ -61,7 +120,6 @@
             </if>
         </where> ORDER BY s.sid asc
     </select>
-
     <!-- 根据学生id查询学生信息 -->
     <select id="selStudentById" resultType="StudentDB">
         select * from student where sid = #{sid}

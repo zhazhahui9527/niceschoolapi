@@ -1,5 +1,6 @@
 package com.nsapi.niceschoolapi.controller;
 
+import com.nsapi.niceschoolapi.common.config.MySysUser;
 import com.nsapi.niceschoolapi.entity.*;
 import com.nsapi.niceschoolapi.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,11 +26,31 @@ public class StudentController extends BaseController {
         return "view/student/findStudent";
     }
 
+    // 跳转教师查询所教学生页面
+    @RequestMapping("tchFindStudent")
+    public String tchFindStudent(){
+        return "tchFindStudent";
+    }
+
+    //教师查询所教学生
+    @RequestMapping("tchSelStudent")
+    @ResponseBody
+    public LayuiResult<Map> tchSelStudent(PageCount pageCount, StudentVO studentVO){
+        String tid = MySysUser.loginName();
+        studentVO.setTid(tid);
+        LayuiResult<Map> result = new LayuiResult<>();
+        List<Map> list =studentService.tchSelStudent(studentVO,pageCount);
+        int count = studentService.tchSelCount(studentVO);
+        result.setData(list);
+        result.setCount(count);
+        return result;
+    }
+
 
     //  查询所有学生
     @RequestMapping("selStudent")
     @ResponseBody
-    public LayuiResult<Map> selectStu(pageCount pageCount, StudentVO studentVO){
+    public LayuiResult<Map> selectStu(PageCount pageCount, StudentVO studentVO){
         LayuiResult<Map> result = new LayuiResult<>();
         List<Map> list = studentService.selStudent(studentVO,pageCount);
         int count = studentService.selCount(studentVO);

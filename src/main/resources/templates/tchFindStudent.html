@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>学生信息查询</title>
+    <title>查询学生</title>
 
     <script type="text/javascript" th:src="@{/static/layui/layui.js}"></script>
     <link rel="stylesheet" type="text/css" th:href="@{/static/layui/css/layui.css}"/>
@@ -47,31 +47,27 @@
         </div>
     </form>
     <form class="demoTable" style="margin-top: 10px;margin-left: 50px">
-    <div class="layui-inline">
-        学生学号：
         <div class="layui-inline">
-            <input class="layui-input" name="sid" id="demoReload" autocomplete="off">
-        </div>&nbsp;&nbsp;
-    </div>
-        <div class="layui-inline">
-        学生姓名：
-        <div class="layui-inline">
-            <input class="layui-input" name="sid" id="demoReload1" autocomplete="off">
+            学生学号：
+            <div class="layui-inline">
+                <input class="layui-input" name="sid" id="demoReload" autocomplete="off">
+            </div>&nbsp;&nbsp;
         </div>
+        <div class="layui-inline">
+            学生姓名：
+            <div class="layui-inline">
+                <input class="layui-input" name="sid" id="demoReload1" autocomplete="off">
+            </div>
         </div>
     </form>
     <div class="layui-form-item" style="margin: 5px 50px">
-    <button class="layui-btn" type="button" id="selBtn">开始搜索</button>
-    <button class="layui-btn" type="button" id="qxBtn">取消搜索</button>
+        <button class="layui-btn" type="button" id="selBtn">开始搜索</button>
+        <button class="layui-btn" type="button" id="qxBtn">取消搜索</button>
     </div>
     <table class="layui-hide" id="demo" lay-filter="test">
     </table>
     <script type="text/html" id="barDemo">
-        <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
         <a class="layui-btn layui-btn-xs" lay-event="examine">查看</a>
-        <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">退学</a>
-
-
     </script>
 
 
@@ -274,7 +270,7 @@
         table.render({
             elem: '#demo',
             // height: 520,
-            url: 'selStudent', //数据接口
+            url: 'tchSelStudent', //数据接口
             title: '用户表',
             page: true //开启分页
             , limits: [10, 15, 20],
@@ -294,7 +290,7 @@
                     {field: "classname", title: '班级', align: 'center'},
                     {fixed: 'right', title: '操作', width: 165, align: 'center', toolbar: '#barDemo'}
                 ]]
-            , id: 'selStudent',
+            , id: 'tchSelStudent',
             done: function (res, curr, count) {
                 $("[data-field='stustate']").children().each(function () {
                     if ($(this).text() == 0) {
@@ -311,79 +307,79 @@
         });
 
         //监听头工具栏事件
-        table.on('toolbar(test)', function (obj) {
-            var checkStatus = table.checkStatus(obj.config.id)
-                , data = checkStatus.data; //获取选中的数据
-            switch (obj.event) {
-                case 'add':
-                    //添加
-                    layer.open({
-                        type: 2,      //layer的5种层类型   0（信息框，默认）、1（页面层）、2（iframe层）、3（加载层）、4（tips层）
-                        title: ['新增', 'font-size:18px;'],  //弹出框标题
-                        area: ['800px', '350px'],    //设置弹框的大小
-                        shadeClose: true,          //点击遮罩层外区域关闭遮罩层
-                        anim: 2,              //弹出动画
-                        content: 'add'     //写方法的路径  进入页面  此处也和easyui相同
-                    })
-                    break;
-                case 'update':
-                    if (data.length === 0) {
-                        layer.msg('请选择一行');
-                    } else if (data.length > 1) {
-                        layer.msg('只能同时编辑一个');
-                    } else {
-                        // layer.alert('编辑 [id]：'+ checkStatus.data[0].id);
-                        //修改
-                        layer.open({
-                            type: 2, //layer的5种层类型   0（信息框，默认）1（页面层）2（iframe层）3（加载层）4（tips层）
-                            title: ['修改数据', 'font-size:18px;'],  //弹出框标题
-                            shade: [0.5, '#393D49'],     //遮罩层
-                            shadeClose: true,          //点击遮罩层外区域关闭遮罩层
-                            area: ['580px', '500px'],    //弹出框大小
-                            anim: 1,              //弹出动画
-                            content: 'selStudentById?id=' + checkStatus.data[0].sid
-                        });
-                    }
-                    break;
-                case 'delete':
-                    if (data.length === 0) {
-                        layer.msg('请选择一行');
-                    } else {
-                        //删除
-                        layer.confirm('真的要删除吗？', function () {
-                            $.post("delete", {'id': checkStatus.data[0].id}, function (result) {
-                                    layer.msg(
-                                        result.msg, {
-                                            icon: 1,
-                                            time: 1000 //2秒关闭（如果不配置，默认是3秒）
-                                        }, function () {
-                                            //刷新父页面
-                                            parent.window.location.reload();
-                                        });
-                                }
-                            );
-                        });
-                    }
-                    break;
-            }
-            ;
-        });
+        // table.on('toolbar(test)', function (obj) {
+        //     var checkStatus = table.checkStatus(obj.config.id)
+        //         , data = checkStatus.data; //获取选中的数据
+        //     switch (obj.event) {
+        //         case 'add':
+        //             //添加
+        //             layer.open({
+        //                 type: 2,      //layer的5种层类型   0（信息框，默认）、1（页面层）、2（iframe层）、3（加载层）、4（tips层）
+        //                 title: ['新增', 'font-size:18px;'],  //弹出框标题
+        //                 area: ['800px', '350px'],    //设置弹框的大小
+        //                 shadeClose: true,          //点击遮罩层外区域关闭遮罩层
+        //                 anim: 2,              //弹出动画
+        //                 content: 'add'     //写方法的路径  进入页面  此处也和easyui相同
+        //             })
+        //             break;
+        //         case 'update':
+        //             if (data.length === 0) {
+        //                 layer.msg('请选择一行');
+        //             } else if (data.length > 1) {
+        //                 layer.msg('只能同时编辑一个');
+        //             } else {
+        //                 // layer.alert('编辑 [id]：'+ checkStatus.data[0].id);
+        //                 //修改
+        //                 layer.open({
+        //                     type: 2, //layer的5种层类型   0（信息框，默认）1（页面层）2（iframe层）3（加载层）4（tips层）
+        //                     title: ['修改数据', 'font-size:18px;'],  //弹出框标题
+        //                     shade: [0.5, '#393D49'],     //遮罩层
+        //                     shadeClose: true,          //点击遮罩层外区域关闭遮罩层
+        //                     area: ['580px', '500px'],    //弹出框大小
+        //                     anim: 1,              //弹出动画
+        //                     content: 'selStudentById?id=' + checkStatus.data[0].sid
+        //                 });
+        //             }
+        //             break;
+        //         case 'delete':
+        //             if (data.length === 0) {
+        //                 layer.msg('请选择一行');
+        //             } else {
+        //                 //删除
+        //                 layer.confirm('真的要删除吗？', function () {
+        //                     $.post("delete", {'id': checkStatus.data[0].id}, function (result) {
+        //                             layer.msg(
+        //                                 result.msg, {
+        //                                     icon: 1,
+        //                                     time: 1000 //2秒关闭（如果不配置，默认是3秒）
+        //                                 }, function () {
+        //                                     //刷新父页面
+        //                                     parent.window.location.reload();
+        //                                 });
+        //                         }
+        //                     );
+        //                 });
+        //             }
+        //             break;
+        //     }
+        //     ;
+        // });
         //监听行工具事件
         table.on('tool(test)', function (obj) { //注：tool 是工具条事件名，test 是 table 原始容器的属性 lay-filter="对应的值"
             var data = obj.data //获得当前行数据
                 , layEvent = obj.event; //获得 lay-event 对应的值
             //修改
-            if (layEvent === 'edit') {
-                top.layer.open({
-                    type: 2, //layer的5种层类型   0（信息框，默认）1（页面层）2（iframe层）3（加载层）4（tips层）
-                    title: ['修改学生信息', 'font-size:18px;'],  //弹出框标题
-                    shade: [0.5, '#393D49'],     //遮罩层
-                    shadeClose: true,          //点击遮罩层外区域关闭遮罩层
-                    area: ['580px', '500px'],   //弹出框大小
-                    anim: 1,              //弹出动画
-                    content: 'selStudentById?id=' + data.sid
-                });
-            }
+            // if (layEvent === 'edit') {
+            //     top.layer.open({
+            //         type: 2, //layer的5种层类型   0（信息框，默认）1（页面层）2（iframe层）3（加载层）4（tips层）
+            //         title: ['修改学生信息', 'font-size:18px;'],  //弹出框标题
+            //         shade: [0.5, '#393D49'],     //遮罩层
+            //         shadeClose: true,          //点击遮罩层外区域关闭遮罩层
+            //         area: ['580px', '500px'],   //弹出框大小
+            //         anim: 1,              //弹出动画
+            //         content: 'selStudentById?id=' + data.sid
+            //     });
+            // }
             //查看详情
             if (layEvent === 'examine') {
                 top.layer.open({
@@ -398,17 +394,17 @@
             }
 
 
-            if (layEvent == 'del') {
-                top.layer.open({
-                    type: 2, //layer的5种层类型   0（信息框，默认）1（页面层）2（iframe层）3（加载层）4（tips层）
-                    title: ['退学', 'font-size:18px;'],  //弹出框标题
-                    shade: [0.5, '#393D49'],     //遮罩层
-                    shadeClose: true,          //点击遮罩层外区域关闭遮罩层
-                    area: ['600px', '400px'],   //弹出框大小
-                    anim: 1,              //弹出动画
-                    content: 'insertDropout?stuid=' + data.stuid + "&sname=" + data.sname
-                });
-            }
+            // if (layEvent == 'del') {
+            //     top.layer.open({
+            //         type: 2, //layer的5种层类型   0（信息框，默认）1（页面层）2（iframe层）3（加载层）4（tips层）
+            //         title: ['退学', 'font-size:18px;'],  //弹出框标题
+            //         shade: [0.5, '#393D49'],     //遮罩层
+            //         shadeClose: true,          //点击遮罩层外区域关闭遮罩层
+            //         area: ['600px', '400px'],   //弹出框大小
+            //         anim: 1,              //弹出动画
+            //         content: 'insertDropout?stuid=' + data.stuid + "&sname=" + data.sname
+            //     });
+            // }
         });
 
 
@@ -437,7 +433,7 @@
             var stuid = $('#demoReload');
             var sname = $('#demoReload1');
             //执行重载
-            table.reload('selStudent', {
+            table.reload('tchSelStudent', {
                 page: {
                     curr: 1 //重新从第 1 页开始
                 }

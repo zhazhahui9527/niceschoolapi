@@ -1,14 +1,14 @@
 package com.nsapi.niceschoolapi.service;
 
 import com.nsapi.niceschoolapi.entity.TeacherDB;
-import com.nsapi.niceschoolapi.entity.pageCount;
+import com.nsapi.niceschoolapi.entity.PageCount;
 
 import java.util.List;
 import java.util.Map;
 
 public interface TeacherService {
     //  查询所有教师
-    public List<Map> selTeacher(TeacherDB teacherDB, pageCount pageCount);
+    public List<Map> selTeacher(TeacherDB teacherDB, PageCount pageCount);
 
     //  查询教师数量
     public int selTeacherCount(TeacherDB teacherDB);

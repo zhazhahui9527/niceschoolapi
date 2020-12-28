@@ -11,6 +11,12 @@ public interface StudentMapper {
     //  查询所有学生
     public List<Map> selStudent(Map<String, Object> map);
 
+    //  教师查询所教学生
+    public List<Map> tchSelStudent(Map<String, Object> map);
+
+    //  查询教师所教学生信息总条数
+    public int tchSelCount(StudentVO studentVO);
+
     //  查询信息总条数
     public int selCount(StudentVO studentVO);
 

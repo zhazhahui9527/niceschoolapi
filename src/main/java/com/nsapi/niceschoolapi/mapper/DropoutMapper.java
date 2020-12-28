@@ -1,7 +1,6 @@
 package com.nsapi.niceschoolapi.mapper;
 
 import com.nsapi.niceschoolapi.entity.StudentDB;
-import com.nsapi.niceschoolapi.entity.pageCount;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;

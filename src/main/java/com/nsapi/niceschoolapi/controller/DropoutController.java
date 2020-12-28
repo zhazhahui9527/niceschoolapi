@@ -2,7 +2,7 @@ package com.nsapi.niceschoolapi.controller;
 
 import com.nsapi.niceschoolapi.entity.LayuiResult;
 import com.nsapi.niceschoolapi.entity.StudentDB;
-import com.nsapi.niceschoolapi.entity.pageCount;
+import com.nsapi.niceschoolapi.entity.PageCount;
 import com.nsapi.niceschoolapi.service.DropoutService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -26,7 +26,7 @@ public class DropoutController {
 
     @RequestMapping("selDropout")
     @ResponseBody
-    public LayuiResult<Map> selDropout(pageCount pageCount, StudentDB studentDB) {
+    public LayuiResult<Map> selDropout(PageCount pageCount, StudentDB studentDB) {
         LayuiResult<Map> result = new LayuiResult<>();
         //  查询所有退学信息
         List<Map> selDropout = dropoutService.selDropout(pageCount, studentDB);

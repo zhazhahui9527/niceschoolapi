@@ -3,7 +3,7 @@ package com.nsapi.niceschoolapi.controller;
 import com.nsapi.niceschoolapi.entity.LayuiResult;
 import com.nsapi.niceschoolapi.entity.PoliticsTypeDB;
 import com.nsapi.niceschoolapi.entity.TeacherDB;
-import com.nsapi.niceschoolapi.entity.pageCount;
+import com.nsapi.niceschoolapi.entity.PageCount;
 import com.nsapi.niceschoolapi.service.DeleteService;
 import com.nsapi.niceschoolapi.service.StudentService;
 import com.nsapi.niceschoolapi.service.TeacherService;
@@ -40,7 +40,7 @@ public class TeacherController {
     //  查询教师信息
     @RequestMapping("selTeacher")
     @ResponseBody
-    public LayuiResult<Map> selTeacher(TeacherDB teacherDB, pageCount pageCount) {
+    public LayuiResult<Map> selTeacher(TeacherDB teacherDB, PageCount pageCount) {
         LayuiResult<Map> result = new LayuiResult<>();
         //  查询所有教师信息/模糊查询教师信息
         List<Map> list = teacherService.selTeacher(teacherDB, pageCount);

@@ -7,7 +7,13 @@ import java.util.Map;
 
 public interface StudentService {
     //  查询所有学生
-    public List<Map> selStudent(StudentVO studentVO, pageCount pageCount);
+    public List<Map> selStudent(StudentVO studentVO, PageCount pageCount);
+
+    //  查询教师所教学生
+    public List<Map> tchSelStudent(StudentVO studentVO, PageCount pageCount);
+
+    //  查询教师所教学生信息总条数
+    public int tchSelCount(StudentVO studentVO);
 
     //  查询信息总条数
     public int selCount(StudentVO studentVO);

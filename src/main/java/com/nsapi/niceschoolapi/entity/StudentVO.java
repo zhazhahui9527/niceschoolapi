@@ -37,6 +37,7 @@ public class StudentVO implements Serializable {
     private Date leavetime; //毕业时间
     private Integer stustate; //学生状态
     private Integer isDel; //逻辑删除
+    private String tid; //教师编号
 
     public Integer getDid() {
         return did;
@@ -260,5 +261,13 @@ public class StudentVO implements Serializable {
 
     public void setIsDel(Integer isDel) {
         this.isDel = isDel;
+    }
+
+    public String getTid() {
+        return tid;
+    }
+
+    public void setTid(String tid) {
+        this.tid = tid;
     }
 }
