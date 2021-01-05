@@ -14,7 +14,7 @@
 <div>
     <form class="layui-form">
         <div class="layui-inline">
-            <label class="layui-form-label">院系：</label>
+            <label class="layui-form-label">院系名称：</label>
             <div class="layui-input-inline">
                 <select th:name="did" lay-search="" lay-verify="required1" id="required1" lay-filter="required1">
                     <option th:value="0">请选择</option>
@@ -22,7 +22,7 @@
             </div>
         </div>
         <div class="layui-inline">
-            <label class="layui-form-label">专业：</label>
+            <label class="layui-form-label">专业名称：</label>
             <div class="layui-input-inline">
                 <select th:name="mid" lay-search="" lay-verify="required2" id="required2" lay-filter="required2">
                     <!--<option th:each="ma:${selMajor}" th:value="${ma.mid}" th:text="${ma.mname}"></option>-->
@@ -30,7 +30,7 @@
             </div>
         </div>
         <div class="layui-inline">
-            <label class="layui-form-label">年级：</label>
+            <label class="layui-form-label">年级名称：</label>
             <div class="layui-input-inline">
                 <select th:name="gid" lay-search="" lay-verify="required3" id="required3" lay-filter="required3">
                     <!--<option th:each="gr:${selGrade}" th:value="${gr.gid}" th:text="${gr.gname}"></option>-->
@@ -38,7 +38,7 @@
             </div>
         </div>
         <div class="layui-inline">
-            <label class="layui-form-label">班级：</label>
+            <label class="layui-form-label">班级名称：</label>
             <div class="layui-input-inline">
                 <select th:name="classid" lay-search="" lay-verify="required4" id="required4" lay-filter="required4">
                     <!--<option th:each="ca:${selCalss}" th:value="${ca.classid}" th:text="${ca.classname}"></option>-->

@@ -217,106 +217,113 @@
             }
 
         });
-        //监听系
+        //监听院系
         form.on("select(select)", function (obj) {
+            if (obj.value == 0) {
+                layui.$('#mid').html("");
+                layui.$('#gid').html("");
+                layui.$('#classid').html("");
+                layui.$('#sid').html("");
+                form.render();
+            }
+            else {
+                $('#mid').html("");
+                $('#gid').html("");
+                $('#classid').html("");
+                $('#sid').html("");
+                var did = $("#did").val();
 
-            $('#mid').html("");
-            $('#gid').html("");
-            $('#classid').html("");
-            $('#sid').html("");
-            var did = $("#did").val();
+                $.ajax({
+                    //要跳转的地址
+                    url: 'selMa',
+                    //数据类型
+                    data: {
+                        did: did
+                    },
+                    dataType: 'json',
+                    //提交类型
+                    type: 'post',
+                    //查询成功后执行的方法
 
-            $.ajax({
-                //要跳转的地址
-                url: 'selMa',
-                //数据类型
-                data: {
-                    did: did
-                },
-                dataType: 'json',
-                //提交类型
-                type: 'post',
-                //查询成功后执行的方法
+                    success: function (obj) {
+                        $.each(obj, function (index, item) {
+                            $('#mid').append(new Option(item.mname, item.mid));// 下拉菜单里添加元素
+                        });
+                        form.render();
 
-                success: function (obj) {
-                    $.each(obj, function (index, item) {
-                        $('#mid').append(new Option(item.mname, item.mid));// 下拉菜单里添加元素
-                    });
-                    form.render();
+                        var mid = $("#mid").val();
+                        $.ajax({
+                            //要跳转的地址
+                            url: 'selGr',
+                            //数据类型
+                            data: {
+                                mid: mid
+                            },
+                            dataType: 'json',
+                            //提交类型
+                            type: 'post',
+                            //查询成功后执行的方法
 
-                    var mid = $("#mid").val();
-                    $.ajax({
-                        //要跳转的地址
-                        url: 'selGr',
-                        //数据类型
-                        data: {
-                            mid: mid
-                        },
-                        dataType: 'json',
-                        //提交类型
-                        type: 'post',
-                        //查询成功后执行的方法
+                            success: function (oba) {
+                                $.each(oba, function (index, item) {
+                                    $('#gid').append(new Option(item.gname, item.gid));// 下拉菜单里添加元素
+                                });
+                                form.render();
+                                var gid = $("#gid").val();
+                                $.ajax({
+                                    //要跳转的地址
+                                    url: 'selCl',
+                                    //数据类型
+                                    data: {
+                                        gid: gid
+                                    },
+                                    dataType: 'json',
+                                    //提交类型
+                                    type: 'post',
+                                    //查询成功后执行的方法
 
-                        success: function (oba) {
-                            $.each(oba, function (index, item) {
-                                $('#gid').append(new Option(item.gname, item.gid));// 下拉菜单里添加元素
-                            });
-                            form.render();
-                            var gid = $("#gid").val();
-                            $.ajax({
-                                //要跳转的地址
-                                url: 'selCl',
-                                //数据类型
-                                data: {
-                                    gid: gid
-                                },
-                                dataType: 'json',
-                                //提交类型
-                                type: 'post',
-                                //查询成功后执行的方法
+                                    success: function (objss) {
+                                        $.each(objss, function (index, item) {
+                                            $('#classid').append(new Option(item.classname, item.classid));// 下拉菜单里添加元素
+                                        });
+                                        form.render();
+                                        var classid = $("#classid").val();
+                                        $.ajax({
+                                            //要跳转的地址
+                                            url: 'selSt',
+                                            //数据类型
+                                            data: {
+                                                classid: classid
+                                            },
+                                            dataType: 'json',
+                                            //提交类型
+                                            type: 'post',
+                                            //查询成功后执行的方法
 
-                                success: function (objss) {
-                                    $.each(objss, function (index, item) {
-                                        $('#classid').append(new Option(item.classname, item.classid));// 下拉菜单里添加元素
-                                    });
-                                    form.render();
-                                    var classid = $("#classid").val();
-                                    $.ajax({
-                                        //要跳转的地址
-                                        url: 'selSt',
-                                        //数据类型
-                                        data: {
-                                            classid: classid
-                                        },
-                                        dataType: 'json',
-                                        //提交类型
-                                        type: 'post',
-                                        //查询成功后执行的方法
+                                            success: function (objz) {
+                                                $.each(objz, function (index, item) {
+                                                    $('#sid').append(new Option(item.sname, item.sname));// 下拉菜单里添加元素
+                                                });
+                                                form.render();
 
-                                        success: function (objz) {
-                                            $.each(objz, function (index, item) {
-                                                $('#sid').append(new Option(item.sname, item.sname));// 下拉菜单里添加元素
-                                            });
-                                            form.render();
+                                                //var params=$("#fors").serialize();//序列化表单
+                                                var sname = $("#sid").val();
 
-                                            //var params=$("#fors").serialize();//序列化表单
-                                            var sname = $("#sid").val();
+                                                tableIns.reload({
+                                                    url: "selSc?sname=" + sname
+                                                })
 
-                                            tableIns.reload({
-                                                url: "selSc?sname=" + sname
-                                            })
+                                            }
+                                        })
 
-                                        }
-                                    })
+                                    }
+                                })
+                            }
+                        })
 
-                                }
-                            })
-                        }
-                    })
-
-                }
-            });
-
+                    }
+                });
+            }
         });
 
 
