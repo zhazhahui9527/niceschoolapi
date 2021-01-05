@@ -19,7 +19,7 @@ spring:
       #jdbc-url: jdbc:mysql://localhost/niceschool?useUnicode=true&characterEncoding=utf8
 
       username: root
-      password: 123456
+      password: 201472
       driver-class-name: com.mysql.jdbc.Driver
       maximum-pool-size: 30
 
@@ -68,7 +68,7 @@ spring:
       #url: jdbc:mysql://server.natappfree.cc：45079/niceschool?useUnicode=true&characterEncoding=utf8
 
       username: root
-      password: 123456
+      password: 201472
       driver-class-name: com.mysql.jdbc.Driver
       maximum-pool-size: 30
 server:
